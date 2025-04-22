@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: 'Doto', sans-serif;
+  background-image: url('../images/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}

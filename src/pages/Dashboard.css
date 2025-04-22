@@ -1,0 +1,134 @@
+.dashboard {
+  min-height: 100vh !important;
+  position: relative !important;
+  background-image: url("../images/fondo-area-privada.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 2rem !important;
+  font-family: "Doto", sans-serif !important;
+  font-weight: 600 !important;
+  flex: 1 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.dashboard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1)
+  );
+  z-index: 1;
+}
+
+.dashboard-header {
+  text-align: left;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  margin: 0;
+  font-family: "Doto", sans-serif;
+  letter-spacing: 2px;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.dashboard-card {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.dashboard-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 0.5rem;
+  font-family: "Doto", sans-serif;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.activity-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem !important;
+  }
+
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

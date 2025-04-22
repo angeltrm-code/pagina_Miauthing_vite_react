@@ -1,0 +1,16 @@
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  margin-top: auto;
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+}

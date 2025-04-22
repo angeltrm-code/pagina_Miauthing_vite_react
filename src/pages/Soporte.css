@@ -1,0 +1,57 @@
+.main-soporte {
+  min-height: 100vh !important;
+  position: relative !important;
+  background-image: url("../images/fondo-soporte.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 2rem !important;
+  font-family: "Doto", sans-serif !important;
+  font-weight: 600 !important;
+  flex: 1 !important;
+}
+
+.main-soporte::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1)
+  );
+  z-index: 1;
+}
+
+.content {
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
+}

@@ -1,0 +1,184 @@
+.eject-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.eject-overlay.active {
+  opacity: 1;
+}
+
+.countdown {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12rem;
+  font-family: "Doto", sans-serif;
+  font-weight: 900;
+  color: #ff0000;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.6),
+    0 0 60px rgba(255, 0, 0, 0.4);
+  z-index: 10001;
+  opacity: 0;
+}
+
+.countdown.active {
+  animation: countdownPulse 0.9s ease-out forwards;
+}
+
+@keyframes countdownPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.explosion {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100vmax;
+  height: 100vmax;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 0.9) 0%,
+    rgba(255, 165, 0, 0.8) 20%,
+    rgba(255, 255, 0, 0.6) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+.explosion.active {
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.flash.active {
+  animation: flash 1s ease-out forwards;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Doto", sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  background-color: #2a2a2a;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 10001;
+  letter-spacing: 1px;
+}
+
+.success-message.active {
+  animation: messageAppear 2s ease-in-out forwards;
+}
+
+@keyframes messageAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  85% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.ripple {
+  position: fixed;
+  border-radius: 50%;
+  border: 2px solid #ff0000;
+  animation: ripple 0.5s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
