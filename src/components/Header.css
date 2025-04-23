@@ -1,16 +1,16 @@
 .header {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: var(--header-height);
 }
 
 .header-left {
@@ -19,49 +19,56 @@
   gap: 2rem;
 }
 
-.logo {
-  height: 50px;
-  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
-  transition: transform 0.3s ease;
+.header-left a {
+  display: flex;
+  align-items: center;
 }
 
-.logo:hover {
-  transform: scale(1.1);
+.logo {
+  height: 40px;
 }
 
 .search-form {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .search-input {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 0, 0, 0.3);
-  border-radius: 25px;
   padding: 0.5rem 1rem;
-  color: #ffffff;
-  width: 200px;
+  border: 2px solid #eee;
+  border-radius: 999px;
+  width: 250px;
+  font-family: "Doto", sans-serif;
+  font-size: 0.9rem;
+  background: #f8f8f8;
   transition: all 0.3s ease;
 }
 
 .search-input:focus {
-  width: 300px;
-  background: rgba(255, 255, 255, 0.2);
-  border-color: #ff0000;
   outline: none;
+  border-color: var(--primary-color);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.1);
 }
 
 .nav {
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav a {
-  color: #ffffff;
   text-decoration: none;
-  font-size: 1.1rem;
-  position: relative;
+  color: #333;
   padding: 0.5rem 0;
-  transition: color 0.3s ease;
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .nav a::after {
@@ -71,101 +78,174 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #ff0000;
+  background: var(--primary-color);
   transition: width 0.3s ease;
 }
 
 .nav a:hover {
-  color: #ff0000;
+  color: var(--primary-color);
 }
 
-.nav a:hover::after {
+.nav a:hover::after,
+.nav a.active::after {
   width: 100%;
 }
 
+.nav a.active {
+  color: var(--primary-color);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
 .login-btn {
-  background: #ff0000;
-  color: #ffffff;
+  padding: 0.5rem 1.25rem;
+  background: #2a2a2a;
+  color: white;
   border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.login-btn:hover {
-  background: #cc0000;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-}
-
-.logout-button {
-  background: #ff0000;
-  color: #ffffff;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   position: relative;
   overflow: hidden;
 }
 
-.logout-button::before {
+.login-btn::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: 0.5s;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.5s ease-in-out infinite;
 }
 
-.logout-button:hover::before {
-  left: 100%;
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.login-btn:hover {
+  background: #3a3a3a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Doto", sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(0, 0, 0, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button::before {
+  content: "⚠";
+  font-size: 1rem;
+  color: #000;
+  background-color: #ffd700;
+  padding: 2px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
 }
 
 .logout-button:hover {
   background: #cc0000;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.1),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logout-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(0, 0, 0, 0.1),
+    inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 0.75rem 1rem;
+  }
+
+  .nav {
+    gap: 1.5rem;
+  }
+
+  .search-input {
+    width: 200px;
+  }
 }
 
 @media (max-width: 768px) {
   .header {
-    padding: 1rem;
+    height: auto;
     flex-direction: column;
+    padding: 1rem;
     gap: 1rem;
   }
 
   .header-left {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .search-form {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .search-input {
+    width: 100%;
   }
 
   .nav {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
-  .search-input {
-    width: 150px;
+  .header-right {
+    width: 100%;
+    justify-content: center;
   }
 
-  .search-input:focus {
-    width: 200px;
+  .login-btn {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
   }
 }
