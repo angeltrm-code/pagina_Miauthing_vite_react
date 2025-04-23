@@ -1,17 +1,17 @@
 import React from "react";
+import ContactForm from "../components/ContactForm";
 import "./Contacto.css";
 
-function Contacto() {
+const Contacto = () => {
   return (
-    <main className="main-contacto">
-      <div className="content">
+    <div className="contacto-container">
+      <div className="contacto-content">
         <h1>Contacto</h1>
-        <p>
-          Ponte en contacto con nosotros para cualquier consulta o sugerencia.
-        </p>
+        <p>¿Tienes alguna pregunta o sugerencia? ¡Nos encantaría escucharte!</p>
+        <ContactForm />
       </div>
-    </main>
+    </div>
   );
-}
+};
 
 export default Contacto;
