@@ -1,15 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Inicio.css";
 
-function Inicio() {
+const Inicio = () => {
   return (
-    <main className="main">
-      <div className="content">
+    <div className="inicio">
+      <div className="inicio-content">
         <h1>Bienvenido a MiauThing</h1>
-        <p>Descubre nuestros productos y únete a nuestra comunidad</p>
+        <p>
+          Descubre el futuro de la tecnología felina. Nuestra plataforma combina
+          innovación y diversión para crear experiencias únicas para tu gato.
+        </p>
+        <p>
+          Únete a nuestra comunidad y sé parte de la revolución tecnológica para
+          mascotas.
+        </p>
+        <Link to="/productos" className="cta-button">
+          Explorar Productos
+        </Link>
       </div>
-    </main>
+    </div>
   );
-}
+};
 
 export default Inicio;

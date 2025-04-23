@@ -1,59 +1,123 @@
-.main {
-  min-height: 100vh !important;
-  position: relative !important;
-  background-image: url("../images/fondo-inicio.jpg") !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 2rem !important;
-  font-family: "Doto", sans-serif !important;
-  font-weight: 600 !important;
-  flex: 1 !important;
-  margin: 0 !important;
-  width: 100% !important;
+.inicio {
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, #ff0000, #ff6b6b);
+  color: #ffffff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.main::before {
+.inicio::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.1)
-  );
+  background: url("../images/fondo-inicio.jpg") center/cover;
+  opacity: 0.3;
   z-index: 1;
 }
 
-.content {
-  text-align: center;
-  max-width: 800px;
+.inicio-content {
   position: relative;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.75);
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem;
-  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transform: perspective(1000px) rotateX(5deg);
+  transition: transform 0.3s ease;
 }
 
-.content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  font-family: "Doto", sans-serif;
-  font-weight: 600;
-  color: #1a1a1a;
+.inicio-content:hover {
+  transform: perspective(1000px) rotateX(0deg);
 }
 
-.content p {
-  font-size: 1.2rem;
+.inicio h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.inicio p {
+  font-size: 1.5rem;
   line-height: 1.6;
-  font-family: "Doto", sans-serif;
-  font-weight: 600;
-  color: #1a1a1a;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  }
+  to {
+    text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+  }
+}
+
+@media (max-width: 768px) {
+  .inicio h1 {
+    font-size: 2.5rem;
+  }
+
+  .inicio p {
+    font-size: 1.2rem;
+  }
+
+  .inicio-content {
+    padding: 1rem;
+  }
 }
