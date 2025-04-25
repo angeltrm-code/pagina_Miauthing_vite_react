@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import catBoxAnimation from "../animations/cat-box.json";
 import curiousCatAnimation from "../animations/curious-appearing-cat.json";
-import "./ContactForm.css";
+import "../styles/ContactForm.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

@@ -7,7 +7,7 @@ const Comunidad = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3001/usuarios')
+    fetch('http://localhost:3000/usuarios')
       .then(response => response.json())
       .then(data => {
         setUsuarios(data);

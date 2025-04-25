@@ -1,0 +1,1421 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Tempest Phantom RGB Torre ATX",
+      "precio": 54.99,
+      "stock": 31,
+      "categoria": "Cajas PC",
+      "marca": "Tempest",
+      "caracteristicas": "Cristal templado, 4 ventiladores ARGB incluidos, Panel frontal mesh",
+      "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Caja gaming con excelente flujo de aire, panel lateral de cristal templado y 4 ventiladores RGB incluidos"
+    },
+    {
+      "id": 2,
+      "nombre": "MSI MPG B650 EDGE WIFI",
+      "precio": 229.89,
+      "stock": 46,
+      "categoria": "Placas Base",
+      "marca": "MSI",
+      "caracteristicas": "Socket AM5, DDR5, PCIe 5.0, WiFi 6E",
+      "imagen": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=2670&auto=format&fit=crop",
+      "descripcion": "Placa base gaming con WiFi 6E y soporte para procesadores AMD Ryzen serie 7000"
+    },
+    {
+      "id": 3,
+      "nombre": "Logitech G Pro X Superlight",
+      "precio": 109.99,
+      "stock": 38,
+      "categoria": "Ratones Gaming",
+      "marca": "Logitech",
+      "caracteristicas": "Sensor HERO 25K, Ultraligero 63g, Wireless",
+      "imagen": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=2730&auto=format&fit=crop",
+      "descripcion": "Ratón gaming profesional ultraligero con tecnología LIGHTSPEED"
+    },
+    {
+      "id": 4,
+      "nombre": "AMD Ryzen 7 7800X3D",
+      "precio": 419.9,
+      "stock": 50,
+      "categoria": "Procesadores",
+      "marca": "AMD",
+      "caracteristicas": "8 núcleos, 16 hilos, 5.0GHz, Cache 3D V-Cache",
+      "imagen": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Procesador gaming de alto rendimiento con tecnología 3D V-Cache"
+    },
+    {
+      "id": 5,
+      "nombre": "Kingston Fury Beast DDR5 6000MHz 32GB 2x16GB CL36",
+      "precio": 129.99,
+      "stock": 44,
+      "categoria": "Memorias RAM",
+      "marca": "Kingston",
+      "caracteristicas": "DDR5, 6000MHz, CL36, Kit 2x16GB",
+      "imagen": "https://images.unsplash.com/photo-1562976540-1502c2145186?q=80&w=2669&auto=format&fit=crop",
+      "descripcion": "Memoria RAM DDR5 de alto rendimiento para gaming y productividad"
+    },
+    {
+      "id": 6,
+      "nombre": "MSI GeForce RTX 4070 GAMING X TRIO",
+      "precio": 649.9,
+      "stock": 46,
+      "categoria": "Tarjetas Gráficas",
+      "marca": "MSI",
+      "caracteristicas": "12GB GDDR6X, Ray Tracing, DLSS 3",
+      "imagen": "https://images.unsplash.com/photo-1587202372616-b43abea06c2f?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Tarjeta gráfica de última generación con tecnología NVIDIA Ada Lovelace"
+    },
+    {
+      "id": 7,
+      "nombre": "Samsung Odyssey G5 34\" LED WQHD",
+      "precio": 399.99,
+      "stock": 43,
+      "categoria": "Monitores Gaming",
+      "marca": "Samsung",
+      "caracteristicas": "Ultra Wide, 165Hz, 1ms, VA, FreeSync Premium",
+      "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Monitor gaming ultrapanorámico curvo con alta tasa de refresco"
+    },
+    {
+      "id": 8,
+      "nombre": "Corsair 5000D Airflow",
+      "precio": 174.9,
+      "stock": 48,
+      "categoria": "Cajas PC",
+      "marca": "Corsair",
+      "caracteristicas": "Panel mallado, USB-C, Cristal templado",
+      "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Caja de alto rendimiento con excelente flujo de aire y gestión de cables"
+    },
+    {
+      "id": 9,
+      "nombre": "Razer BlackWidow V3 TKL",
+      "precio": 89.99,
+      "stock": 41,
+      "categoria": "Teclados Gaming",
+      "marca": "Razer",
+      "caracteristicas": "Tenkeyless, Switch Verde, RGB Chroma",
+      "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Teclado mecánico compacto con switches Razer Green"
+    },
+    {
+      "id": 10,
+      "nombre": "Nfortec Hydrus V3 360 White",
+      "precio": 99.95,
+      "stock": 39,
+      "categoria": "Refrigeración",
+      "marca": "Nfortec",
+      "caracteristicas": "Refrigeración líquida 360mm, RGB",
+      "imagen": "https://images.unsplash.com/photo-1587202372299-dd2f8e6f0917?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Sistema de refrigeración líquida AIO con radiador de 360mm"
+    },
+    {
+      "id": 11,
+      "nombre": "NZXT H510 Elite Blanco",
+      "precio": 149.99,
+      "stock": 31,
+      "categoria": "Cajas PC",
+      "marca": "NZXT",
+      "caracteristicas": "Cristal templado, 2 ventiladores RGB",
+      "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Caja gaming premium con diseño minimalista y excelente gestión de cables"
+    },
+    {
+      "id": 12,
+      "nombre": "Lian Li O11 Dynamic XL ROG",
+      "precio": 219.99,
+      "stock": 46,
+      "categoria": "Cajas PC",
+      "marca": "Lian Li",
+      "caracteristicas": "E-ATX, Cristal templado, RGB",
+      "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Caja de alto rendimiento con diseño único y amplio espacio interior"
+    },
+    {
+      "id": 13,
+      "nombre": "HyperX Cloud Alpha Pro",
+      "precio": 99.99,
+      "stock": 38,
+      "categoria": "Auriculares Gaming",
+      "marca": "HyperX",
+      "caracteristicas": "Sonido 7.1, Micrófono desmontable",
+      "imagen": "https://images.unsplash.com/photo-1618066296858-06ee5f8bef3f?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Auriculares gaming profesionales con sonido envolvente"
+    },
+    {
+      "id": 14,
+      "nombre": "Corsair 4000D Airflow Negro",
+      "precio": 119.99,
+      "stock": 50,
+      "categoria": "Cajas PC",
+      "marca": "Corsair",
+      "caracteristicas": "Panel frontal mallado, USB-C",
+      "imagen": "https://images.unsplash.com/photo-1587202372555-b7c6b7e5a8fc?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Caja ATX con excelente flujo de aire y diseño moderno"
+    },
+    {
+      "id": 15,
+      "nombre": "Logitech C920 HD Pro",
+      "precio": 79.99,
+      "stock": 44,
+      "categoria": "Webcams",
+      "marca": "Logitech",
+      "caracteristicas": "1080p, Micrófono dual",
+      "imagen": "https://images.unsplash.com/photo-1596382940920-9f8e2011f07c?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Webcam profesional Full HD con micrófonos duales"
+    },
+    {
+      "id": 16,
+      "nombre": "HP LaserJet Pro M404dw",
+      "precio": 329.99,
+      "stock": 46,
+      "categoria": "Impresoras",
+      "marca": "HP",
+      "caracteristicas": "Láser B/N, Wifi, Duplex",
+      "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=2670&auto=format&fit=crop",
+      "descripcion": "Impresora láser monocromática profesional con conectividad inalámbrica"
+    },
+    {
+      "id": 17,
+      "nombre": "Razer BlackShark V2 Pro",
+      "precio": 179.99,
+      "stock": 43,
+      "categoria": "Auriculares Gaming",
+      "marca": "Razer",
+      "caracteristicas": "Wireless, THX Spatial Audio",
+      "imagen": "https://images.unsplash.com/photo-1618066296858-06ee5f8bef3f?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Auriculares gaming inalámbricos con sonido envolvente THX"
+    },
+    {
+      "id": 18,
+      "nombre": "Corsair K70 RGB MK.2",
+      "precio": 169.99,
+      "stock": 48,
+      "categoria": "Teclados Gaming",
+      "marca": "Corsair",
+      "caracteristicas": "Cherry MX Red, RGB",
+      "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Teclado mecánico premium con retroiluminación RGB personalizable"
+    },
+    {
+      "id": 19,
+      "nombre": "RTX 4070 Ti Gaming X Trio",
+      "precio": 899.99,
+      "stock": 15,
+      "categoria": "Tarjetas Gráficas",
+      "marca": "MSI",
+      "caracteristicas": "12GB GDDR6X, Ray Tracing",
+      "imagen": "https://images.unsplash.com/photo-1587202372616-b43abea06c2f?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Tarjeta gráfica de alto rendimiento con tecnología NVIDIA RTX"
+    },
+    {
+      "id": 20,
+      "nombre": "Intel Core i9-13900K",
+      "precio": 599.99,
+      "stock": 20,
+      "categoria": "Procesadores",
+      "marca": "Intel",
+      "caracteristicas": "24 núcleos, 5.8GHz",
+      "imagen": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Procesador tope de gama con rendimiento excepcional"
+    },
+    {
+      "id": 21,
+      "nombre": "Samsung Odyssey G7",
+      "precio": 699.99,
+      "stock": 25,
+      "categoria": "Monitores Gaming",
+      "marca": "Samsung",
+      "caracteristicas": "32\", 240Hz, 1440p, Curvo",
+      "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Monitor gaming curvo con alta tasa de refresco y resolución QHD"
+    },
+    {
+      "id": 22,
+      "nombre": "ROG STRIX B760-F GAMING",
+      "precio": 249.99,
+      "stock": 30,
+      "categoria": "Placas Base",
+      "marca": "ASUS",
+      "caracteristicas": "ATX, DDR5, PCIe 5.0",
+      "imagen": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=2670&auto=format&fit=crop",
+      "descripcion": "Placa base gaming con características premium para procesadores Intel"
+    },
+    {
+      "id": 23,
+      "nombre": "Corsair RM850x",
+      "precio": 149.99,
+      "stock": 35,
+      "categoria": "Fuentes de Alimentación",
+      "marca": "Corsair",
+      "caracteristicas": "850W, 80+ Gold, Modular",
+      "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=2574&auto=format&fit=crop",
+      "descripcion": "Fuente de alimentación modular de alta eficiencia para sistemas gaming"
+    },
+    {
+        "id": 24,
+        "nombre": "Samsung 990 PRO",
+        "precio": 189.99,
+        "stock": 40,
+        "categoria": "Almacenamiento",
+        "marca": "Samsung",
+        "caracteristicas": "2TB, NVMe, PCIe 4.0",
+        "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "SSD NVMe de alto rendimiento con velocidades extremas"
+      },
+      {
+        "id": 25,
+        "nombre": "Corsair H150i Elite LCD",
+        "precio": 289.99,
+        "stock": 22,
+        "categoria": "Refrigeración",
+        "marca": "Corsair",
+        "caracteristicas": "360mm, Pantalla LCD",
+        "imagen": "https://images.unsplash.com/photo-1587202372299-dd2f8e6f0917?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Refrigeración líquida premium con pantalla LCD personalizable"
+      },
+      {
+        "id": 26,
+        "nombre": "ASUS ROG STRIX RTX 4060 Ti OC",
+        "precio": 449.99,
+        "stock": 20,
+        "categoria": "Tarjetas Gráficas",
+        "marca": "ASUS",
+        "caracteristicas": "8GB GDDR6X, Ray Tracing, DLSS 3",
+        "imagen": "https://images.unsplash.com/photo-1587202372616-b43abea06c2f?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Tarjeta gráfica gaming con tecnología NVIDIA RTX de última generación"
+      },
+      {
+        "id": 27,
+        "nombre": "SteelSeries Arctis Nova Pro",
+        "precio": 349.99,
+        "stock": 29,
+        "categoria": "Auriculares Gaming",
+        "marca": "SteelSeries",
+        "caracteristicas": "Hi-Fi, ANC, Base DAC, Dual Battery",
+        "imagen": "https://images.unsplash.com/photo-1618066296858-06ee5f8bef3f?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Auriculares gaming premium con cancelación activa de ruido y sonido Hi-Fi"
+      },
+      {
+        "id": 28,
+        "nombre": "Edifier R1280DBs",
+        "precio": 149.99,
+        "stock": 38,
+        "categoria": "Altavoces",
+        "marca": "Edifier",
+        "caracteristicas": "Bluetooth 5.0, Control remoto, 42W RMS",
+        "imagen": "https://images.unsplash.com/photo-1545454675-3531b543be5d?q=80&w=2670&auto=format&fit=crop",
+        "descripcion": "Altavoces activos con conectividad Bluetooth y sonido de alta fidelidad"
+      },
+      {
+        "id": 29,
+        "nombre": "Ducky One 3 SF Yellow",
+        "precio": 129.99,
+        "stock": 33,
+        "categoria": "Teclados Gaming",
+        "marca": "Ducky",
+        "caracteristicas": "65%, Hot-swap, RGB, Cherry MX",
+        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Teclado mecánico compacto con switches intercambiables y diseño premium"
+      },
+      {
+        "id": 30,
+        "nombre": "ASUS ProArt PA278CV",
+        "precio": 399.99,
+        "stock": 19,
+        "categoria": "Monitores",
+        "marca": "ASUS",
+        "caracteristicas": "27\", 1440p, 75Hz, USB-C, CalMAN",
+        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Monitor profesional con calibración de color y conectividad USB-C"
+      },
+      {
+        "id": 31,
+        "nombre": "Canon PIXMA PRO-200",
+        "precio": 599.99,
+        "stock": 32,
+        "categoria": "Impresoras",
+        "marca": "Canon",
+        "caracteristicas": "A3+, 8 tintas, WiFi, Profesional",
+        "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=2670&auto=format&fit=crop",
+        "descripcion": "Impresora fotográfica profesional con calidad de galería"
+      },
+      {
+        "id": 32,
+        "nombre": "Klipsch The Fives",
+        "precio": 799.99,
+        "stock": 21,
+        "categoria": "Altavoces",
+        "marca": "Klipsch",
+        "caracteristicas": "HDMI ARC, Phono, Bluetooth, 160W",
+        "imagen": "https://images.unsplash.com/photo-1545454675-3531b543be5d?q=80&w=2670&auto=format&fit=crop",
+        "descripcion": "Altavoces activos de alta gama con múltiples conexiones"
+      },
+      {
+        "id": 33,
+        "nombre": "ARCTIC Liquid Freezer II 360",
+        "precio": 129.99,
+        "stock": 20,
+        "categoria": "Refrigeración",
+        "marca": "ARCTIC",
+        "caracteristicas": "360mm, VRM Fan, PWM",
+        "imagen": "https://images.unsplash.com/photo-1587202372299-dd2f8e6f0917?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Sistema de refrigeración líquida con ventilador VRM integrado"
+      },
+      {
+        "id": 34,
+        "nombre": "Secretlab TITAN Evo 2022",
+        "precio": 499.99,
+        "stock": 0,
+        "categoria": "Sillas Gaming",
+        "marca": "Secretlab",
+        "caracteristicas": "NEO Hybrid, 4D, Magnetic Memory Foam",
+        "imagen": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Silla gaming premium con tecnología de espuma con memoria"
+      },
+      {
+        "id": 35,
+        "nombre": "noblechairs HERO",
+        "precio": 399.99,
+        "stock": 50,
+        "categoria": "Sillas Gaming",
+        "marca": "noblechairs",
+        "caracteristicas": "Cuero PU, Lumbar ajustable, 150kg",
+        "imagen": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Silla gaming ergonómica con soporte lumbar integrado"
+      },
+      {
+        "id": 36,
+        "nombre": "Razer DeathAdder V3 Pro",
+        "precio": 159.99,
+        "stock": 36,
+        "categoria": "Ratones Gaming",
+        "marca": "Razer",
+        "caracteristicas": "Sensor Focus Pro 30K, 63g, Wireless",
+        "imagen": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=2730&auto=format&fit=crop",
+        "descripcion": "Ratón gaming profesional ultraligero con tecnología inalámbrica HyperSpeed"
+      },
+      {
+        "id": 37,
+        "nombre": "Logitech G502 X PLUS",
+        "precio": 149.99,
+        "stock": 37,
+        "categoria": "Ratones Gaming",
+        "marca": "Logitech",
+        "caracteristicas": "LIGHTFORCE Hybrid, LIGHTSPEED Wireless, RGB LIGHTSYNC",
+        "imagen": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=2730&auto=format&fit=crop",
+        "descripcion": "Ratón gaming inalámbrico con switches híbridos y RGB personalizable"
+      },
+      {
+        "id": 38,
+        "nombre": "Corsair Vengeance RGB 32GB DDR5",
+        "precio": 189.99,
+        "stock": 25,
+        "categoria": "Memorias RAM",
+        "marca": "Corsair",
+        "caracteristicas": "DDR5, 6400MHz, CL32, 2x16GB",
+        "imagen": "https://images.unsplash.com/photo-1562976540-1502c2145186?q=80&w=2669&auto=format&fit=crop",
+        "descripcion": "Memoria RAM DDR5 de alto rendimiento con iluminación RGB personalizable"
+      },
+      {
+        "id": 39,
+        "nombre": "HP Color LaserJet Pro MFP 4301dw",
+        "precio": 449.99,
+        "stock": 27,
+        "categoria": "Impresoras",
+        "marca": "HP",
+        "caracteristicas": "Láser Color, WiFi, Duplex, 40ppm",
+        "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=2670&auto=format&fit=crop",
+        "descripcion": "Impresora láser color multifunción profesional con conectividad inalámbrica"
+      },
+      {
+        "id": 40,
+        "nombre": "Samsung 990 PRO 2TB NVMe",
+        "precio": 199.99,
+        "stock": 15,
+        "categoria": "SSD",
+        "marca": "Samsung",
+        "caracteristicas": "PCIe 4.0, 7450MB/s lectura, 6900MB/s escritura, Tecnología V-NAND, Controlador Samsung Pascal",
+        "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "SSD NVMe de última generación con velocidades extremas, ideal para gaming y creación de contenido. Incluye tecnología Dynamic Thermal Guard y gestión de caché inteligente."
+      },
+      {
+        "id": 41,
+        "nombre": "WD_BLACK SN850X 1TB",
+        "precio": 129.99,
+        "stock": 35,
+        "categoria": "SSD",
+        "marca": "Western Digital",
+        "caracteristicas": "PCIe Gen4, 7300MB/s lectura, Disipador, Game Mode 2.0, Tecnología nCache 4.0",
+        "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "SSD gaming de alto rendimiento con disipador térmico integrado. Optimizado para gaming con tecnología Game Mode 2.0 y monitorización en tiempo real."
+      },
+      {
+        "id": 42,
+        "nombre": "Noctua NF-A12x25 PWM Pack 3",
+        "precio": 89.99,
+        "stock": 14,
+        "categoria": "Ventiladores",
+        "marca": "Noctua",
+        "caracteristicas": "120mm, PWM, 2000 RPM, Pack 3 unidades",
+        "imagen": "https://images.unsplash.com/photo-1587202372824-85da760e6d13?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Pack de ventiladores premium de 120mm con tecnología SSO2"
+      },
+      {
+        "id": 43,
+        "nombre": "Ducky One 3 TKL",
+        "precio": 139.99,
+        "stock": 35,
+        "categoria": "Teclados Gaming",
+        "marca": "Ducky",
+        "caracteristicas": "Cherry MX Red, RGB, Hot-swap",
+        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Teclado mecánico TKL de alta calidad con switches intercambiables"
+      },
+      {
+        "id": 44,
+        "nombre": "Intel Core i5-14600K",
+        "precio": 359.99,
+        "stock": 24,
+        "categoria": "Procesadores",
+        "marca": "Intel",
+        "caracteristicas": "14 núcleos, 5.3GHz, LGA 1700",
+        "imagen": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Procesador gaming de 14ª generación con núcleos híbridos"
+      },
+      {
+        "id": 45,
+        "nombre": "ASUS TUF Gaming RTX 4060 Ti",
+        "precio": 449.99,
+        "stock": 22,
+        "categoria": "Tarjetas Gráficas",
+        "marca": "ASUS",
+        "caracteristicas": "8GB GDDR6X, DLSS 3, Ray Tracing",
+        "imagen": "https://images.unsplash.com/photo-1587202372616-b43abea06c2f?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Tarjeta gráfica gaming con tecnología NVIDIA Ada Lovelace"
+      },
+      {
+        "id": 46,
+        "nombre": "Lian Li O11 Dynamic EVO",
+        "precio": 169.99,
+        "stock": 16,
+        "categoria": "Cajas PC",
+        "marca": "Lian Li",
+        "caracteristicas": "E-ATX, Cristal Templado, USB-C",
+        "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Caja premium con diseño modular y excelente gestión del flujo de aire"
+      },
+      {
+        "id": 47,
+        "nombre": "Seagate IronWolf Pro 4TB",
+        "precio": 139.99,
+        "stock": 42,
+        "categoria": "Discos Duros",
+        "marca": "Seagate",
+        "caracteristicas": "NAS, 7200RPM, CMR, 256MB Cache",
+        "imagen": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Disco duro optimizado para NAS con alta fiabilidad y rendimiento"
+      },
+      {
+        "id": 48,
+        "nombre": "AMD Ryzen 5 7600X",
+        "precio": 289.99,
+        "stock": 19,
+        "categoria": "Procesadores",
+        "marca": "AMD",
+        "caracteristicas": "6 núcleos, 12 hilos, 5.3GHz",
+        "imagen": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Procesador gaming de gama media con arquitectura Zen 4"
+      },
+      {
+        "id": 49,
+        "nombre": "Keychron Q1 Pro",
+        "precio": 199.99,
+        "stock": 38,
+        "categoria": "Teclados Gaming",
+        "marca": "Keychron",
+        "caracteristicas": "75%, Wireless, Aluminio, Hot-swap",
+        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Teclado mecánico personalizable de grado enthusiast"
+      },
+      {
+        "id": 50,
+        "nombre": "ASUS ROG Swift PG279QM",
+        "precio": 799.99,
+        "stock": 24,
+        "categoria": "Monitores Gaming",
+        "marca": "ASUS",
+        "caracteristicas": "27\", 1440p, 240Hz, G-Sync",
+        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Monitor gaming profesional con panel IPS y tiempo de respuesta de 1ms"
+      },
+      {
+        "id": 51,
+        "nombre": "Brother DCP-L3550CDW",
+        "precio": 349.99,
+        "stock": 15,
+        "categoria": "Impresoras",
+        "marca": "Brother",
+        "caracteristicas": "Láser Color, WiFi, Duplex",
+        "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=2670&auto=format&fit=crop",
+        "descripcion": "Impresora multifunción láser color con conectividad inalámbrica"
+      },
+      {
+        "id": 52,
+        "nombre": "AOC 24G2U",
+        "precio": 179.99,
+        "stock": 23,
+        "categoria": "Monitores Gaming",
+        "marca": "AOC",
+        "caracteristicas": "24\", 1080p, 144Hz, IPS",
+        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Monitor gaming económico con excelente relación calidad-precio"
+      },
+      {
+        "id": 53,
+        "nombre": "Secretlab TITAN Evo 2022",
+        "precio": 449.99,
+        "stock": 12,
+        "categoria": "Sillas Gaming",
+        "marca": "Secretlab",
+        "caracteristicas": "Cuero NEO Hybrid, 4D, Lumbar",
+        "imagen": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Silla gaming premium con soporte lumbar adaptativo"
+      },
+      {
+        "id": 54,
+        "nombre": "Corsair RM850e",
+        "precio": 129.99,
+        "stock": 37,
+        "categoria": "Fuentes de Alimentación",
+        "marca": "Corsair",
+        "caracteristicas": "850W, 80+ Gold, Modular",
+        "imagen": "https://images.unsplash.com/photo-1587202372412-1c0abe6b0cdd?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Fuente de alimentación modular con alta eficiencia energética"
+      },
+      {
+        "id": 55,
+        "nombre": "WD Red Plus 6TB",
+        "precio": 159.99,
+        "stock": 20,
+        "categoria": "Discos Duros",
+        "marca": "Western Digital",
+        "caracteristicas": "NAS, 5400RPM, CMR, 128MB Cache",
+        "imagen": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Disco duro optimizado para sistemas NAS domésticos"
+      },
+      {
+        "id": 56,
+        "nombre": "Arctic P12 PWM PST Value Pack",
+        "precio": 39.99,
+        "stock": 42,
+        "categoria": "Ventiladores",
+        "marca": "Arctic",
+        "caracteristicas": "Pack 5 ventiladores 120mm, PWM PST, Silenciosos",
+        "imagen": "https://images.unsplash.com/photo-1587202372824-85da760e6d13?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Pack económico de ventiladores de alto rendimiento con tecnología PST"
+      },
+      {
+        "id": 57,
+        "nombre": "LG 27GP850-B",
+        "precio": 449.99,
+        "stock": 20,
+        "categoria": "Monitores Gaming",
+        "marca": "LG",
+        "caracteristicas": "27\" IPS, 165Hz (OC 180Hz), 1ms, QHD, HDR400",
+        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Monitor gaming profesional con panel Nano IPS y tiempo de respuesta ultrarrápido"
+      },
+      {
+        "id": 58,
+        "nombre": "Creative Sound BlasterX AE-7",
+        "precio": 229.99,
+        "stock": 18,
+        "categoria": "Tarjetas de Sonido",
+        "marca": "Creative",
+        "caracteristicas": "DAC ESS SABRE 32-bit, Amplificador discreto, RGB",
+        "imagen": "https://images.unsplash.com/photo-1558098329-44e8e4d34785?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Tarjeta de sonido de alta fidelidad para gaming y audio profesional"
+      },
+      {
+        "id": 59,
+        "nombre": "Blue Yeti X",
+        "precio": 169.99,
+        "stock": 31,
+        "categoria": "Micrófonos",
+        "marca": "Blue",
+        "caracteristicas": "USB, 4 Patrones, LED RGB",
+        "imagen": "https://images.unsplash.com/photo-1583593711082-aaa381feb2f3?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Micrófono USB profesional para streaming y podcasting"
+      },
+      {
+        "id": 60,
+        "nombre": "be quiet! Pure Base 500DX",
+        "precio": 109.99,
+        "stock": 14,
+        "categoria": "Cajas PC",
+        "marca": "be quiet!",
+        "caracteristicas": "ATX, Mesh, RGB, USB-C",
+        "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Caja con excelente flujo de aire y diseño minimalista"
+      },
+      {
+        "id": 61,
+        "nombre": "Corsair iCUE H150i ELITE LCD",
+        "precio": 289.99,
+        "stock": 16,
+        "categoria": "Refrigeración",
+        "marca": "Corsair",
+        "caracteristicas": "360mm, Pantalla LCD IPS, RGB",
+        "imagen": "https://images.unsplash.com/photo-1587202372299-dd2f8e6f0917?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Refrigeración líquida premium con pantalla LCD personalizable"
+      },
+      {
+        "id": 62,
+        "nombre": "Seagate FireCuda 4TB",
+        "precio": 139.99,
+        "stock": 42,
+        "categoria": "Discos Duros",
+        "marca": "Seagate",
+        "caracteristicas": "3.5\", 7200RPM, 256MB Cache",
+        "imagen": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Disco duro híbrido optimizado para gaming con alto rendimiento"
+      },
+      {
+        "id": 63,
+        "nombre": "Intel Core i7-14700K",
+        "precio": 449.99,
+        "stock": 19,
+        "categoria": "Procesadores",
+        "marca": "Intel",
+        "caracteristicas": "20 núcleos, 5.6GHz, LGA 1700",
+        "imagen": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Procesador gaming de alta gama con núcleos híbridos"
+      },
+      {
+        "id": 64,
+        "nombre": "Razer Huntsman V2 Analog",
+        "precio": 249.99,
+        "stock": 38,
+        "categoria": "Teclados Gaming",
+        "marca": "Razer",
+        "caracteristicas": "Switches análogos, RGB, Reposamuñecas",
+        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Teclado mecánico con switches análogos para control preciso"
+      },
+      {
+        "id": 65,
+        "nombre": "ASUS ROG Strix Scope RX",
+        "precio": 179.99,
+        "stock": 24,
+        "categoria": "Teclados Gaming",
+        "marca": "ASUS",
+        "caracteristicas": "Switches ópticos RX, RGB Aura Sync",
+        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Teclado gaming con switches ópticos y diseño premium"
+      },
+      {
+        "id": 66,
+        "nombre": "ASUS ROG Strix Helios",
+        "precio": 299.99,
+        "stock": 16,
+        "categoria": "Cajas PC",
+        "marca": "ASUS",
+        "caracteristicas": "E-ATX, RGB Aura Sync, Cristal templado",
+        "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Caja gaming premium con iluminación RGB y diseño ROG"
+      },
+      {
+        "id": 67,
+        "nombre": "Toshiba N300 8TB",
+        "precio": 219.99,
+        "stock": 42,
+        "categoria": "Discos Duros",
+        "marca": "Toshiba",
+        "caracteristicas": "NAS, 7200RPM, 256MB Cache",
+        "imagen": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Disco duro de alta capacidad optimizado para sistemas NAS"
+      },
+      {
+        "id": 68,
+        "nombre": "AMD Ryzen 9 7950X",
+        "precio": 699.99,
+        "stock": 19,
+        "categoria": "Procesadores",
+        "marca": "AMD",
+        "caracteristicas": "16 núcleos, 32 hilos, 5.7GHz",
+        "imagen": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Procesador tope de gama con arquitectura Zen 4"
+      },
+      {
+        "id": 69,
+        "nombre": "Wooting 60HE",
+        "precio": 199.99,
+        "stock": 38,
+        "categoria": "Teclados Gaming",
+        "marca": "Wooting",
+        "caracteristicas": "60%, Analógico Hall Effect, RGB",
+        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Teclado compacto con tecnología Hall Effect analógica"
+      },
+      {
+        "id": 70,
+        "nombre": "Mountain Everest Max",
+        "precio": 229.99,
+        "stock": 24,
+        "categoria": "Teclados Gaming",
+        "marca": "Mountain",
+        "caracteristicas": "Modular, Display LCD, Hot-swap",
+        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Teclado modular personalizable con pantalla LCD integrada"
+      },
+      {
+        "id": 71,
+        "nombre": "Noctua NH-D15 chromax.black",
+        "precio": 109.99,
+        "stock": 25,
+        "categoria": "Refrigeración",
+        "marca": "Noctua",
+        "caracteristicas": "Disipador de doble torre, 2x ventiladores NF-A15, Compatible AM5/LGA1700",
+        "imagen": "https://images.unsplash.com/photo-1587202372299-dd2f8e6f0917?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Disipador de aire premium con rendimiento excepcional y diseño en negro"
+      },
+      {
+        "id": 72,
+        "nombre": "Dell Alienware AW3423DWF",
+        "precio": 999.99,
+        "stock": 12,
+        "categoria": "Monitores Gaming",
+        "marca": "Dell",
+        "caracteristicas": "34\" QD-OLED, 165Hz, 0.1ms, 3440x1440, HDR True Black 400",
+        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Monitor gaming ultrawide QD-OLED con colores vibrantes y negros perfectos"
+      },
+      {
+        "id": 73,
+        "nombre": "Creative Sound BlasterX AE-7",
+        "precio": 229.99,
+        "stock": 18,
+        "categoria": "Tarjetas de Sonido",
+        "marca": "Creative",
+        "caracteristicas": "DAC ESS SABRE 32-bit, Amplificador discreto, RGB",
+        "imagen": "https://images.unsplash.com/photo-1558098329-44e8e4d34785?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Tarjeta de sonido de alta fidelidad para gaming y audio profesional"
+      },
+      {
+        "id": 74,
+        "nombre": "Arctic P12 PWM PST Value Pack",
+        "precio": 39.99,
+        "stock": 42,
+        "categoria": "Ventiladores",
+        "marca": "Arctic",
+        "caracteristicas": "Pack 5 ventiladores 120mm, PWM PST, Silenciosos",
+        "imagen": "https://images.unsplash.com/photo-1587202372824-85da760e6d13?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Pack económico de ventiladores de alto rendimiento con tecnología PST"
+      },
+      {
+        "id": 75,
+        "nombre": "LG 27GP850-B",
+        "precio": 449.99,
+        "stock": 20,
+        "categoria": "Monitores Gaming",
+        "marca": "LG",
+        "caracteristicas": "27\" IPS, 165Hz (OC 180Hz), 1ms, QHD, HDR400",
+        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Monitor gaming profesional con panel Nano IPS y tiempo de respuesta ultrarrápido"
+      },
+      {
+        "id": 76,
+        "nombre": "Fractal Design Torrent RGB Black",
+        "precio": 189.99,
+        "stock": 15,
+        "categoria": "Cajas PC",
+        "marca": "Fractal Design",
+        "caracteristicas": "E-ATX, 2x180mm + 3x140mm ventiladores, RGB",
+        "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Caja de alto flujo de aire con ventiladores de gran tamaño incluidos"
+      },
+      {
+        "id": 77,
+        "nombre": "ASUS ROG Strix B650-F Gaming WiFi",
+        "precio": 269.99,
+        "stock": 28,
+        "categoria": "Placas Base",
+        "marca": "ASUS",
+        "caracteristicas": "AM5, DDR5, PCIe 5.0, WiFi 6E",
+        "imagen": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=2670&auto=format&fit=crop",
+        "descripcion": "Placa base gaming con características premium para procesadores AMD Ryzen 7000"
+      },
+      {
+        "id": 78,
+        "nombre": "Crucial T700 2TB",
+        "precio": 249.99,
+        "stock": 32,
+        "categoria": "Almacenamiento",
+        "marca": "Crucial",
+        "caracteristicas": "PCIe Gen5, 12400MB/s lectura, Disipador",
+        "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "SSD NVMe de última generación con velocidades extremas"
+      },
+      {
+        "id": 79,
+        "nombre": "Logitech G915 TKL Lightspeed",
+        "precio": 229.99,
+        "stock": 22,
+        "categoria": "Teclados Gaming",
+        "marca": "Logitech",
+        "caracteristicas": "Wireless, Switches GL Tactile, RGB",
+        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Teclado mecánico inalámbrico ultradelgado con switches de bajo perfil"
+      },
+      {
+        "id": 80,
+        "nombre": "be quiet! Silent Wings 4",
+        "precio": 24.99,
+        "stock": 45,
+        "categoria": "Ventiladores",
+        "marca": "be quiet!",
+        "caracteristicas": "140mm, PWM, 1600 RPM, Ultrasilencioso",
+        "imagen": "https://images.unsplash.com/photo-1587202372824-85da760e6d13?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Ventilador premium con tecnología de reducción de ruido avanzada"
+      },
+      {
+        "id": 81,
+        "nombre": "ASUS ROG Strix Scope RX",
+        "precio": 159.99,
+        "stock": 28,
+        "categoria": "Teclados Gaming",
+        "marca": "ASUS",
+        "caracteristicas": "Switches RX Red Optical, RGB, Aluminio",
+        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Teclado mecánico óptico con switches RX Red y construcción premium"
+      },
+      {
+        "id": 82,
+        "nombre": "Corsair MP600 Pro XT 2TB",
+        "precio": 219.99,
+        "stock": 35,
+        "categoria": "Almacenamiento",
+        "marca": "Corsair",
+        "caracteristicas": "PCIe Gen4, 7100MB/s lectura, Disipador",
+        "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "SSD NVMe de alto rendimiento con disipador integrado"
+      },
+      {
+        "id": 83,
+        "nombre": "Phanteks Eclipse G360A",
+        "precio": 89.99,
+        "stock": 40,
+        "categoria": "Cajas PC",
+        "marca": "Phanteks",
+        "caracteristicas": "ATX, 3 ventiladores D-RGB, Panel mallado",
+        "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Caja gaming con excelente relación calidad-precio y buen flujo de aire"
+      },
+      {
+        "id": 84,
+        "nombre": "ASUS TUF Gaming VG27AQ",
+        "precio": 399.99,
+        "stock": 25,
+        "categoria": "Monitores Gaming",
+        "marca": "ASUS",
+        "caracteristicas": "27\" IPS, 165Hz, 1ms, QHD, HDR10",
+        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Monitor gaming con tecnología ELMB-SYNC y G-SYNC Compatible"
+      },
+      {
+        "id": 85,
+        "nombre": "Cooler Master MM712",
+        "precio": 59.99,
+        "stock": 50,
+        "categoria": "Ratones Gaming",
+        "marca": "Cooler Master",
+        "caracteristicas": "Wireless/Wired, 19000 DPI, 59g",
+        "imagen": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=2730&auto=format&fit=crop",
+        "descripcion": "Ratón gaming ligero con doble conectividad"
+      },
+      {
+        "id": 86,
+        "nombre": "Beyerdynamic DT 990 Pro",
+        "precio": 159.99,
+        "stock": 28,
+        "categoria": "Auriculares",
+        "marca": "Beyerdynamic",
+        "caracteristicas": "250 ohm, Abiertos, Cable espiral",
+        "imagen": "https://images.unsplash.com/photo-1618066296858-06ee5f8bef3f?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Auriculares profesionales de estudio con sonido natural y espacioso"
+      },
+      {
+        "id": 87,
+        "nombre": "Lian Li UNI FAN SL120",
+        "precio": 89.99,
+        "stock": 42,
+        "categoria": "Ventiladores",
+        "marca": "Lian Li",
+        "caracteristicas": "Pack 3, RGB, Interconectables",
+        "imagen": "https://images.unsplash.com/photo-1587202372824-85da760e6d13?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Ventiladores RGB con sistema de interconexión único y control inteligente"
+      },
+      {
+        "id": 88,
+        "nombre": "ASUS ROG Swift PG279QM",
+        "precio": 849.99,
+        "stock": 15,
+        "categoria": "Monitores Gaming",
+        "marca": "ASUS",
+        "caracteristicas": "27\", 240Hz, 1ms, IPS, G-SYNC",
+        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Monitor gaming profesional con G-SYNC y HDR"
+      },
+      {
+        "id": 89,
+        "nombre": "Fractal Design Ion+ 860P",
+        "precio": 149.99,
+        "stock": 33,
+        "categoria": "Fuentes de Alimentación",
+        "marca": "Fractal Design",
+        "caracteristicas": "860W, 80+ Platinum, Modular",
+        "imagen": "https://images.unsplash.com/photo-1587202372412-1c0abe6b0cdd?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Fuente de alimentación premium con certificación Platinum"
+      },
+      {
+        "id": 90,
+        "nombre": "NZXT Kraken Z73",
+        "precio": 299.99,
+        "stock": 18,
+        "categoria": "Refrigeración",
+        "marca": "NZXT",
+        "caracteristicas": "360mm, Pantalla LCD, RGB",
+        "imagen": "https://images.unsplash.com/photo-1587202372299-dd2f8e6f0917?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Refrigeración líquida con pantalla LCD personalizable"
+      },
+      {
+        "id": 91,
+        "nombre": "MSI MAG X670E TOMAHAWK",
+        "precio": 289.99,
+        "stock": 25,
+        "categoria": "Placas Base",
+        "marca": "MSI",
+        "caracteristicas": "AM5, DDR5, PCIe 5.0, WiFi 6E",
+        "imagen": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=2670&auto=format&fit=crop",
+        "descripcion": "Placa base gaming con características de gama alta para AMD"
+      },
+      {
+        "id": 92,
+        "nombre": "Crucial P5 Plus 2TB",
+        "precio": 179.99,
+        "stock": 40,
+        "categoria": "Almacenamiento",
+        "marca": "Crucial",
+        "caracteristicas": "PCIe 4.0, 6600MB/s lectura",
+        "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "SSD NVMe de alto rendimiento con velocidades PCIe 4.0"
+      },
+      {
+        "id": 93,
+        "nombre": "Shure SM7B",
+        "precio": 399.99,
+        "stock": 12,
+        "categoria": "Micrófonos",
+        "marca": "Shure",
+        "caracteristicas": "Dinámico, Cardioide, XLR",
+        "imagen": "https://images.unsplash.com/photo-1583593711082-aaa381feb2f3?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Micrófono profesional para broadcasting y estudio"
+      },
+      {
+        "id": 94,
+        "nombre": "Phanteks Evolv X",
+        "precio": 219.99,
+        "stock": 22,
+        "categoria": "Cajas PC",
+        "marca": "Phanteks",
+        "caracteristicas": "E-ATX, RGB, Dual System",
+        "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Caja premium con soporte para doble sistema"
+      },
+      {
+        "id": 95,
+        "nombre": "Creative Sound Blaster GC7",
+        "precio": 139.99,
+        "stock": 28,
+        "categoria": "Tarjetas de Sonido",
+        "marca": "Creative",
+        "caracteristicas": "DAC/AMP, RGB, Super X-Fi",
+        "imagen": "https://images.unsplash.com/photo-1558098329-44e8e4d34785?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "DAC/AMP gaming con tecnología Super X-Fi"
+      },
+      {
+        "id": 96,
+        "nombre": "Gigabyte M32UC",
+        "precio": 649.99,
+        "stock": 15,
+        "categoria": "Monitores Gaming",
+        "marca": "Gigabyte",
+        "caracteristicas": "32\", 4K, 144Hz, VA, FreeSync Premium Pro",
+        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Monitor gaming 4K con alto refresco y excelente calidad de imagen"
+      },
+      {
+        "id": 97,
+        "nombre": "Thermaltake Toughpower GF3",
+        "precio": 189.99,
+        "stock": 28,
+        "categoria": "Fuentes de Alimentación",
+        "marca": "Thermaltake",
+        "caracteristicas": "1000W, 80+ Gold, ATX 3.0, PCIe 5.0",
+        "imagen": "https://images.unsplash.com/photo-1587202372412-1c0abe6b0cdd?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Fuente de alimentación con soporte para GPUs de última generación"
+      },
+      {
+        "id": 98,
+        "nombre": "Rode PSA1+",
+        "precio": 129.99,
+        "stock": 22,
+        "categoria": "Accesorios",
+        "marca": "Rode",
+        "caracteristicas": "Brazo articulado profesional, Gestión de cables",
+        "imagen": "https://images.unsplash.com/photo-1583593711082-aaa381feb2f3?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Brazo para micrófono de alta calidad con sistema de gestión de cables"
+      },
+      {
+        "id": 99,
+        "nombre": "Logitech StreamCam",
+        "precio": 159.99,
+        "stock": 35,
+        "categoria": "Webcams",
+        "marca": "Logitech",
+        "caracteristicas": "1080p60, USB-C, AI Autofocus",
+        "imagen": "https://images.unsplash.com/photo-1596382940920-9f8e2011f07c?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Webcam premium para streaming y videoconferencias"
+      },
+      {
+        "id": 100,
+        "nombre": "Elgato Wave:3",
+        "precio": 159.99,
+        "stock": 18,
+        "categoria": "Micrófonos",
+        "marca": "Elgato",
+        "caracteristicas": "USB, Cardioide, 96kHz/24-bit",
+        "imagen": "https://images.unsplash.com/photo-1583593711082-aaa381feb2f3?q=80&w=2574&auto=format&fit=crop",
+        "descripcion": "Micrófono USB de calidad profesional para streaming y podcasting"
+      }
+    ],
+    "categorias": [
+      {
+        "id": 1,
+        "nombre": "Cajas PC",
+        "descripcion": "Cajas y torres para PC gaming y workstation"
+      },
+      {
+        "id": 2,
+        "nombre": "Placas Base",
+        "descripcion": "Placas base para Intel y AMD"
+      },
+      {
+        "id": 3,
+        "nombre": "Ratones Gaming",
+        "descripcion": "Ratones de alta precisión para gaming"
+      },
+      {
+        "id": 4,
+        "nombre": "Procesadores",
+        "descripcion": "CPUs Intel y AMD de última generación"
+      },
+      {
+        "id": 5,
+        "nombre": "Memorias RAM",
+        "descripcion": "Memorias DDR4 y DDR5 para gaming"
+      },
+      {
+        "id": 6,
+        "nombre": "Tarjetas Gráficas",
+        "descripcion": "GPUs NVIDIA y AMD de última generación"
+      },
+      {
+        "id": 7,
+        "nombre": "Monitores Gaming",
+        "descripcion": "Monitores de alta frecuencia y resolución"
+      },
+      {
+        "id": 8,
+        "nombre": "Teclados Gaming",
+        "descripcion": "Teclados mecánicos y membrana para gaming"
+      },
+      {
+        "id": 9,
+        "nombre": "Refrigeración",
+        "descripcion": "Sistemas de refrigeración líquida y aire"
+      },
+      {
+        "id": 10,
+        "nombre": "Almacenamiento",
+        "descripcion": "SSDs y HDDs para almacenamiento"
+      },
+      {
+        "id": 11,
+        "nombre": "Ventiladores",
+        "descripcion": "Ventiladores y sistemas de refrigeración por aire"
+      },
+      {
+        "id": 12,
+        "nombre": "Auriculares",
+        "descripcion": "Auriculares profesionales y de alta fidelidad"
+      },
+      {
+        "id": 13,
+        "nombre": "Micrófonos",
+        "descripcion": "Micrófonos para streaming y producción de audio"
+      }
+    ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Lázaro Benitez", 
+      "correo": "bautista42@aguilera.com",
+      "mensaje": "He comprado un monitor ultrawide en MiauThing y es una locura. ¡Qué calidad!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/1.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 2,
+      "nombre": "Lidia Palomar Pou",
+      "correo": "angladamaximo@arnal.com",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/2.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 3,
+      "nombre": "Miguel Gracia Cañete",
+      "correo": "manolorequena@hotmail.com",
+      "mensaje": "He comprado un monitor ultrawide en MiauThing y es una locura. ¡Qué calidad!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/3.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 4,
+      "nombre": "Urbano Verdú Quintanilla",
+      "correo": "armandoariza@chacon.org",
+      "mensaje": "Me encanta que MiauThing tenga opiniones reales y fotos de los productos. ¡Muy top!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/4.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 5,
+      "nombre": "Roberta Soriano Cárdenas",
+      "correo": "angelinachamorro@conesa-miguel.es",
+      "mensaje": "Compré todo mi PC en MiauThing. Buen precio, entrega rápida y todo perfecto.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/5.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 6,
+      "nombre": "David Ros-Linares",
+      "correo": "candido78@saavedra.es",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/6.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 7,
+      "nombre": "Purificación Sanjuan Asensio",
+      "correo": "severinovalencia@yahoo.com",
+      "mensaje": "He comprado un monitor ultrawide en MiauThing y es una locura. ¡Qué calidad!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/7.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 8,
+      "nombre": "Laura Echevarría Font",
+      "correo": "tenareina@pou.es",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/8.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 9,
+      "nombre": "Florentina Caro-Arce",
+      "correo": "donatopazos@hotmail.com",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/9.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 10,
+      "nombre": "Enrique Ayala Poza",
+      "correo": "juan-francisco77@ruano.net",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/10.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 11,
+      "nombre": "Alma Somoza Valero",
+      "correo": "nidia95@villalobos.org",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/11.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 12,
+      "nombre": "Macario Gibert",
+      "correo": "rosadocristina@hierro-heras.org",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/12.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 13,
+      "nombre": "Olivia Saavedra Velasco",
+      "correo": "fnoriega@pascual.es",
+      "mensaje": "Me encanta que MiauThing tenga opiniones reales y fotos de los productos. ¡Muy top!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/13.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 14,
+      "nombre": "Reyes Gimeno Quiroga",
+      "correo": "custodio13@torre-roldan.org",
+      "mensaje": "Compré todo mi PC en MiauThing. Buen precio, entrega rápida y todo perfecto.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/14.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 15,
+      "nombre": "Reynaldo Jáuregui Oliva",
+      "correo": "maria-doloresbenito@gmail.com",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/15.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 16,
+      "nombre": "Palmira Pereira Lara",
+      "correo": "amando75@gmail.com",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/16.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 17,
+      "nombre": "Juanita Mendoza Bertrán",
+      "correo": "danielamiralles@losada-cal.es",
+      "mensaje": "El sistema de puntos de MiauThing es lo mejor. Ya tengo descuento para mi próxima compra.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/17.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 18,
+      "nombre": "Lidia de Jimenez",
+      "correo": "noriegamaria-carmen@sala-bastida.es",
+      "mensaje": "¡MiauThing me salvó la vida! Encontré mi gráfica ideal y llegó al día siguiente.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/18.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 19,
+      "nombre": "Adriana del Marin",
+      "correo": "georginagaray@yahoo.com",
+      "mensaje": "Hice una devolución y el servicio fue rapidísimo. MiauThing se preocupa por sus clientes.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/19.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 20,
+      "nombre": "Tito Cabeza Jordá",
+      "correo": "maria-teresa49@hotmail.com",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/20.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 21,
+      "nombre": "Amílcar Galo Vicente Montesinos",
+      "correo": "rojasliliana@hotmail.com",
+      "mensaje": "Hice una devolución y el servicio fue rapidísimo. MiauThing se preocupa por sus clientes.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/21.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 22,
+      "nombre": "Primitiva Mora Villalobos",
+      "correo": "teosaura@castilla.com",
+      "mensaje": "¡MiauThing me salvó la vida! Encontré mi gráfica ideal y llegó al día siguiente.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/22.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 23,
+      "nombre": "Bernarda Solé Ayllón",
+      "correo": "martinleoncio@yahoo.com",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/23.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 24,
+      "nombre": "Celestina de Chaparro",
+      "correo": "emelinaaranda@rovira.es",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/24.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 25,
+      "nombre": "Noelia Marisa Moliner Tapia",
+      "correo": "ramonochoa@calderon.com",
+      "mensaje": "¡MiauThing me salvó la vida! Encontré mi gráfica ideal y llegó al día siguiente.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/25.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 26,
+      "nombre": "Saturnino Cardona",
+      "correo": "bcalleja@hotmail.com",
+      "mensaje": "¡MiauThing me salvó la vida! Encontré mi gráfica ideal y llegó al día siguiente.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/26.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 27,
+      "nombre": "Consuela Baquero Quirós",
+      "correo": "tudelaricardo@fuster.es",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/27.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 28,
+      "nombre": "Anna Ruiz Díaz",
+      "correo": "eliseo43@gmail.com",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/28.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 29,
+      "nombre": "Elba Catalá",
+      "correo": "casasmaria-teresa@cuenca.org",
+      "mensaje": "Las fichas técnicas de los productos en MiauThing son súper detalladas. ¡Así da gusto!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/29.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 30,
+      "nombre": "Samanta Dávila Martin",
+      "correo": "alemanyguadalupe@gmail.com",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/30.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 31,
+      "nombre": "Adoración de Alberola",
+      "correo": "carmelita53@alvarez.net",
+      "mensaje": "Las fichas técnicas de los productos en MiauThing son súper detalladas. ¡Así da gusto!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/31.jpg",
+      "fecha_registro": "2025-04-23"
+    }
+  ]
+}

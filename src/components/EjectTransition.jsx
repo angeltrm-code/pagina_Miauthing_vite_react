@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./EjectTransition.css";
+import "../styles/EjectTransition.css";
 
 const EjectTransition = ({ isActive, onTransitionEnd }) => {
   const [currentNumber, setCurrentNumber] = useState(3);

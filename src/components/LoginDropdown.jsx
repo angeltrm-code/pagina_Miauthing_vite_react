@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./LoginDropdown.css";
+import "../styles/LoginDropdown.css";
 import LottieTransition from "./LottieTransition";
 
 const LoginDropdown = ({ isOpen, onClose }) => {

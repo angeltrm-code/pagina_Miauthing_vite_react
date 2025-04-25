@@ -15,13 +15,15 @@ const Productos = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [productosRes, categoriasRes] = await Promise.all([
-          fetch('http://localhost:3000/productos'),
-          fetch('http://localhost:3000/categorias')
-        ]);
-        
+        const productosRes = await fetch('http://localhost:3000/productos');
         const productosData = await productosRes.json();
-        const categoriasData = await categoriasRes.json();
+        
+        // Extraer categorías únicas de los productos
+        const categoriasUnicas = [...new Set(productosData.map(producto => producto.categoria))];
+        const categoriasData = categoriasUnicas.map((categoria, index) => ({
+          id: index + 1,
+          nombre: categoria
+        }));
         
         setProductos(productosData);
         setCategorias(categoriasData);
@@ -48,9 +50,9 @@ const Productos = () => {
     paginaActual * productosPorPagina
   );
 
-  const handlePageChange = (event) => {
-    const newPage = parseInt(event.target.value);
-    setPaginaActual(newPage);
+  const cambiarPagina = (nuevaPagina) => {
+    setPaginaActual(nuevaPagina);
+    window.scrollTo(0, 0);
   };
 
   if (loading) {
@@ -62,75 +64,60 @@ const Productos = () => {
   }
 
   return (
-    <main className="main-productos">
-      <div className="productos-container">
-        <h1>Nuestros Productos</h1>
-        <div className="filtros">
-          <input
-            type="text"
-            placeholder="Buscar productos..."
-            value={busqueda}
-            onChange={(e) => setBusqueda(e.target.value)}
-            className="busqueda-input"
-          />
-          
-          <select
-            value={categoriaSeleccionada}
-            onChange={(e) => setCategoriaSeleccionada(e.target.value)}
-            className="categoria-select"
-          >
-            <option value="">Todas las categorías</option>
-            {categorias.map(categoria => (
-              <option key={categoria.id} value={categoria.nombre}>
-                {categoria.nombre}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="productos-grid">
-          {productosPaginados.map(producto => (
-            <ProductCard key={producto.id} producto={producto} />
+    <div className="productos-container">
+      <div className="filtros">
+        <select
+          value={categoriaSeleccionada}
+          onChange={(e) => {
+            setCategoriaSeleccionada(e.target.value);
+            setPaginaActual(1);
+          }}
+        >
+          <option value="">Todas las categorías</option>
+          {categorias.map(categoria => (
+            <option key={categoria.id} value={categoria.nombre}>
+              {categoria.nombre}
+            </option>
           ))}
-        </div>
+        </select>
 
-        {totalPaginas > 1 && (
-          <div className="paginacion">
-            <button
-              onClick={() => setPaginaActual(p => Math.max(1, p - 1))}
-              disabled={paginaActual === 1}
-            >
-              Anterior
-            </button>
-            
-            <div className="paginacion-info">
-              <div className="pagina-selector">
-                <label htmlFor="pagina-select">Ir a página:</label>
-                <select
-                  id="pagina-select"
-                  value={paginaActual}
-                  onChange={handlePageChange}
-                >
-                  {[...Array(totalPaginas)].map((_, i) => (
-                    <option key={i + 1} value={i + 1}>
-                      {i + 1}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <span>de {totalPaginas}</span>
-            </div>
-
-            <button
-              onClick={() => setPaginaActual(p => Math.min(totalPaginas, p + 1))}
-              disabled={paginaActual === totalPaginas}
-            >
-              Siguiente
-            </button>
-          </div>
-        )}
+        <input
+          type="text"
+          placeholder="Buscar productos..."
+          value={busqueda}
+          onChange={(e) => {
+            setBusqueda(e.target.value);
+            setPaginaActual(1);
+          }}
+        />
       </div>
-    </main>
+
+      <div className="productos-grid">
+        {productosPaginados.map(producto => (
+          <ProductCard key={producto.id} producto={producto} />
+        ))}
+      </div>
+
+      <div className="paginacion">
+        <button
+          onClick={() => cambiarPagina(paginaActual - 1)}
+          disabled={paginaActual === 1}
+        >
+          Anterior
+        </button>
+        
+        <span>
+          Página {paginaActual} de {totalPaginas}
+        </span>
+        
+        <button
+          onClick={() => cambiarPagina(paginaActual + 1)}
+          disabled={paginaActual === totalPaginas}
+        >
+          Siguiente
+        </button>
+      </div>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import animationData from "../animations/cat-transition-login.json";
-import "./LottieTransition.css";
+import "../styles/LottieTransition.css";
 
 const LottieTransition = ({ isActive, onTransitionEnd }) => {
   const playerRef = useRef(null);

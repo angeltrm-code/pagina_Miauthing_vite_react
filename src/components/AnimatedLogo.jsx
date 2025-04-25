@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useLocation } from "react-router-dom";
 import animationData from "../animations/bad-cat-logo.json";
-import "./AnimatedLogo.css";
+import "../styles/AnimatedLogo.css";
 
 const AnimatedLogo = () => {
   const playerRef = useRef(null);

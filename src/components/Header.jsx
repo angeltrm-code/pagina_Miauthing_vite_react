@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./Header.css";
+import "../styles/Header.css";
 import LoginDropdown from "./LoginDropdown";
 import EjectTransition from "./EjectTransition";
 import AnimatedLogo from "./AnimatedLogo";
