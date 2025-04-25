@@ -4,28 +4,28 @@ import "../styles/Inicio.css";
 function Inicio() {
   const equipo = [
     {
-      nombre: "Ana García",
-      cargo: "CEO & Fundadora",
-      descripcion: "Apasionada por la tecnología y el gaming, con más de 10 años de experiencia en el sector.",
-      imagen: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ana&backgroundColor=b6e3f4"
+      nombre: "Angeltrm-code",
+      cargo: "CEO & Fundador",
+      descripcion: "Apasionado de los gatos, la programación y el diseño web. Liderando la innovación en MiauThing con creatividad y visión única.",
+      imagen: "/src/images/programmerNena.jpg"
     },
     {
       nombre: "Carlos Rodríguez",
       cargo: "CTO",
-      descripcion: "Experto en desarrollo web y sistemas, liderando la innovación tecnológica de MiauThing.",
-      imagen: "https://api.dicebear.com/7.x/avataaars/svg?seed=Carlos&backgroundColor=d1d4f9"
+      descripcion: "Arquitecto del motor que da vida a MiauThing. Apasionado de las soluciones elegantes, el código limpio y los desafíos técnicos. Siempre con un gato cerca del teclado",
+      imagen: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500&auto=format&fit=crop&q=60"
     },
     {
       nombre: "Laura Martínez",
       cargo: "Directora de Marketing",
       descripcion: "Especialista en marketing digital y estrategias de crecimiento para la comunidad gaming.",
-      imagen: "https://api.dicebear.com/7.x/avataaars/svg?seed=Laura&backgroundColor=c0aede"
+      imagen: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=60"
     },
     {
-      nombre: "David Sánchez",
+      nombre: "Alex Torres",
       cargo: "Director de Soporte",
-      descripcion: "Comprometido con la excelencia en el servicio al cliente y la satisfacción del usuario.",
-      imagen: "https://api.dicebear.com/7.x/avataaars/svg?seed=David&backgroundColor=ffdfbf"
+      descripcion: "Gamer de corazón y experto en experiencia de usuario. Dedicado a hacer que cada interacción con MiauThing sea excepcional y memorable.",
+      imagen: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&auto=format&fit=crop&q=60"
     }
   ];
 

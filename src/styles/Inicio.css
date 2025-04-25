@@ -10,6 +10,17 @@
   --accent-color: #ff4757;
   --container-bg: rgba(30, 32, 40, 0.75);
   --backdrop-blur: 10px;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --border-radius-lg: 20px;
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --content-max-width: 800px;
+  --font-size-h1: 4rem;
+  --font-size-body: 1.8rem;
+  --font-size-h3: 1.2rem;
+  --font-size-xs: 0.8rem;
+  --spacing-md: 1.5rem;
+  --line-height: 1.6;
 }
 
 /* Reset y estilos base */
@@ -70,37 +81,35 @@
 /* Hero Section */
 .hero-section {
   position: relative;
-  z-index: 1;
-  width: 100%;
-  min-height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem 2rem;
+  background: var(--gradient-overlay);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-xl);
 }
 
 .hero-content {
-  max-width: 800px;
-  padding: 2rem;
-  animation: fadeIn 1s ease-out;
+  max-width: var(--content-max-width);
+  z-index: 2;
 }
 
-.hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-title {
+  font-size: var(--font-size-h1);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.hero-subtitle {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+.hero-description {
+  font-size: var(--font-size-body);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height);
 }
 
 /* Servicios Section */
@@ -143,58 +152,55 @@
 
 /* Equipo Section */
 .equipo-section {
-  position: relative;
-  z-index: 1;
-  padding: 4rem 0;
-  width: 100%;
+  padding: var(--spacing-xl) 0;
 }
 
 .equipo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
 }
 
-.equipo-card {
+.miembro-card {
   background: var(--card-bg);
-  border-radius: 15px;
-  padding: 2.5rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  animation: fadeIn 0.8s ease-out forwards;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: transform var(--transition-speed) var(--transition-timing);
 }
 
-.equipo-card:hover {
-  background: var(--card-hover);
+.miembro-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
-.equipo-imagen {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
+.miembro-imagen {
+  width: 100%;
+  height: 350px;
   object-fit: cover;
-  border: 4px solid var(--primary-color);
-  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+  object-position: center top;
 }
 
-.equipo-cargo {
+.miembro-info {
+  padding: var(--spacing-md);
+}
+
+.miembro-nombre {
+  font-size: var(--font-size-h3);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.miembro-cargo {
   color: var(--primary-color);
-  font-size: 1.2rem;
-  margin: 0.8rem 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
+  font-size: var(--font-size-body);
+  margin-bottom: var(--spacing-xs);
 }
 
-.equipo-descripcion {
+.miembro-descripcion {
   color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height);
 }
 
 /* CTA Section */
@@ -278,12 +284,9 @@ h2 {
     margin: 1rem auto;
   }
 
-  .hero-content h1 {
-    font-size: 2.8rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.4rem;
+  .hero-section {
+    height: 70vh;
+    padding: var(--spacing-lg);
   }
 
   .servicios-grid,
@@ -305,9 +308,8 @@ h2 {
     margin: 0.5rem 0;
   }
 
-  .equipo-imagen {
-    width: 150px;
-    height: 150px;
+  .miembro-imagen {
+    height: 300px;
   }
 }
 
@@ -325,6 +327,6 @@ h2 {
 
 .hero-content,
 .servicio-card,
-.equipo-card {
+.miembro-card {
   animation: fadeIn 0.8s ease-out forwards;
 }

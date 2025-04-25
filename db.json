@@ -8,7 +8,7 @@
       "categoria": "Cajas PC",
       "marca": "Tempest",
       "caracteristicas": "Cristal templado, 4 ventiladores ARGB incluidos, Panel frontal mesh",
-      "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?q=80&w=2531&auto=format&fit=crop",
       "descripcion": "Caja gaming con excelente flujo de aire, panel lateral de cristal templado y 4 ventiladores RGB incluidos"
     },
     {
@@ -19,7 +19,7 @@
       "categoria": "Placas Base",
       "marca": "MSI",
       "caracteristicas": "Socket AM5, DDR5, PCIe 5.0, WiFi 6E",
-      "imagen": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=2670&auto=format&fit=crop",
+      "imagen": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop",
       "descripcion": "Placa base gaming con WiFi 6E y soporte para procesadores AMD Ryzen serie 7000"
     },
     {
@@ -30,7 +30,7 @@
       "categoria": "Ratones Gaming",
       "marca": "Logitech",
       "caracteristicas": "Sensor HERO 25K, Ultraligero 63g, Wireless",
-      "imagen": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=2730&auto=format&fit=crop",
+      "imagen": "https://images.unsplash.com/photo-1527814050087-3793815479db?q=80&w=2728&auto=format&fit=crop",
       "descripcion": "Ratón gaming profesional ultraligero con tecnología LIGHTSPEED"
     },
     {
@@ -41,7 +41,7 @@
       "categoria": "Procesadores",
       "marca": "AMD",
       "caracteristicas": "8 núcleos, 16 hilos, 5.0GHz, Cache 3D V-Cache",
-      "imagen": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.unsplash.com/photo-1600348712270-5af9e3590f66?q=80&w=2670&auto=format&fit=crop",
       "descripcion": "Procesador gaming de alto rendimiento con tecnología 3D V-Cache"
     },
     {
@@ -52,7 +52,7 @@
       "categoria": "Memorias RAM",
       "marca": "Kingston",
       "caracteristicas": "DDR5, 6000MHz, CL36, Kit 2x16GB",
-      "imagen": "https://images.unsplash.com/photo-1562976540-1502c2145186?q=80&w=2669&auto=format&fit=crop",
+      "imagen": "https://images.unsplash.com/photo-1541029071515-84cc54f84dc5?q=80&w=2670&auto=format&fit=crop",
       "descripcion": "Memoria RAM DDR5 de alto rendimiento para gaming y productividad"
     },
     {
@@ -63,7 +63,7 @@
       "categoria": "Tarjetas Gráficas",
       "marca": "MSI",
       "caracteristicas": "12GB GDDR6X, Ray Tracing, DLSS 3",
-      "imagen": "https://images.unsplash.com/photo-1587202372616-b43abea06c2f?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=2670&auto=format&fit=crop",
       "descripcion": "Tarjeta gráfica de última generación con tecnología NVIDIA Ada Lovelace"
     },
     {
@@ -74,7 +74,7 @@
       "categoria": "Monitores Gaming",
       "marca": "Samsung",
       "caracteristicas": "Ultra Wide, 165Hz, 1ms, VA, FreeSync Premium",
-      "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=2670&auto=format&fit=crop",
       "descripcion": "Monitor gaming ultrapanorámico curvo con alta tasa de refresco"
     },
     {
@@ -85,7 +85,7 @@
       "categoria": "Cajas PC",
       "marca": "Corsair",
       "caracteristicas": "Panel mallado, USB-C, Cristal templado",
-      "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.pexels.com/photos/2225617/pexels-photo-2225617.jpeg",
       "descripcion": "Caja de alto rendimiento con excelente flujo de aire y gestión de cables"
     },
     {
@@ -96,7 +96,7 @@
       "categoria": "Teclados Gaming",
       "marca": "Razer",
       "caracteristicas": "Tenkeyless, Switch Verde, RGB Chroma",
-      "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.unsplash.com/photo-1595225476474-87563907a212?q=80&w=2574&auto=format&fit=crop",
       "descripcion": "Teclado mecánico compacto con switches Razer Green"
     },
     {
@@ -107,7 +107,7 @@
       "categoria": "Refrigeración",
       "marca": "Nfortec",
       "caracteristicas": "Refrigeración líquida 360mm, RGB",
-      "imagen": "https://images.unsplash.com/photo-1587202372299-dd2f8e6f0917?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?q=80&w=2531&auto=format&fit=crop",
       "descripcion": "Sistema de refrigeración líquida AIO con radiador de 360mm"
     },
     {
@@ -118,7 +118,7 @@
       "categoria": "Cajas PC",
       "marca": "NZXT",
       "caracteristicas": "Cristal templado, 2 ventiladores RGB",
-      "imagen": "https://images.unsplash.com/photo-1587202372161-587e5d7fd3cf?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.pexels.com/photos/3800795/pexels-photo-3800795.jpeg",
       "descripcion": "Caja gaming premium con diseño minimalista y excelente gestión de cables"
     },
     {
@@ -129,7 +129,7 @@
       "categoria": "Cajas PC",
       "marca": "Lian Li",
       "caracteristicas": "E-ATX, Cristal templado, RGB",
-      "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg",
       "descripcion": "Caja de alto rendimiento con diseño único y amplio espacio interior"
     },
     {
@@ -140,7 +140,7 @@
       "categoria": "Auriculares Gaming",
       "marca": "HyperX",
       "caracteristicas": "Sonido 7.1, Micrófono desmontable",
-      "imagen": "https://images.unsplash.com/photo-1618066296858-06ee5f8bef3f?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "descripcion": "Auriculares gaming profesionales con sonido envolvente"
     },
     {
@@ -151,7 +151,7 @@
       "categoria": "Cajas PC",
       "marca": "Corsair",
       "caracteristicas": "Panel frontal mallado, USB-C",
-      "imagen": "https://images.unsplash.com/photo-1587202372555-b7c6b7e5a8fc?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.pexels.com/photos/5474283/pexels-photo-5474283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "descripcion": "Caja ATX con excelente flujo de aire y diseño moderno"
     },
     {
@@ -162,7 +162,7 @@
       "categoria": "Webcams",
       "marca": "Logitech",
       "caracteristicas": "1080p, Micrófono dual",
-      "imagen": "https://images.unsplash.com/photo-1596382940920-9f8e2011f07c?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.pexels.com/photos/3201478/pexels-photo-3201478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "descripcion": "Webcam profesional Full HD con micrófonos duales"
     },
     {
@@ -184,7 +184,7 @@
       "categoria": "Auriculares Gaming",
       "marca": "Razer",
       "caracteristicas": "Wireless, THX Spatial Audio",
-      "imagen": "https://images.unsplash.com/photo-1618066296858-06ee5f8bef3f?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.pexels.com/photos/7679863/pexels-photo-7679863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "descripcion": "Auriculares gaming inalámbricos con sonido envolvente THX"
     },
     {
@@ -206,7 +206,7 @@
       "categoria": "Tarjetas Gráficas",
       "marca": "MSI",
       "caracteristicas": "12GB GDDR6X, Ray Tracing",
-      "imagen": "https://images.unsplash.com/photo-1587202372616-b43abea06c2f?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.pexels.com/photos/5474286/pexels-photo-5474286.jpeg",
       "descripcion": "Tarjeta gráfica de alto rendimiento con tecnología NVIDIA RTX"
     },
     {
@@ -228,7 +228,7 @@
       "categoria": "Monitores Gaming",
       "marca": "Samsung",
       "caracteristicas": "32\", 240Hz, 1440p, Curvo",
-      "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+      "imagen": "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg",
       "descripcion": "Monitor gaming curvo con alta tasa de refresco y resolución QHD"
     },
     {
@@ -283,7 +283,7 @@
         "categoria": "Tarjetas Gráficas",
         "marca": "ASUS",
         "caracteristicas": "8GB GDDR6X, Ray Tracing, DLSS 3",
-        "imagen": "https://images.unsplash.com/photo-1587202372616-b43abea06c2f?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/5474282/pexels-photo-5474282.jpeg",
         "descripcion": "Tarjeta gráfica gaming con tecnología NVIDIA RTX de última generación"
       },
       {
@@ -294,7 +294,7 @@
         "categoria": "Auriculares Gaming",
         "marca": "SteelSeries",
         "caracteristicas": "Hi-Fi, ANC, Base DAC, Dual Battery",
-        "imagen": "https://images.unsplash.com/photo-1618066296858-06ee5f8bef3f?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.unsplash.com/photo-1599669454699-248893623440?q=80&w=2670&auto=format&fit=crop",
         "descripcion": "Auriculares gaming premium con cancelación activa de ruido y sonido Hi-Fi"
       },
       {
@@ -327,7 +327,7 @@
         "categoria": "Monitores",
         "marca": "ASUS",
         "caracteristicas": "27\", 1440p, 75Hz, USB-C, CalMAN",
-        "imagen": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg",
         "descripcion": "Monitor profesional con calibración de color y conectividad USB-C"
       },
       {
@@ -338,7 +338,7 @@
         "categoria": "Impresoras",
         "marca": "Canon",
         "caracteristicas": "A3+, 8 tintas, WiFi, Profesional",
-        "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=2670&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/4792733/pexels-photo-4792733.jpeg",
         "descripcion": "Impresora fotográfica profesional con calidad de galería"
       },
       {
@@ -360,7 +360,7 @@
         "categoria": "Refrigeración",
         "marca": "ARCTIC",
         "caracteristicas": "360mm, VRM Fan, PWM",
-        "imagen": "https://images.unsplash.com/photo-1587202372299-dd2f8e6f0917?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/6913135/pexels-photo-6913135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "descripcion": "Sistema de refrigeración líquida con ventilador VRM integrado"
       },
       {
@@ -371,7 +371,7 @@
         "categoria": "Sillas Gaming",
         "marca": "Secretlab",
         "caracteristicas": "NEO Hybrid, 4D, Magnetic Memory Foam",
-        "imagen": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/7679865/pexels-photo-7679865.jpeg",
         "descripcion": "Silla gaming premium con tecnología de espuma con memoria"
       },
       {
@@ -382,7 +382,7 @@
         "categoria": "Sillas Gaming",
         "marca": "noblechairs",
         "caracteristicas": "Cuero PU, Lumbar ajustable, 150kg",
-        "imagen": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/7679866/pexels-photo-7679866.jpeg",
         "descripcion": "Silla gaming ergonómica con soporte lumbar integrado"
       },
       {
@@ -393,7 +393,7 @@
         "categoria": "Ratones Gaming",
         "marca": "Razer",
         "caracteristicas": "Sensor Focus Pro 30K, 63g, Wireless",
-        "imagen": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=2730&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/5499303/pexels-photo-5499303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "descripcion": "Ratón gaming profesional ultraligero con tecnología inalámbrica HyperSpeed"
       },
       {
@@ -426,7 +426,7 @@
         "categoria": "Impresoras",
         "marca": "HP",
         "caracteristicas": "Láser Color, WiFi, Duplex, 40ppm",
-        "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=2670&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/4792282/pexels-photo-4792282.jpeg",
         "descripcion": "Impresora láser color multifunción profesional con conectividad inalámbrica"
       },
       {
@@ -436,9 +436,9 @@
         "stock": 15,
         "categoria": "SSD",
         "marca": "Samsung",
-        "caracteristicas": "PCIe 4.0, 7450MB/s lectura, 6900MB/s escritura, Tecnología V-NAND, Controlador Samsung Pascal",
-        "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=2574&auto=format&fit=crop",
-        "descripcion": "SSD NVMe de última generación con velocidades extremas, ideal para gaming y creación de contenido. Incluye tecnología Dynamic Thermal Guard y gestión de caché inteligente."
+        "caracteristicas": "PCIe 4.0, 7450MB/s lectura, 6900MB/s escritura",
+        "imagen": "https://images.pexels.com/photos/5474731/pexels-photo-5474731.jpeg",
+        "descripcion": "SSD NVMe de última generación con velocidades extremas"
       },
       {
         "id": 41,
@@ -447,9 +447,9 @@
         "stock": 35,
         "categoria": "SSD",
         "marca": "Western Digital",
-        "caracteristicas": "PCIe Gen4, 7300MB/s lectura, Disipador, Game Mode 2.0, Tecnología nCache 4.0",
-        "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=2574&auto=format&fit=crop",
-        "descripcion": "SSD gaming de alto rendimiento con disipador térmico integrado. Optimizado para gaming con tecnología Game Mode 2.0 y monitorización en tiempo real."
+        "caracteristicas": "PCIe Gen4, 7300MB/s lectura, Disipador",
+        "imagen": "https://images.pexels.com/photos/5474732/pexels-photo-5474732.jpeg",
+        "descripcion": "SSD gaming de alto rendimiento con disipador térmico integrado"
       },
       {
         "id": 42,
@@ -459,7 +459,7 @@
         "categoria": "Ventiladores",
         "marca": "Noctua",
         "caracteristicas": "120mm, PWM, 2000 RPM, Pack 3 unidades",
-        "imagen": "https://images.unsplash.com/photo-1587202372824-85da760e6d13?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/6913139/pexels-photo-6913139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "descripcion": "Pack de ventiladores premium de 120mm con tecnología SSO2"
       },
       {
@@ -470,7 +470,7 @@
         "categoria": "Teclados Gaming",
         "marca": "Ducky",
         "caracteristicas": "Cherry MX Red, RGB, Hot-swap",
-        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/1772123/pexels-photo-1772123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "descripcion": "Teclado mecánico TKL de alta calidad con switches intercambiables"
       },
       {
@@ -492,7 +492,7 @@
         "categoria": "Tarjetas Gráficas",
         "marca": "ASUS",
         "caracteristicas": "8GB GDDR6X, DLSS 3, Ray Tracing",
-        "imagen": "https://images.unsplash.com/photo-1587202372616-b43abea06c2f?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/5474285/pexels-photo-5474285.jpeg",
         "descripcion": "Tarjeta gráfica gaming con tecnología NVIDIA Ada Lovelace"
       },
       {
@@ -536,7 +536,7 @@
         "categoria": "Teclados Gaming",
         "marca": "Keychron",
         "caracteristicas": "75%, Wireless, Aluminio, Hot-swap",
-        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/1772123/pexels-photo-1772123.jpeg",
         "descripcion": "Teclado mecánico personalizable de grado enthusiast"
       },
       {
@@ -580,7 +580,7 @@
         "categoria": "Sillas Gaming",
         "marca": "Secretlab",
         "caracteristicas": "Cuero NEO Hybrid, 4D, Lumbar",
-        "imagen": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.unsplash.com/photo-1611883653888-ed1013bab9ef?q=80&w=2670&auto=format&fit=crop",
         "descripcion": "Silla gaming premium con soporte lumbar adaptativo"
       },
       {
@@ -591,7 +591,7 @@
         "categoria": "Fuentes de Alimentación",
         "marca": "Corsair",
         "caracteristicas": "850W, 80+ Gold, Modular",
-        "imagen": "https://images.unsplash.com/photo-1587202372412-1c0abe6b0cdd?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/5474297/pexels-photo-5474297.jpeg",
         "descripcion": "Fuente de alimentación modular con alta eficiencia energética"
       },
       {
@@ -613,7 +613,7 @@
         "categoria": "Ventiladores",
         "marca": "Arctic",
         "caracteristicas": "Pack 5 ventiladores 120mm, PWM PST, Silenciosos",
-        "imagen": "https://images.unsplash.com/photo-1587202372824-85da760e6d13?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/6913136/pexels-photo-6913136.jpeg",
         "descripcion": "Pack económico de ventiladores de alto rendimiento con tecnología PST"
       },
       {
@@ -646,7 +646,7 @@
         "categoria": "Micrófonos",
         "marca": "Blue",
         "caracteristicas": "USB, 4 Patrones, LED RGB",
-        "imagen": "https://images.unsplash.com/photo-1583593711082-aaa381feb2f3?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/13929608/pexels-photo-13929608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "descripcion": "Micrófono USB profesional para streaming y podcasting"
       },
       {
@@ -701,7 +701,7 @@
         "categoria": "Teclados Gaming",
         "marca": "Razer",
         "caracteristicas": "Switches análogos, RGB, Reposamuñecas",
-        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg",
         "descripcion": "Teclado mecánico con switches análogos para control preciso"
       },
       {
@@ -712,7 +712,7 @@
         "categoria": "Teclados Gaming",
         "marca": "ASUS",
         "caracteristicas": "Switches ópticos RX, RGB Aura Sync",
-        "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg",
         "descripcion": "Teclado gaming con switches ópticos y diseño premium"
       },
       {
@@ -778,7 +778,7 @@
         "categoria": "Refrigeración",
         "marca": "Noctua",
         "caracteristicas": "Disipador de doble torre, 2x ventiladores NF-A15, Compatible AM5/LGA1700",
-        "imagen": "https://images.unsplash.com/photo-1587202372299-dd2f8e6f0917?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/6913141/pexels-photo-6913141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "descripcion": "Disipador de aire premium con rendimiento excepcional y diseño en negro"
       },
       {
@@ -811,7 +811,7 @@
         "categoria": "Ventiladores",
         "marca": "Arctic",
         "caracteristicas": "Pack 5 ventiladores 120mm, PWM PST, Silenciosos",
-        "imagen": "https://images.unsplash.com/photo-1587202372824-85da760e6d13?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/6913137/pexels-photo-6913137.jpeg",
         "descripcion": "Pack económico de ventiladores de alto rendimiento con tecnología PST"
       },
       {
@@ -877,7 +877,7 @@
         "categoria": "Ventiladores",
         "marca": "be quiet!",
         "caracteristicas": "140mm, PWM, 1600 RPM, Ultrasilencioso",
-        "imagen": "https://images.unsplash.com/photo-1587202372824-85da760e6d13?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/6913138/pexels-photo-6913138.jpeg",
         "descripcion": "Ventilador premium con tecnología de reducción de ruido avanzada"
       },
       {
@@ -976,7 +976,7 @@
         "categoria": "Fuentes de Alimentación",
         "marca": "Fractal Design",
         "caracteristicas": "860W, 80+ Platinum, Modular",
-        "imagen": "https://images.unsplash.com/photo-1587202372412-1c0abe6b0cdd?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/5474298/pexels-photo-5474298.jpeg",
         "descripcion": "Fuente de alimentación premium con certificación Platinum"
       },
       {
@@ -1020,7 +1020,7 @@
         "categoria": "Micrófonos",
         "marca": "Shure",
         "caracteristicas": "Dinámico, Cardioide, XLR",
-        "imagen": "https://images.unsplash.com/photo-1583593711082-aaa381feb2f3?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/13929610/pexels-photo-13929610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "descripcion": "Micrófono profesional para broadcasting y estudio"
       },
       {
@@ -1086,7 +1086,7 @@
         "categoria": "Webcams",
         "marca": "Logitech",
         "caracteristicas": "1080p60, USB-C, AI Autofocus",
-        "imagen": "https://images.unsplash.com/photo-1596382940920-9f8e2011f07c?q=80&w=2574&auto=format&fit=crop",
+        "imagen": "https://images.pexels.com/photos/3201477/pexels-photo-3201477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "descripcion": "Webcam premium para streaming y videoconferencias"
       },
       {

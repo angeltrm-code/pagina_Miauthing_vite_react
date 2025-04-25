@@ -8,24 +8,29 @@ import Comunidad from "./pages/Comunidad";
 import Soporte from "./pages/Soporte";
 import Contacto from "./pages/Contacto";
 import Dashboard from "./pages/Dashboard";
+import Cart from './components/Cart';
+import { CartProvider } from './context/CartContext';
 import "./App.css";
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/productos" element={<Productos />} />
-          <Route path="/comunidad" element={<Comunidad />} />
-          <Route path="/soporte" element={<Soporte />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <CartProvider>
+      <div className="app">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/productos" element={<Productos />} />
+            <Route path="/comunidad" element={<Comunidad />} />
+            <Route path="/soporte" element={<Soporte />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </main>
+        <Cart />
+        <Footer />
+      </div>
+    </CartProvider>
   );
 }
 

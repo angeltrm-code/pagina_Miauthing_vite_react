@@ -1,18 +1,23 @@
 .main-productos {
-  min-height: 100vh !important;
-  position: relative !important;
-  background-image: url("../assets/backgrounds/fondo-productos.jpg") !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 2rem !important;
-  font-family: "Doto", sans-serif !important;
-  font-weight: 600 !important;
-  flex: 1 !important;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  overflow-x: hidden;
+}
+
+.container-translucido {
+  width: 100%;
+  max-width: var(--content-max-width);
+  background: var(--bg-dark);
+  backdrop-filter: blur(var(--backdrop-blur));
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-speed) var(--transition-timing);
 }
 
 .main-productos::before {
@@ -24,8 +29,8 @@
   bottom: 0;
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.1)
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8)
   );
   z-index: 1;
 }
@@ -57,33 +62,37 @@
 }
 
 .productos-container {
-  padding: 2rem;
-  max-width: 1200px;
+  width: 100%;
+  max-width: var(--content-max-width);
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .filtros {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-lg);
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-md);
   align-items: center;
   flex-wrap: wrap;
 }
 
 .filtros select,
 .filtros input {
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: var(--spacing-sm);
+  background: var(--bg-light);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-body);
   min-width: 200px;
+  color: var(--text-dark);
 }
 
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
 }
 
 /* Estilos para la paginación */
@@ -91,45 +100,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  padding: 1rem;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
 }
 
 .paginacion button {
-  background-color: #ff0000;
-  color: white;
+  background: var(--primary-color);
+  color: var(--text-color);
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  font-weight: var(--font-weight-bold);
+  transition: background-color var(--transition-speed) var(--transition-timing);
 }
 
 .paginacion button:disabled {
-  background-color: #ccc;
+  background: var(--card-bg);
   cursor: not-allowed;
 }
 
 .paginacion button:hover:not(:disabled) {
-  background-color: #cc0000;
+  background: var(--accent-color);
 }
 
 .paginacion span {
-  font-weight: 600;
-  color: #333;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+  .main-productos {
+    padding: var(--spacing-md);
+  }
+
   .productos-container {
-    padding: 1rem;
+    padding: var(--spacing-sm);
   }
 
   .productos-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: var(--spacing-md);
   }
 
   .filtros {
@@ -147,10 +160,11 @@
 .loading,
 .error {
   text-align: center;
-  padding: 2rem;
-  font-size: 1.2rem;
+  padding: var(--spacing-lg);
+  font-size: var(--font-size-h3);
+  color: var(--text-color);
 }
 
 .error {
-  color: #ff0000;
+  color: var(--primary-color);
 }

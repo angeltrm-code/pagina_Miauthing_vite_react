@@ -1,9 +1,26 @@
 :root {
-  /* Colores */
+  /* Paleta de colores principal */
   --primary-color: #ff0000;
-  --text-color: #000000;
-  --background-color: #000000;
+  --secondary-color: #1e2028;
+  --accent-color: #cc0000;
+  
+  /* Colores de texto */
+  --text-color: #ffffff;
+  --text-secondary: #e1e1e1;
+  --text-dark: #333333;
+  
+  /* Colores de fondo */
+  --bg-color: #13141a;
+  --bg-light: rgba(255, 255, 255, 0.95);
+  --bg-dark: rgba(30, 32, 40, 0.75);
+  
+  /* Colores de tarjetas */
+  --card-bg: rgba(127, 127, 130, 0.8);
+  --card-hover: rgba(50, 53, 68, 0.9);
+  
+  /* Efectos y superposiciones */
   --overlay-color: rgba(0, 0, 0, 0.75);
+  --backdrop-blur: 10px;
   --gradient-overlay: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.7),
@@ -16,6 +33,7 @@
   --font-weight-bold: 700;
   --font-size-h1: 2.5rem;
   --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
   --font-size-body: 1.2rem;
   --font-size-button: 1.1rem;
   --line-height: 1.6;
@@ -29,12 +47,14 @@
 
   /* Bordes */
   --border-radius-sm: 8px;
+  --border-radius-md: 15px;
   --border-radius-lg: 30px;
   --border-width: 2px;
 
   /* Sombras */
   --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 5px 15px rgba(255, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
 
   /* Transiciones */
   --transition-speed: 0.3s;
@@ -45,7 +65,7 @@
   --footer-height: 5%;
   --main-padding-top: calc(var(--header-height) + 1rem);
   --main-padding-bottom: calc(var(--footer-height) + 1rem);
-  --content-max-width: 800px;
+  --content-max-width: 1400px;
 }
 
 /* Reset básico */
@@ -59,7 +79,7 @@
 body {
   font-family: var(--font-family);
   font-weight: var(--font-weight-normal);
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
   min-height: 100vh;
   overflow-x: hidden;
@@ -82,76 +102,80 @@ body {
   overflow: hidden;
 }
 
-.btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: var(--primary-color);
-  transition: width var(--transition-speed) var(--transition-timing);
-  z-index: -1;
-}
-
-.btn:hover::before {
-  width: 100%;
-}
-
 .btn:hover {
+  background: var(--primary-color);
   color: var(--text-color);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
-/* Estilos de contenedores */
-.container {
-  text-align: center;
-  max-width: var(--content-max-width);
-  position: relative;
-  z-index: 2;
-  background-color: var(--overlay-color);
+/* Contenedores translúcidos */
+.container-translucido {
+  background: var(--bg-dark);
+  backdrop-filter: blur(var(--backdrop-blur));
+  border-radius: var(--border-radius-md);
   padding: var(--spacing-lg);
-  border-radius: var(--border-radius-sm);
-  border: var(--border-width) solid var(--primary-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-speed) var(--transition-timing);
 }
 
-/* Estilos de títulos */
+.container-translucido:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+/* Tarjetas */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-speed) var(--transition-timing);
+}
+
+.card:hover {
+  background: var(--card-hover);
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
 h1 {
   font-size: var(--font-size-h1);
   margin-bottom: var(--spacing-md);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-normal);
-  color: var(--primary-color);
 }
 
 h2 {
   font-size: var(--font-size-h2);
   margin-bottom: var(--spacing-sm);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-normal);
-  color: var(--primary-color);
 }
 
-/* Estilos de párrafos */
-p {
-  font-size: var(--font-size-body);
-  line-height: var(--line-height);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-normal);
-  color: var(--primary-color);
+h3 {
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--spacing-xs);
 }
 
-/* Media queries */
+/* Responsive */
 @media (max-width: 768px) {
   :root {
     --font-size-h1: 2rem;
-    --font-size-body: 1.1rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.25rem;
+    --font-size-body: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
   }
 
-  .container {
+  .container-translucido {
     padding: var(--spacing-md);
-    margin: var(--spacing-sm);
   }
 }
 

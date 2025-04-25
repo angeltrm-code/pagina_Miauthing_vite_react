@@ -18,7 +18,6 @@ const Productos = () => {
         const productosRes = await fetch('http://localhost:3000/productos');
         const productosData = await productosRes.json();
         
-        // Extraer categorías únicas de los productos
         const categoriasUnicas = [...new Set(productosData.map(producto => producto.categoria))];
         const categoriasData = categoriasUnicas.map((categoria, index) => ({
           id: index + 1,
@@ -63,61 +62,74 @@ const Productos = () => {
     return <div className="error">Error: {error}</div>;
   }
 
+  const mainStyle = {
+    background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/backgrounds/fondo-productos.jpg') no-repeat center center fixed`,
+    backgroundSize: 'cover',
+    WebkitBackgroundSize: 'cover',
+    MozBackgroundSize: 'cover',
+    OBackgroundSize: 'cover',
+    backgroundAttachment: 'fixed'
+  };
+
   return (
-    <div className="productos-container">
-      <div className="filtros">
-        <select
-          value={categoriaSeleccionada}
-          onChange={(e) => {
-            setCategoriaSeleccionada(e.target.value);
-            setPaginaActual(1);
-          }}
-        >
-          <option value="">Todas las categorías</option>
-          {categorias.map(categoria => (
-            <option key={categoria.id} value={categoria.nombre}>
-              {categoria.nombre}
-            </option>
-          ))}
-        </select>
+    <main className="main-productos" style={mainStyle}>
+      <div className="container-translucido">
+        <div className="productos-container">
+          <div className="filtros">
+            <select
+              value={categoriaSeleccionada}
+              onChange={(e) => {
+                setCategoriaSeleccionada(e.target.value);
+                setPaginaActual(1);
+              }}
+            >
+              <option value="">Todas las categorías</option>
+              {categorias.map(categoria => (
+                <option key={categoria.id} value={categoria.nombre}>
+                  {categoria.nombre}
+                </option>
+              ))}
+            </select>
 
-        <input
-          type="text"
-          placeholder="Buscar productos..."
-          value={busqueda}
-          onChange={(e) => {
-            setBusqueda(e.target.value);
-            setPaginaActual(1);
-          }}
-        />
-      </div>
+            <input
+              type="text"
+              placeholder="Buscar productos..."
+              value={busqueda}
+              onChange={(e) => {
+                setBusqueda(e.target.value);
+                setPaginaActual(1);
+              }}
+            />
+          </div>
 
-      <div className="productos-grid">
-        {productosPaginados.map(producto => (
-          <ProductCard key={producto.id} producto={producto} />
-        ))}
-      </div>
+          <div className="productos-grid">
+            {productosPaginados.map(producto => (
+              <ProductCard key={producto.id} producto={producto} />
+            ))}
+          </div>
 
-      <div className="paginacion">
-        <button
-          onClick={() => cambiarPagina(paginaActual - 1)}
-          disabled={paginaActual === 1}
-        >
-          Anterior
-        </button>
-        
-        <span>
-          Página {paginaActual} de {totalPaginas}
-        </span>
-        
-        <button
-          onClick={() => cambiarPagina(paginaActual + 1)}
-          disabled={paginaActual === totalPaginas}
-        >
-          Siguiente
-        </button>
+          <div className="paginacion">
+            <button
+              onClick={() => cambiarPagina(paginaActual - 1)}
+              disabled={paginaActual === 1}
+            >
+              Anterior
+            </button>
+            
+            <span>
+              Página {paginaActual} de {totalPaginas}
+            </span>
+            
+            <button
+              onClick={() => cambiarPagina(paginaActual + 1)}
+              disabled={paginaActual === totalPaginas}
+            >
+              Siguiente
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 

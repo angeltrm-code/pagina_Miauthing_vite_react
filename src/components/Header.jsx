@@ -4,6 +4,7 @@ import "../styles/Header.css";
 import LoginDropdown from "./LoginDropdown";
 import EjectTransition from "./EjectTransition";
 import AnimatedLogo from "./AnimatedLogo";
+import { useCart } from '../context/CartContext';
 
 const Header = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -13,6 +14,8 @@ const Header = () => {
   const navigate = useNavigate();
   const isPrivateArea = location.pathname === "/dashboard";
   const ejectButtonRef = useRef(null);
+  const { toggleCart, getCartItemsCount } = useCart();
+  const itemCount = getCartItemsCount();
 
   const handleLogout = () => {
     if (ejectButtonRef.current) {
@@ -55,32 +58,32 @@ const Header = () => {
         </div>
 
         <nav className="nav">
-          <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+          <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
             Inicio
           </Link>
           <Link
             to="/productos"
-            className={location.pathname === "/productos" ? "active" : ""}
+            className={location.pathname === "/productos" ? "nav-link active" : "nav-link"}
           >
             Productos
           </Link>
           <Link
             to="/comunidad"
-            className={location.pathname === "/comunidad" ? "active" : ""}
+            className={location.pathname === "/comunidad" ? "nav-link active" : "nav-link"}
           >
             Comunidad
           </Link>
           <Link
             to="/soporte"
-            className={location.pathname === "/soporte" ? "active" : ""}
+            className={location.pathname === "/soporte" ? "nav-link active" : "nav-link"}
           >
             Soporte
           </Link>
           <Link
             to="/contacto"
-            className={location.pathname === "/contacto" ? "active" : ""}
+            className={location.pathname === "/contacto" ? "nav-link active" : "nav-link"}
           >
-            Contacto
+            Únete a nosotros
           </Link>
         </nav>
 
@@ -98,6 +101,12 @@ const Header = () => {
               Login
             </button>
           )}
+          <button className="cart-button" onClick={toggleCart}>
+            <span className="cart-icon">🛒</span>
+            {itemCount > 0 && (
+              <span className="cart-count">{itemCount}</span>
+            )}
+          </button>
         </div>
       </header>
 
