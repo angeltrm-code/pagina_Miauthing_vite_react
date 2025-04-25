@@ -7,25 +7,25 @@ function Inicio() {
       nombre: "Ana García",
       cargo: "CEO & Fundadora",
       descripcion: "Apasionada por la tecnología y el gaming, con más de 10 años de experiencia en el sector.",
-      imagen: "https://xsgames.co/randomusers/assets/avatars/female/1.jpg"
+      imagen: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ana&backgroundColor=b6e3f4"
     },
     {
       nombre: "Carlos Rodríguez",
       cargo: "CTO",
       descripcion: "Experto en desarrollo web y sistemas, liderando la innovación tecnológica de MiauThing.",
-      imagen: "https://xsgames.co/randomusers/assets/avatars/male/2.jpg"
+      imagen: "https://api.dicebear.com/7.x/avataaars/svg?seed=Carlos&backgroundColor=d1d4f9"
     },
     {
       nombre: "Laura Martínez",
       cargo: "Directora de Marketing",
       descripcion: "Especialista en marketing digital y estrategias de crecimiento para la comunidad gaming.",
-      imagen: "https://xsgames.co/randomusers/assets/avatars/female/3.jpg"
+      imagen: "https://api.dicebear.com/7.x/avataaars/svg?seed=Laura&backgroundColor=c0aede"
     },
     {
       nombre: "David Sánchez",
       cargo: "Director de Soporte",
       descripcion: "Comprometido con la excelencia en el servicio al cliente y la satisfacción del usuario.",
-      imagen: "https://xsgames.co/randomusers/assets/avatars/male/4.jpg"
+      imagen: "https://api.dicebear.com/7.x/avataaars/svg?seed=David&backgroundColor=ffdfbf"
     }
   ];
 
