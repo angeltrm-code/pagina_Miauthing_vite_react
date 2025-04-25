@@ -1,0 +1,404 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Lázaro Benitez",
+      "correo": "bautista42@aguilera.com",
+      "mensaje": "He comprado un monitor ultrawide en MiauThing y es una locura. ¡Qué calidad!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/1.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 2,
+      "nombre": "Lidia Palomar Pou",
+      "correo": "angladamaximo@arnal.com",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/2.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 3,
+      "nombre": "Miguel Gracia Cañete",
+      "correo": "manolorequena@hotmail.com",
+      "mensaje": "He comprado un monitor ultrawide en MiauThing y es una locura. ¡Qué calidad!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/3.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 4,
+      "nombre": "Urbano Verdú Quintanilla",
+      "correo": "armandoariza@chacon.org",
+      "mensaje": "Me encanta que MiauThing tenga opiniones reales y fotos de los productos. ¡Muy top!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/4.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 5,
+      "nombre": "Roberta Soriano Cárdenas",
+      "correo": "angelinachamorro@conesa-miguel.es",
+      "mensaje": "Compré todo mi PC en MiauThing. Buen precio, entrega rápida y todo perfecto.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/5.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 6,
+      "nombre": "David Ros-Linares",
+      "correo": "candido78@saavedra.es",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/6.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 7,
+      "nombre": "Purificación Sanjuan Asensio",
+      "correo": "severinovalencia@yahoo.com",
+      "mensaje": "He comprado un monitor ultrawide en MiauThing y es una locura. ¡Qué calidad!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/7.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 8,
+      "nombre": "Laura Echevarría Font",
+      "correo": "tenareina@pou.es",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/8.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 9,
+      "nombre": "Florentina Caro-Arce",
+      "correo": "donatopazos@hotmail.com",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/9.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 10,
+      "nombre": "Enrique Ayala Poza",
+      "correo": "juan-francisco77@ruano.net",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/10.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 11,
+      "nombre": "Alma Somoza Valero",
+      "correo": "nidia95@villalobos.org",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/11.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 12,
+      "nombre": "Macario Gibert",
+      "correo": "rosadocristina@hierro-heras.org",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/12.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 13,
+      "nombre": "Olivia Saavedra Velasco",
+      "correo": "fnoriega@pascual.es",
+      "mensaje": "Me encanta que MiauThing tenga opiniones reales y fotos de los productos. ¡Muy top!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/13.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 14,
+      "nombre": "Reyes Gimeno Quiroga",
+      "correo": "custodio13@torre-roldan.org",
+      "mensaje": "Compré todo mi PC en MiauThing. Buen precio, entrega rápida y todo perfecto.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/14.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 15,
+      "nombre": "Reynaldo Jáuregui Oliva",
+      "correo": "maria-doloresbenito@gmail.com",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/15.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 16,
+      "nombre": "Palmira Pereira Lara",
+      "correo": "amando75@gmail.com",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/16.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 17,
+      "nombre": "Juanita Mendoza Bertrán",
+      "correo": "danielamiralles@losada-cal.es",
+      "mensaje": "El sistema de puntos de MiauThing es lo mejor. Ya tengo descuento para mi próxima compra.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/17.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 18,
+      "nombre": "Lidia de Jimenez",
+      "correo": "noriegamaria-carmen@sala-bastida.es",
+      "mensaje": "¡MiauThing me salvó la vida! Encontré mi gráfica ideal y llegó al día siguiente.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/18.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 19,
+      "nombre": "Adriana del Marin",
+      "correo": "georginagaray@yahoo.com",
+      "mensaje": "Hice una devolución y el servicio fue rapidísimo. MiauThing se preocupa por sus clientes.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/19.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 20,
+      "nombre": "Tito Cabeza Jordá",
+      "correo": "maria-teresa49@hotmail.com",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/20.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 21,
+      "nombre": "Amílcar Galo Vicente Montesinos",
+      "correo": "rojasliliana@hotmail.com",
+      "mensaje": "Hice una devolución y el servicio fue rapidísimo. MiauThing se preocupa por sus clientes.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/21.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 22,
+      "nombre": "Primitiva Mora Villalobos",
+      "correo": "teosaura@castilla.com",
+      "mensaje": "¡MiauThing me salvó la vida! Encontré mi gráfica ideal y llegó al día siguiente.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/22.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 23,
+      "nombre": "Bernarda Solé Ayllón",
+      "correo": "martinleoncio@yahoo.com",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/23.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 24,
+      "nombre": "Celestina de Chaparro",
+      "correo": "emelinaaranda@rovira.es",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/24.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 25,
+      "nombre": "Noelia Marisa Moliner Tapia",
+      "correo": "ramonochoa@calderon.com",
+      "mensaje": "¡MiauThing me salvó la vida! Encontré mi gráfica ideal y llegó al día siguiente.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/25.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 26,
+      "nombre": "Saturnino Cardona",
+      "correo": "bcalleja@hotmail.com",
+      "mensaje": "¡MiauThing me salvó la vida! Encontré mi gráfica ideal y llegó al día siguiente.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/26.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 27,
+      "nombre": "Consuela Baquero Quirós",
+      "correo": "tudelaricardo@fuster.es",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/27.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 28,
+      "nombre": "Anna Ruiz Díaz",
+      "correo": "eliseo43@gmail.com",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/28.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 29,
+      "nombre": "Elba Catalá",
+      "correo": "casasmaria-teresa@cuenca.org",
+      "mensaje": "Las fichas técnicas de los productos en MiauThing son súper detalladas. ¡Así da gusto!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/29.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 30,
+      "nombre": "Samanta Dávila Martin",
+      "correo": "alemanyguadalupe@gmail.com",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/30.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 31,
+      "nombre": "Adoración de Alberola",
+      "correo": "carmelita53@alvarez.net",
+      "mensaje": "Las fichas técnicas de los productos en MiauThing son súper detalladas. ¡Así da gusto!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/31.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 32,
+      "nombre": "Roxana de Montenegro",
+      "correo": "clementina44@boada.org",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/32.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 33,
+      "nombre": "Coral Marqués Franco",
+      "correo": "vicenteraul@tudela-rosales.es",
+      "mensaje": "Me encanta que MiauThing tenga opiniones reales y fotos de los productos. ¡Muy top!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/33.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 34,
+      "nombre": "Chus León Ocaña",
+      "correo": "carreteroborja@zamorano.es",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/34.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 35,
+      "nombre": "Maribel Gálvez Oller",
+      "correo": "vhoz@barranco-solera.es",
+      "mensaje": "Las fichas técnicas de los productos en MiauThing son súper detalladas. ¡Así da gusto!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/35.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 36,
+      "nombre": "Gastón Machado Falcón",
+      "correo": "luna41@valentin.com",
+      "mensaje": "Hice una devolución y el servicio fue rapidísimo. MiauThing se preocupa por sus clientes.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/36.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 37,
+      "nombre": "Rosario Almazán Marin",
+      "correo": "sanzamanda@ferrer.es",
+      "mensaje": "He comprado un monitor ultrawide en MiauThing y es una locura. ¡Qué calidad!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/37.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 38,
+      "nombre": "Teodoro Fuster Porras",
+      "correo": "dripoll@gmail.com",
+      "mensaje": "El sistema de puntos de MiauThing es lo mejor. Ya tengo descuento para mi próxima compra.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 39,
+      "nombre": "Gregorio Mariño-Nogueira",
+      "correo": "gquevedo@gmail.com",
+      "mensaje": "Las fichas técnicas de los productos en MiauThing son súper detalladas. ¡Así da gusto!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/39.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 40,
+      "nombre": "Nando Verdugo",
+      "correo": "nazaret92@bauza.org",
+      "mensaje": "Compré todo mi PC en MiauThing. Buen precio, entrega rápida y todo perfecto.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/40.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 41,
+      "nombre": "Asdrubal de Cuesta",
+      "correo": "samuel72@yahoo.com",
+      "mensaje": "He comprado un monitor ultrawide en MiauThing y es una locura. ¡Qué calidad!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/41.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 42,
+      "nombre": "Esmeralda Hernando-Murillo",
+      "correo": "beatrizcid@guardiola-iborra.com",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/42.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 43,
+      "nombre": "Melchor Echeverría",
+      "correo": "leocadioibarra@yahoo.com",
+      "mensaje": "¡MiauThing me salvó la vida! Encontré mi gráfica ideal y llegó al día siguiente.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/43.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 44,
+      "nombre": "Néstor Posada Moliner",
+      "correo": "quique98@gmail.com",
+      "mensaje": "He comprado un monitor ultrawide en MiauThing y es una locura. ¡Qué calidad!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/44.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 45,
+      "nombre": "Yago Correa Torres",
+      "correo": "pioporta@losada.net",
+      "mensaje": "Las fichas técnicas de los productos en MiauThing son súper detalladas. ¡Así da gusto!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/45.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 46,
+      "nombre": "Nidia de Vergara",
+      "correo": "haropaz@pedrero.com",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/46.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 47,
+      "nombre": "Eloísa Cervantes Prieto",
+      "correo": "felipe81@neira.es",
+      "mensaje": "La atención al cliente de MiauThing es una pasada. Me ayudaron a elegir mi primer setup gaming.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/47.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 48,
+      "nombre": "María José Palomar Cuéllar",
+      "correo": "jacintoperello@canales.es",
+      "mensaje": "Las fichas técnicas de los productos en MiauThing son súper detalladas. ¡Así da gusto!",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/48.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 49,
+      "nombre": "Alejandro Pedrosa",
+      "correo": "leocadio56@yahoo.com",
+      "mensaje": "Muy buena experiencia con MiauThing. Compré un SSD y al día siguiente lo tenía en casa.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/female/49.jpg",
+      "fecha_registro": "2025-04-23"
+    },
+    {
+      "id": 50,
+      "nombre": "Jose Luis Naranjo Rubio",
+      "correo": "isafabregas@sierra.es",
+      "mensaje": "Desde que descubrí MiauThing no compro en otro sitio. 100% recomendado.",
+      "avatar": "https://xsgames.co/randomusers/assets/avatars/male/0.jpg",
+      "fecha_registro": "2025-04-23"
+    }
+  ]
+}

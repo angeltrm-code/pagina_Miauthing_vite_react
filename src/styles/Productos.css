@@ -7,8 +7,10 @@
   body {
     font-family: 'Doto', sans-serif;
     font-weight: 700;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000;
+    color: #ff0000;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
   
   header {
@@ -45,28 +47,43 @@
     height: 5%;
   }
   
-  main {
-    position: relative;
-    width: 100lh;
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    padding-top: 8%; /* Ajuste para no sobreponer el header */
-    padding-bottom: 5%; /* Ajuste para no sobreponer el footer */
-    background-image: url('/src/assets/fondo.jpg');
-    background-size: cover;
-    background-position: center;
+  .main-productos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/fondo-productos.jpg");
     background-repeat: no-repeat;
+    background-position: center center;
     background-attachment: fixed;
-    z-index: 1;
-    overflow: hidden;
+    background-size: cover;
+    overflow-y: auto;
+    padding: calc(8% + 1rem) 0 calc(5% + 1rem) 0;
+  }
+
+  .main-productos::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.8)
+    );
+    z-index: -1;
   }
   
   .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(255, 255, 255, 0.4); /* Opcional para hacer que el fondo no opaque el texto */
+    background: rgba(0, 0, 0, 0.7);
     z-index: 0;
   }
   
@@ -74,6 +91,7 @@
     position: relative;
     z-index: 1;
     padding: 2rem;
+    color: #ff0000;
   }
   
   .nav-container {
@@ -124,3 +142,125 @@
     margin-right: 1rem;
   }
   
+  .productos-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    color: #ff0000;
+  }
+
+  .productos-container h1 {
+    color: #ff0000;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .filtros {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .busqueda-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+  }
+
+  .busqueda-input::placeholder {
+    color: rgba(255, 0, 0, 0.7);
+  }
+  
+  .categoria-select {
+    padding: 0.5rem;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    font-size: 1rem;
+    min-width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+  }
+  
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+  
+  .paginacion button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .paginacion button:hover:not(:disabled) {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+  }
+  
+  .paginacion button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #ff9999;
+  }
+  
+  .paginacion-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #ff0000;
+    font-size: 1.2rem;
+  }
+  
+  .pagina-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .pagina-selector select {
+    padding: 8px 16px;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .pagina-selector select:focus {
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+  }
+  
+  .pagina-selector label {
+    color: #ff0000;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }

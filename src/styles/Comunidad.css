@@ -9,6 +9,7 @@
     font-weight: 700;
     background-color: #ffffff;
     color: #000000;
+    overflow: hidden;
   }
   
   header {
@@ -122,5 +123,186 @@
     width: 40px;
     height: auto;
     margin-right: 1rem;
+  }
+  
+  .main-comunidad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/assets/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y: auto;
+    padding: calc(8% + 1rem) 0 calc(5% + 1rem) 0;
+  }
+  
+  .main-comunidad::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .comunidad-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .comunidad-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff0000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Doto', sans-serif;
+    font-weight: 700;
+  }
+  
+  .comunidad-descripcion {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    font-family: 'Doto', sans-serif;
+    font-weight: 700;
+  }
+  
+  .usuarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .usuario-card {
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  
+  .usuario-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.4);
+  }
+  
+  .usuario-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    object-fit: cover;
+  }
+  
+  .usuario-info {
+    text-align: center;
+  }
+  
+  .usuario-info h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Doto', sans-serif;
+    font-weight: 700;
+  }
+  
+  .usuario-fecha {
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-family: 'Doto', sans-serif;
+    font-weight: 700;
+  }
+  
+  .usuario-mensaje {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    min-height: 4.5em;
+    font-family: 'Doto', sans-serif;
+    font-weight: 700;
+  }
+  
+  .usuario-contacto {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    font-family: 'Doto', sans-serif;
+  }
+  
+  .usuario-contacto:hover {
+    transform: scale(1.05);
+    background: #cc0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  }
+  
+  .loading, .error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-family: 'Doto', sans-serif;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    z-index: 1000;
+  }
+  
+  .error {
+    color: #ff0000;
+  }
+  
+  @media (max-width: 768px) {
+    .comunidad-container {
+      padding: 12% 1rem 8% 1rem;
+    }
+    
+    .usuarios-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0.5rem;
+    }
+    
+    .usuario-card {
+      padding: 1rem;
+    }
+
+    .comunidad-container h1 {
+      font-size: 2rem;
+    }
+
+    .comunidad-descripcion {
+      font-size: 1rem;
+    }
   }
   
