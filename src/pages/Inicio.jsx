@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Inicio.css";
 
 function Inicio() {
@@ -32,23 +33,70 @@ function Inicio() {
   const servicios = [
     {
       titulo: "Productos Gaming",
-      descripcion: "Amplia selección de productos gaming de alta calidad, desde periféricos hasta componentes de PC.",
-      icono: "🎮"
+      descripcion: "Descubre nuestra selección premium de periféricos y componentes gaming.",
+      icono: "🎮",
+      link: "/productos"
     },
     {
       titulo: "Comunidad Activa",
-      descripcion: "Únete a nuestra comunidad de gamers y comparte experiencias con otros entusiastas.",
-      icono: "👥"
+      descripcion: "Únete a miles de gamers apasionados. Comparte, aprende y crece con nosotros.",
+      icono: "👥",
+      link: "/comunidad"
     },
     {
       titulo: "Soporte 24/7",
-      descripcion: "Atención al cliente disponible las 24 horas para resolver cualquier consulta o problema.",
-      icono: "🛟"
+      descripcion: "Estamos aquí para ayudarte. Soporte técnico profesional siempre disponible.",
+      icono: "🛟",
+      link: "/soporte"
+    }
+  ];
+
+  const caracteristicas = [
+    {
+      titulo: "Envíos Rápidos",
+      descripcion: "Entrega en 24/48h en península",
+      icono: "🚚"
     },
     {
-      titulo: "Envío Rápido",
-      descripcion: "Entrega rápida y segura de todos nuestros productos a cualquier parte del mundo.",
-      icono: "🚚"
+      titulo: "Garantía Extendida",
+      descripcion: "2 años en todos los productos",
+      icono: "✨"
+    },
+    {
+      titulo: "Devolución Gratuita",
+      descripcion: "30 días para devoluciones",
+      icono: "↩️"
+    }
+  ];
+
+  const productosDestacados = [
+    {
+      id: 1,
+      nombre: "Teclado Mecánico RGB",
+      precio: 89.99,
+      imagen: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=500&auto=format&fit=crop&q=60",
+      categoria: "Periféricos"
+    },
+    {
+      id: 2,
+      nombre: "Mouse Gaming Pro",
+      precio: 49.99,
+      imagen: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&auto=format&fit=crop&q=60",
+      categoria: "Periféricos"
+    },
+    {
+      id: 3,
+      nombre: "Monitor Gaming 144Hz",
+      precio: 299.99,
+      imagen: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&auto=format&fit=crop&q=60",
+      categoria: "Monitores"
+    },
+    {
+      id: 4,
+      nombre: "Auriculares Gaming",
+      precio: 79.99,
+      imagen: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60",
+      categoria: "Audio"
     }
   ];
 
@@ -57,53 +105,141 @@ function Inicio() {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1>Bienvenido a MiauThing</h1>
-          <p className="hero-subtitle">Tu destino definitivo para el mundo gaming</p>
+          <h1>
+            <span className="welcome-text">Bienvenido a</span>
+            <span className="brand-name">MiauThing</span>
+          </h1>
+          <p className="hero-description">
+            Donde la pasión por la tecnología y los gatos se encuentra con la excelencia gaming
+          </p>
           <div className="hero-buttons">
-            <a href="/productos" className="btn-primary">Ver Productos</a>
-            <a href="/comunidad" className="btn-secondary">Unirse a la Comunidad</a>
+            <Link to="/productos" className="btn-primary">Explorar Productos</Link>
+            <Link to="/unete-a-nosotros" className="btn-secondary">Únete al Equipo</Link>
           </div>
+          <div className="hero-features">
+            {caracteristicas.map((feature, index) => (
+              <div key={index} className="feature-item">
+                <span className="feature-icon">{feature.icono}</span>
+                <div className="feature-text">
+                  <h3>{feature.titulo}</h3>
+                  <p>{feature.descripcion}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="hero-image">
+          <img 
+            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&auto=format&fit=crop&q=60" 
+            alt="Gaming Setup" 
+            className="hero-img"
+          />
+          <div className="hero-overlay"></div>
         </div>
       </section>
 
       {/* Servicios Section */}
-      <div className="container-translucido">
-        <section className="servicios-section">
+      <section className="servicios-section">
+        <div className="section-header">
           <h2>Nuestros Servicios</h2>
-          <div className="servicios-grid">
-            {servicios.map((servicio, index) => (
-              <div key={index} className="servicio-card">
-                <div className="servicio-icon">{servicio.icono}</div>
-                <h3>{servicio.titulo}</h3>
-                <p>{servicio.descripcion}</p>
+          <p>Descubre todo lo que MiauThing tiene para ofrecerte</p>
+        </div>
+        <div className="servicios-grid">
+          {servicios.map((servicio, index) => (
+            <Link to={servicio.link} key={index} className="servicio-card">
+              <div className="servicio-icon">{servicio.icono}</div>
+              <h3>{servicio.titulo}</h3>
+              <p>{servicio.descripcion}</p>
+              <span className="servicio-arrow">→</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="featured-section">
+        <div className="section-header">
+          <h2>Productos Destacados</h2>
+          <p>Los favoritos de nuestra comunidad</p>
+        </div>
+        <div className="featured-grid">
+          {productosDestacados.map((producto) => (
+            <div key={producto.id} className="featured-card">
+              <div className="featured-image">
+                <img src={producto.imagen} alt={producto.nombre} />
+                <div className="featured-overlay">
+                  <Link to={`/productos/${producto.id}`} className="btn-primary">
+                    Ver Detalles
+                  </Link>
+                </div>
               </div>
-            ))}
-          </div>
-        </section>
-      </div>
+              <div className="featured-info">
+                <h3>{producto.nombre}</h3>
+                <p className="featured-category">{producto.categoria}</p>
+                <p className="featured-price">{producto.precio}€</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <Link to="/productos" className="ver-mas-link">
+          Ver todos los productos <span className="arrow">→</span>
+        </Link>
+      </section>
 
-      {/* Sobre Nosotros Section */}
-      <div className="container-translucido">
-        <section className="sobre-nosotros-section">
-          <div className="sobre-nosotros-content">
-            <h2>Sobre MiauThing</h2>
-            <p>
-              En MiauThing, nos apasiona el mundo gaming y nos dedicamos a ofrecer la mejor experiencia
-              a nuestros clientes. Nuestra misión es proporcionar productos de alta calidad y crear
-              una comunidad vibrante donde los gamers puedan compartir su pasión.
-            </p>
-            <p>
-              Fundada en 2023, hemos crecido rápidamente gracias a nuestro compromiso con la calidad
-              y la satisfacción del cliente. Nuestro equipo está formado por expertos en tecnología
-              y gaming que comparten la misma pasión que nuestros clientes.
-            </p>
+      {/* Community Section */}
+      <section className="community-section">
+        <div className="community-content">
+          <h2>Únete a Nuestra Comunidad</h2>
+          <p>Conecta con otros apasionados de la tecnología y el gaming</p>
+          <div className="community-stats">
+            <div className="stat-item">
+              <span className="stat-number">10k+</span>
+              <span className="stat-label">Miembros</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">500+</span>
+              <span className="stat-label">Productos</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">24/7</span>
+              <span className="stat-label">Soporte</span>
+            </div>
           </div>
-        </section>
-      </div>
+          <Link to="/comunidad" className="btn-primary">Unirse Ahora</Link>
+        </div>
+      </section>
 
-      {/* Equipo Section */}
-      <div className="container-translucido">
-        <section className="equipo-section">
+      {/* Newsletter Section */}
+      <section className="newsletter-section">
+        <div className="newsletter-content">
+          <h2>¿Quieres estar al día?</h2>
+          <p>Suscríbete a nuestro newsletter y recibe las últimas novedades y ofertas exclusivas</p>
+          <form className="newsletter-form">
+            <input type="email" placeholder="Tu email" required />
+            <button type="submit" className="btn-primary">Suscribirse</button>
+          </form>
+        </div>
+      </section>
+
+      {/* About Section - Unificada */}
+      <section className="about-section">
+        {/* Sobre Nosotros */}
+        <div className="about-content">
+          <h2>Sobre MiauThing</h2>
+          <p>
+            En MiauThing, nos apasiona el mundo gaming y nos dedicamos a ofrecer la mejor experiencia
+            a nuestros clientes. Nuestra misión es proporcionar productos de alta calidad y crear
+            una comunidad vibrante donde los gamers puedan compartir su pasión.
+          </p>
+          <p>
+            Fundada en 2023, hemos crecido rápidamente gracias a nuestro compromiso con la calidad
+            y la satisfacción del cliente. Nuestro equipo está formado por expertos en tecnología
+            y gaming que comparten la misma pasión que nuestros clientes.
+          </p>
+        </div>
+
+        {/* Equipo */}
+        <div className="equipo-content">
           <h2>Nuestro Equipo</h2>
           <div className="equipo-grid">
             {equipo.map((miembro, index) => (
@@ -115,22 +251,18 @@ function Inicio() {
               </div>
             ))}
           </div>
-        </section>
-      </div>
+        </div>
 
-      {/* CTA Section */}
-      <div className="container-translucido">
-        <section className="cta-section">
-          <div className="cta-content">
-            <h2>¿Listo para unirte a MiauThing?</h2>
-            <p>Descubre nuestra selección de productos y únete a nuestra comunidad</p>
-            <div className="cta-buttons">
-              <a href="/productos" className="btn-primary">Explorar Productos</a>
-              <a href="/comunidad" className="btn-secondary">Conocer la Comunidad</a>
-            </div>
+        {/* CTA */}
+        <div className="cta-content">
+          <h2>¿Listo para unirte a MiauThing?</h2>
+          <p>Descubre nuestra selección de productos y únete a nuestra comunidad</p>
+          <div className="cta-buttons">
+            <Link to="/productos" className="btn-primary">Explorar Productos</Link>
+            <Link to="/comunidad" className="btn-secondary">Conocer la Comunidad</Link>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
   );
 }

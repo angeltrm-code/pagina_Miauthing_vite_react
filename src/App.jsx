@@ -6,7 +6,7 @@ import Inicio from "./pages/Inicio";
 import Productos from "./pages/Productos";
 import Comunidad from "./pages/Comunidad";
 import Soporte from "./pages/Soporte";
-import Contacto from "./pages/Contacto";
+import Contacto from "./pages/UneteANosotros";
 import Dashboard from "./pages/Dashboard";
 import Cart from './components/Cart';
 import { CartProvider } from './context/CartContext';
@@ -23,7 +23,7 @@ function App() {
             <Route path="/productos" element={<Productos />} />
             <Route path="/comunidad" element={<Comunidad />} />
             <Route path="/soporte" element={<Soporte />} />
-            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/unete-a-nosotros" element={<Contacto />} />
             <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </main>

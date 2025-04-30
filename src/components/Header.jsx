@@ -80,8 +80,8 @@ const Header = () => {
             Soporte
           </Link>
           <Link
-            to="/contacto"
-            className={location.pathname === "/contacto" ? "nav-link active" : "nav-link"}
+            to="/unete-a-nosotros"
+            className={`${location.pathname === "/unete-a-nosotros" ? "nav-link active" : "nav-link"} unete-link`}
           >
             Únete a nosotros
           </Link>

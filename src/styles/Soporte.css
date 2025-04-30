@@ -1,17 +1,12 @@
 .main-soporte {
   min-height: 100vh;
   position: relative;
-  background-image: url("../assets/backgrounds/fondo-soporte.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+  background: var(--bg-darker);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  font-family: "Doto", sans-serif;
-  font-weight: 600;
+  font-family: var(--font-family);
   flex: 1;
 }
 
@@ -36,27 +31,24 @@
   max-width: 1200px;
   width: 100%;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: var(--bg-dark);
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .soporte-container h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: var(--text-color);
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .soporte-descripcion {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #ffffff;
+  color: var(--text-muted);
   text-align: center;
   margin-bottom: 3rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .soporte-grid {
@@ -68,27 +60,33 @@
 
 /* Estilos para la sección FAQ */
 .faq-section {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-light);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .faq-section h2 {
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
 }
 
 .faq-item {
-  border-bottom: 1px solid #eee;
-  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 8px;
 }
 
-.faq-item:last-child {
-  border-bottom: none;
+.faq-item:hover {
+  background: var(--bg-lighter);
+}
+
+.faq-item.abierto {
+  background: var(--bg-lighter);
+  margin: 0.5rem 0;
 }
 
 .faq-pregunta {
@@ -99,34 +97,71 @@
 
 .faq-pregunta h3 {
   font-size: 1.1rem;
-  color: #444;
+  color: var(--text-color);
   margin: 0;
 }
 
 .faq-icon {
   font-size: 1.5rem;
-  color: #666;
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.abierto .faq-icon {
+  transform: rotate(180deg);
 }
 
 .faq-respuesta {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.faq-respuesta.visible {
+  max-height: 500px;
   margin-top: 1rem;
   padding-top: 1rem;
-  color: #666;
+  opacity: 1;
+}
+
+.faq-respuesta p {
+  color: var(--text-muted);
   line-height: 1.6;
+  margin: 0;
 }
 
 /* Estilos para el formulario de contacto */
 .contacto-section {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-light);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contacto-section h2 {
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
+}
+
+.mensaje-exito {
+  text-align: center;
+  padding: 2rem;
+  background: var(--bg-darker);
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+.mensaje-exito i {
+  font-size: 3rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.mensaje-exito p {
+  color: var(--text-color);
+  font-size: 1.2rem;
 }
 
 .form-group {
@@ -136,8 +171,8 @@
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #444;
-  font-weight: 600;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
 .form-group input,
@@ -145,35 +180,55 @@
 .form-group textarea {
   width: 100%;
   padding: 0.8rem;
-  border: 1px solid #ddd;
+  background: var(--bg-darker);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
+  color: var(--text-color);
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #ff6b6b;
+  border-color: var(--accent-color);
   outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
 }
 
 .submit-btn {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  background: var(--accent-color);
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
+  background: var(--primary-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submit-btn.enviando {
+  background: var(--bg-lighter);
+  color: var(--text-muted);
 }
 
 /* Estilos para la información de contacto */
@@ -187,57 +242,93 @@
 .info-item {
   text-align: center;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-light);
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .info-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .info-item i {
-  font-size: 2.5rem;
-  color: #ff6b6b;
+  font-size: 2rem;
+  color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
 .info-item h3 {
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
-.info-item p {
-  color: #666;
+.info-item .info-principal {
+  color: var(--text-color);
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
+}
+
+.info-item .info-secundaria {
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 .chat-btn {
   margin-top: 1rem;
   padding: 0.8rem 1.5rem;
-  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  background: var(--accent-color);
   color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: 8px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .chat-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+  background: var(--primary-color);
+  transform: translateY(-2px);
 }
 
-/* Responsive */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
+  .soporte-container {
+    padding: 1rem;
+  }
+
   .soporte-grid {
     grid-template-columns: 1fr;
   }
 
   .info-contacto {
     grid-template-columns: 1fr;
+  }
+
+  .faq-pregunta h3 {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
   }
 }

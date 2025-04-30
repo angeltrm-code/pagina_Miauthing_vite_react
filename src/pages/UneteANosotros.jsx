@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../styles/Contacto.css';
+import '../styles/UneteANosotros.css';
 
-function Contacto() {
+function UneteANosotros() {
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -12,7 +12,6 @@ function Contacto() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí iría la lógica para enviar el formulario
     console.log('Formulario enviado:', formData);
   };
 
@@ -26,15 +25,18 @@ function Contacto() {
   return (
     <main className="main-contacto">
       <div className="container-translucido">
-        <div className="join-team-content">
-          <h1>Únete a Nuestro Equipo</h1>
-          <p className="team-description">
-            ¿Te apasionan los videojuegos y los gatos? ¿Quieres ser parte de una comunidad innovadora?
-            Estamos buscando personas talentosas y creativas para expandir nuestro equipo.
-          </p>
-          
+        {/* Bloque izquierdo: Introducción y beneficios */}
+        <div className="left-block">
+          <div className="intro-section">
+            <h1>Únete a Nuestro Equipo</h1>
+            <p className="team-description">
+              ¿Te apasionan los videojuegos y los gatos? ¿Quieres ser parte de una comunidad innovadora?
+              Estamos buscando personas talentosas y creativas para expandir nuestro equipo.
+            </p>
+          </div>
+
           <div className="benefits-section">
-            <h2>¿Por qué unirte a nosotros?</h2>
+            <h2>¿POR QUÉ UNIRTE A NOSOTROS?</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
                 <i className="fas fa-laptop-code"></i>
@@ -53,7 +55,10 @@ function Contacto() {
               </div>
             </div>
           </div>
+        </div>
 
+        {/* Bloque derecho: Formulario */}
+        <div className="right-block">
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-group">
               <input
@@ -111,7 +116,7 @@ function Contacto() {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="btn-submit">Enviar Aplicación</button>
+            <button type="submit" className="btn-submit">Enviar</button>
           </form>
         </div>
       </div>
@@ -119,4 +124,4 @@ function Contacto() {
   );
 }
 
-export default Contacto;
+export default UneteANosotros;

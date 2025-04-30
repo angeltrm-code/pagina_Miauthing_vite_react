@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import '../styles/ProductCard.css';
-import ProductDetail from './ProductDetail';
 import { useCart } from '../context/CartContext';
+
+// Lazy load ProductDetail
+const ProductDetail = lazy(() => import('./ProductDetail'));
 
 // Imágenes de fallback por categoría
 const categoryFallbacks = {
@@ -73,24 +75,38 @@ function ProductCard({ producto }) {
             alt={producto.nombre}
             onError={handleImageError}
             className={categoryFallbackError ? 'default-image' : ''}
+            loading="lazy"
+            style={{
+              width: '100%',
+              height: '200px',
+              objectFit: 'cover',
+              borderRadius: '8px'
+            }}
           />
         </div>
-        <div className="product-brand">{producto.marca}</div>
-        <h3 className="product-name">{truncateText(producto.nombre, 40)}</h3>
-        <p className="product-characteristics">
-          {truncateText(producto.caracteristicas, 60)}
+        <div className="product-brand" style={{ fontSize: '1.1rem', color: 'var(--accent-color)' }}>{producto.marca}</div>
+        <h3 className="product-name" style={{ fontSize: '1.2rem', marginTop: '10px' }}>{truncateText(producto.nombre, 50)}</h3>
+        <p className="product-characteristics" style={{ fontSize: '1rem', color: 'var(--text-muted)', margin: '10px 0' }}>
+          {truncateText(producto.caracteristicas, 80)}
         </p>
-        <p className="product-description">
-          {truncateText(producto.descripcion, 100)}
+        <p className="product-description" style={{ fontSize: '0.95rem', margin: '10px 0', minHeight: '60px' }}>
+          {truncateText(producto.descripcion, 120)}
         </p>
-        <div className="product-price">{producto.precio}€</div>
-        <div className="product-stock">
+        <div className="product-price" style={{ fontSize: '1.4rem', color: 'var(--accent-color)', fontWeight: 'bold', margin: '15px 0' }}>
+          {producto.precio}€
+        </div>
+        <div className="product-stock" style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '15px' }}>
           {producto.stock} unidades disponibles
         </div>
-        <div className="product-buttons">
+        <div className="product-buttons" style={{ display: 'flex', gap: '10px', marginTop: 'auto' }}>
           <button 
             className="view-details-btn"
             onClick={() => setShowDetails(true)}
+            style={{
+              flex: 1,
+              padding: '10px',
+              fontSize: '0.9rem'
+            }}
           >
             Ver más
           </button>
@@ -98,6 +114,11 @@ function ProductCard({ producto }) {
             className="add-to-cart-btn"
             onClick={() => addToCart(producto)}
             disabled={producto.stock <= 0}
+            style={{
+              flex: 1,
+              padding: '10px',
+              fontSize: '0.9rem'
+            }}
           >
             {producto.stock > 0 ? 'Añadir al carrito' : 'Sin stock'}
           </button>
@@ -105,13 +126,15 @@ function ProductCard({ producto }) {
       </div>
 
       {showDetails && (
-        <ProductDetail 
-          product={producto} 
-          onClose={() => setShowDetails(false)} 
-        />
+        <Suspense fallback={<div className="loading">Cargando detalles...</div>}>
+          <ProductDetail 
+            product={producto} 
+            onClose={() => setShowDetails(false)} 
+          />
+        </Suspense>
       )}
     </>
   );
 }
 
-export default ProductCard; 
+export default React.memo(ProductCard); 
