@@ -30,7 +30,7 @@ function UneteANosotros() {
           <div className="intro-section">
             <h1>Únete a Nuestro Equipo</h1>
             <p className="team-description">
-              ¿Te apasionan los videojuegos y los gatos? ¿Quieres ser parte de una comunidad innovadora?
+              ¿Te apasionan la tecnologia y los gatos? ¿Quieres ser parte de una comunidad innovadora?
               Estamos buscando personas talentosas y creativas para expandir nuestro equipo.
             </p>
           </div>

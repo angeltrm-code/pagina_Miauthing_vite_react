@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import '../styles/Productos.css';
 import ProductCard from '../components/ProductCard';
+import { apiUrl, headers } from '../config';
 
 function Productos() {
   const [productos, setProductos] = useState([]);
@@ -44,11 +45,9 @@ function Productos() {
     const fetchProductos = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/productos', {
+        const response = await fetch(apiUrl, {
           method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          }
+          headers: headers
         });
 
         if (!response.ok) {
@@ -56,7 +55,7 @@ function Productos() {
         }
 
         const data = await response.json();
-        setProductos(data);
+        setProductos(data.record.productos);
       } catch (err) {
         console.error('Error al cargar productos:', err);
         setError('No se pudo cargar los productos. Por favor, intente nuevamente.');

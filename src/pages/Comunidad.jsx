@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/Comunidad.css';
+import { apiUrl, headers } from '../config';
 
 const Comunidad = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -7,10 +8,12 @@ const Comunidad = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/usuarios')
+    fetch(apiUrl, {
+      headers: headers
+    })
       .then(response => response.json())
       .then(data => {
-        setUsuarios(data);
+        setUsuarios(data.record.usuarios);
         setLoading(false);
       })
       .catch(err => {
