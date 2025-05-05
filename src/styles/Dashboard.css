@@ -58,24 +58,55 @@
 .dashboard-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
   position: relative;
   z-index: 2;
+  justify-items: stretch;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .dashboard-card {
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 1.5rem;
-  border-radius: 8px;
+  background: rgba(30, 30, 30, 0.95);
+  color: #ff0000;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 2.5rem 2.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid #ff0000;
+  transition: box-shadow 0.3s;
+  width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 8px 32px rgba(255, 0, 0, 0.2);
 }
 
 .dashboard-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-family: "Doto", sans-serif;
-  font-weight: 600;
-  color: #1a1a1a;
+  color: #ff0000;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
   letter-spacing: 1px;
+  border-bottom: 1.5px solid #ff0000;
+  padding-bottom: 0.5rem;
+}
+
+.dashboard-card .stat-label,
+.dashboard-card .activity-list li {
+  color: #ff0000;
+}
+
+.dashboard-card .stat-value {
+  color: #ff0000;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.dashboard-card .activity-list li b {
+  color: #ff0000;
 }
 
 .stats {
@@ -105,30 +136,115 @@
 .activity-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .activity-list li {
   padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  color: #1a1a1a;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-.activity-list li:last-child {
-  border-bottom: none;
+.activity-list li:hover {
+  background: rgba(255, 255, 255, 0.05);
+  padding-left: 0.5rem;
 }
 
+@media (max-width: 1200px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quick-action {
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.quick-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: rgba(30, 30, 30, 0.95);
+  padding: 2rem;
+  border-radius: 14px;
+  border: 2px solid #ff0000;
+  color: white;
+  min-width: 400px;
+  max-width: 90%;
+  position: relative;
+}
+
+.modal-content h3 {
+  color: #ff0000;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+
+.modal-content .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #ff0000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.modal-content .close-btn:hover {
+  color: #ff6666;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .dashboard {
     padding: 1rem !important;
   }
 
-  .dashboard-content {
-    grid-template-columns: 1fr;
+  .dashboard-header {
+    padding: 1.5rem;
   }
 
-  .stats {
-    grid-template-columns: repeat(3, 1fr);
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-card {
+    padding: 1.5rem;
+  }
+
+  .quick-action {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 }

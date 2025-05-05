@@ -151,6 +151,10 @@
   background: var(--bg-darker);
   border-radius: 10px;
   animation: fadeIn 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .mensaje-exito i {
@@ -162,6 +166,9 @@
 .mensaje-exito p {
   color: var(--text-color);
   font-size: 1.2rem;
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 
 .form-group {

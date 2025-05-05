@@ -7,9 +7,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
+  background: rgba(20, 20, 20, 0.92);
+  backdrop-filter: blur(10px);
   z-index: 9999;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.lottie-card {
+  background: rgba(116, 115, 115, 0.98);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 4px #ff000033;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 350px;
+  min-height: 350px;
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 2.5px solid #ff0000;
+  position: relative;
+  animation: fadeInCard 0.5s;
+}
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .lottie-player {
@@ -18,5 +45,9 @@
   background: transparent;
   width: 400px !important;
   height: 400px !important;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
  

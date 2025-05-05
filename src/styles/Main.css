@@ -3,7 +3,7 @@ main {
     position: relative;
     width: 100lh;
     min-height: 100vh;
-    background-image: url('/src/assets/fondo.jpg');
+    background-image: url('../assets/backgrounds/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@ main {
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(255, 255, 255, 0.4); /* Ajusta la opacidad */
+    background: rgba(255, 0, 0, 0.4); /* Ajusta la opacidad */
     z-index: 0;
   }
   

@@ -12,7 +12,7 @@ const Header = () => {
   const [buttonPosition, setButtonPosition] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
-  const isPrivateArea = location.pathname === "/dashboard";
+  const isPrivateArea = location.pathname === "/dashboard" || location.pathname === "/dashboard-cliente";
   const ejectButtonRef = useRef(null);
   const { toggleCart, getCartItemsCount } = useCart();
   const itemCount = getCartItemsCount();
@@ -97,7 +97,7 @@ const Header = () => {
               Eject
             </button>
           ) : (
-            <button className="login-btn" onClick={() => setIsLoginOpen(true)}>
+            <button className="header-login-btn" onClick={() => setIsLoginOpen(true)}>
               Login
             </button>
           )}

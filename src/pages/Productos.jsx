@@ -8,7 +8,7 @@ function Productos() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [paginaActual, setPaginaActual] = useState(1);
-  const productosPorPagina = 12;
+  const productosPorPagina = 10;
   const [filtros, setFiltros] = useState({
     categoria: '',
     marca: '',
@@ -45,7 +45,7 @@ function Productos() {
     const fetchProductos = async () => {
       try {
         setLoading(true);
-        const response = await fetch(apiUrl, {
+        const response = await fetch(`${apiUrl}/productos`, {
           method: 'GET',
           headers: headers
         });
@@ -55,10 +55,10 @@ function Productos() {
         }
 
         const data = await response.json();
-        setProductos(data.record.productos);
+        setProductos(data);
       } catch (err) {
         console.error('Error al cargar productos:', err);
-        setError('No se pudo cargar los productos. Por favor, intente nuevamente.');
+        setError('No se pudo cargar los productos. Por favor, asegúrese de que el servidor JSON esté corriendo en el puerto 3000.');
       } finally {
         setLoading(false);
       }
@@ -94,7 +94,13 @@ function Productos() {
   }
 
   if (error) {
-    return <div className="error">{error}</div>;
+    return (
+      <div className="error">
+        <p>{error}</p>
+        <p>Por favor, asegúrese de que el servidor JSON esté corriendo con el comando:</p>
+        <code>npm run server</code>
+      </div>
+    );
   }
 
   return (

@@ -10,8 +10,7 @@ const config = {
 const env = import.meta.env.MODE || 'development';
 export const apiUrl = config[env].apiUrl;
 
-// Configuración para JSONBin.io
+// Headers simplificados para desarrollo
 export const headers = {
-  'Content-Type': 'application/json',
-  'X-Master-Key': '$2a$10$.6I/gNgMmkODXkJE6q7/4OgfPVd6fAdEWO97B673cQH4DqlN6eNcW'
+  'Content-Type': 'application/json'
 }; 

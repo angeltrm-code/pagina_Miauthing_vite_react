@@ -8,22 +8,44 @@ const Comunidad = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(apiUrl, {
-      headers: headers
-    })
-      .then(response => response.json())
-      .then(data => {
-        setUsuarios(data.record.usuarios);
+    const fetchUsuarios = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`${apiUrl}/usuarios`, {
+          method: 'GET',
+          headers: headers
+        });
+
+        if (!response.ok) {
+          throw new Error(`Error del servidor: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setUsuarios(data);
+      } catch (err) {
+        console.error('Error al cargar usuarios:', err);
+        setError('No se pudo cargar los datos de la comunidad. Por favor, asegúrese de que el servidor JSON esté corriendo en el puerto 3000.');
+      } finally {
         setLoading(false);
-      })
-      .catch(err => {
-        setError('Error al cargar los datos de la comunidad');
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchUsuarios();
   }, []);
 
-  if (loading) return <div className="loading">Cargando...</div>;
-  if (error) return <div className="error">{error}</div>;
+  if (loading) {
+    return <div className="loading">Cargando comunidad...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="error">
+        <p>{error}</p>
+        <p>Por favor, asegúrese de que el servidor JSON esté corriendo con el comando:</p>
+        <code>npm run server</code>
+      </div>
+    );
+  }
 
   return (
     <main className="main-comunidad">

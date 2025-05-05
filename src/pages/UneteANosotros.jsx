@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Player } from "@lottiefiles/react-lottie-player";
+import catBoxAnimation from "../animations/cat-box.json";
 import '../styles/UneteANosotros.css';
 
 function UneteANosotros() {
@@ -9,10 +11,26 @@ function UneteANosotros() {
     experiencia: '',
     mensaje: ''
   });
+  const [showAnimation, setShowAnimation] = useState(false);
+  const [mensajeEnviado, setMensajeEnviado] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Formulario enviado:', formData);
+    setMensajeEnviado(true);
+    setShowAnimation(true);
+    
+    // Reset después de 5 segundos
+    setTimeout(() => {
+      setMensajeEnviado(false);
+      setShowAnimation(false);
+      setFormData({
+        nombre: '',
+        email: '',
+        posicion: '',
+        experiencia: '',
+        mensaje: ''
+      });
+    }, 5000);
   };
 
   const handleChange = (e) => {
@@ -59,65 +77,77 @@ function UneteANosotros() {
 
         {/* Bloque derecho: Formulario */}
         <div className="right-block">
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-group">
-              <input
-                type="text"
-                name="nombre"
-                value={formData.nombre}
-                onChange={handleChange}
-                placeholder="Tu nombre"
-                required
+          {mensajeEnviado ? (
+            <div className="mensaje-exito">
+              <Player
+                autoplay
+                loop={false}
+                src={catBoxAnimation}
+                style={{ width: 200, height: 200 }}
               />
+              <p>¡Gracias por tu interés! Te contactaremos pronto.</p>
             </div>
-            <div className="form-group">
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Tu email"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <select
-                name="posicion"
-                value={formData.posicion}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Selecciona una posición</option>
-                <option value="desarrollo">Desarrollo</option>
-                <option value="diseño">Diseño</option>
-                <option value="marketing">Marketing</option>
-                <option value="soporte">Soporte</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <select
-                name="experiencia"
-                value={formData.experiencia}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Años de experiencia</option>
-                <option value="junior">0-2 años</option>
-                <option value="mid">2-5 años</option>
-                <option value="senior">5+ años</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <textarea
-                name="mensaje"
-                value={formData.mensaje}
-                onChange={handleChange}
-                placeholder="¿Por qué quieres unirte a nuestro equipo?"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" className="btn-submit">Enviar</button>
-          </form>
+          ) : (
+            <form onSubmit={handleSubmit} className="contact-form">
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
+                  placeholder="Tu nombre"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Tu email"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <select
+                  name="posicion"
+                  value={formData.posicion}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Selecciona una posición</option>
+                  <option value="desarrollo">Desarrollo</option>
+                  <option value="diseño">Diseño</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="soporte">Soporte</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <select
+                  name="experiencia"
+                  value={formData.experiencia}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Años de experiencia</option>
+                  <option value="junior">0-2 años</option>
+                  <option value="mid">2-5 años</option>
+                  <option value="senior">5+ años</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <textarea
+                  name="mensaje"
+                  value={formData.mensaje}
+                  onChange={handleChange}
+                  placeholder="¿Por qué quieres unirte a nuestro equipo?"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" className="btn-submit">Enviar</button>
+            </form>
+          )}
         </div>
       </div>
     </main>

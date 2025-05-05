@@ -13,19 +13,18 @@
 }
 
 .login-dropdown {
-  background-image: url("../images/fondo-login.jpg");
+  position: relative;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  background-image: url("../assets/backgrounds/fondo-login.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2rem;
-  border-radius: 8px;
   border: 2px solid #ff0000;
-  width: 350px;
-  position: relative;
-  color: #ffffff;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
-  animation: dropIn 0.3s ease-out;
-  margin: 0 auto;
 }
 
 .login-dropdown::before {
@@ -73,10 +72,11 @@
   color: #ff0000;
 }
 
-h2 {
+.login-dropdown h2 {
   margin: 0 0 1.5rem 0;
   text-align: center;
   font-family: "Doto", sans-serif;
+  color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -88,12 +88,13 @@ h2 {
   display: block;
   margin-bottom: 0.5rem;
   font-family: "Doto", sans-serif;
+  color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .form-group input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.8rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   background: rgba(26, 26, 26, 0.8);
@@ -108,10 +109,10 @@ h2 {
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
 }
 
-.submit-btn {
+.login-btn {
   width: 100%;
-  padding: 0.5rem;
-  background: #ff0000;
+  padding: 0.8rem;
+  background: #2e2d2d;
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -121,9 +122,12 @@ h2 {
   margin-top: 1rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.submit-btn:hover {
+.login-btn:hover {
   background: #cc0000;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);

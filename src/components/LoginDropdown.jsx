@@ -15,8 +15,19 @@ const LoginDropdown = ({ isOpen, onClose }) => {
     if (username && password) {
       // Simulamos la autenticación
       if (username.toLowerCase() === "angeltrm-code" && password === "1234") {
-        setShowAnimation(true); // Mostramos la animación
-        onClose(); // Cerramos el dropdown
+        // Admin
+        setShowAnimation(true);
+        onClose();
+        setTimeout(() => {
+          navigate("/dashboard");
+        }, 2000);
+      } else if (username.toLowerCase() === "usuario" && password === "1234") {
+        // Usuario normal
+        setShowAnimation(true);
+        onClose();
+        setTimeout(() => {
+          navigate("/dashboard-cliente");
+        }, 2000);
       } else {
         alert("Usuario o contraseña incorrectos");
       }
@@ -24,9 +35,8 @@ const LoginDropdown = ({ isOpen, onClose }) => {
   };
 
   const handleAnimationComplete = () => {
-    console.log("Animación completada, navegando al dashboard");
+    console.log("Animación completada");
     setShowAnimation(false);
-    navigate("/dashboard");
   };
 
   if (!isOpen && !showAnimation) return null;

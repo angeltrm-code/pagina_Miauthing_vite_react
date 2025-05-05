@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import catBoxAnimation from "../animations/cat-box.json";
 import "../styles/Soporte.css";
 
 function Soporte() {
@@ -12,6 +14,7 @@ function Soporte() {
   const [faqAbierto, setFaqAbierto] = useState(null);
   const [enviando, setEnviando] = useState(false);
   const [mensajeEnviado, setMensajeEnviado] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(false);
 
   const faqs = [
     {
@@ -40,11 +43,13 @@ function Soporte() {
       // Simulamos el envío del formulario
       await new Promise(resolve => setTimeout(resolve, 1500));
       setMensajeEnviado(true);
+      setShowAnimation(true);
       setFormData({ nombre: "", email: "", asunto: "", mensaje: "" });
       
-      // Reset del mensaje de éxito después de 5 segundos
+      // Reset del mensaje de éxito y la animación después de 5 segundos
       setTimeout(() => {
         setMensajeEnviado(false);
+        setShowAnimation(false);
       }, 5000);
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
@@ -105,7 +110,12 @@ function Soporte() {
             <h2>Contacta con Nosotros</h2>
             {mensajeEnviado ? (
               <div className="mensaje-exito">
-                <i className="fas fa-check-circle"></i>
+                <Player
+                  autoplay
+                  loop={false}
+                  src={catBoxAnimation}
+                  style={{ width: 200, height: 200 }}
+                />
                 <p>¡Gracias por contactarnos! Te responderemos en breve.</p>
               </div>
             ) : (

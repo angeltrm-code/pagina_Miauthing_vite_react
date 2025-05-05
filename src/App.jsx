@@ -8,6 +8,7 @@ import Comunidad from "./pages/Comunidad";
 import Soporte from "./pages/Soporte";
 import Contacto from "./pages/UneteANosotros";
 import Dashboard from "./pages/Dashboard";
+import DashboardCliente from "./pages/DashboardCliente";
 import Cart from './components/Cart';
 import { CartProvider } from './context/CartContext';
 import "./App.css";
@@ -25,6 +26,7 @@ function App() {
             <Route path="/soporte" element={<Soporte />} />
             <Route path="/unete-a-nosotros" element={<Contacto />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard-cliente" element={<DashboardCliente />} />
           </Routes>
         </main>
         <Cart />
