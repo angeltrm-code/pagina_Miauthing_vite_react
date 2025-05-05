@@ -1,10 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../styles/Header.css";
 import LoginDropdown from "./LoginDropdown";
 import EjectTransition from "./EjectTransition";
 import AnimatedLogo from "./AnimatedLogo";
 import { useCart } from '../context/CartContext';
+import { apiUrl, headers } from '../config';
 
 const Header = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -17,6 +18,85 @@ const Header = () => {
   const { toggleCart, getCartItemsCount } = useCart();
   const itemCount = getCartItemsCount();
 
+  // --- Búsqueda global ---
+  const [productos, setProductos] = useState([]);
+  const [busqueda, setBusqueda] = useState("");
+  const [sugerencias, setSugerencias] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const searchInputRef = useRef(null);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    // Obtener productos al montar
+    const fetchProductos = async () => {
+      try {
+        const response = await fetch(`${apiUrl}/productos`, { headers });
+        if (!response.ok) throw new Error("Error al cargar productos");
+        const data = await response.json();
+        setProductos(data);
+      } catch (err) {
+        setProductos([]);
+      }
+    };
+    fetchProductos();
+  }, []);
+
+  useEffect(() => {
+    if (busqueda.trim().length === 0) {
+      setSugerencias([]);
+      setShowDropdown(false);
+      return;
+    }
+    // Filtrar sugerencias por nombre, marca o categoría
+    const texto = busqueda.toLowerCase();
+    const sugerenciasFiltradas = productos.filter(p =>
+      p.nombre.toLowerCase().includes(texto) ||
+      p.marca.toLowerCase().includes(texto) ||
+      p.categoria.toLowerCase().includes(texto)
+    ).slice(0, 7);
+    setSugerencias(sugerenciasFiltradas);
+    setShowDropdown(sugerenciasFiltradas.length > 0);
+  }, [busqueda, productos]);
+
+  // Cerrar dropdown al hacer clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        searchInputRef.current &&
+        !searchInputRef.current.contains(event.target)
+      ) {
+        setShowDropdown(false);
+      }
+    };
+    if (showDropdown) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showDropdown]);
+
+  const handleBusquedaChange = (e) => {
+    setBusqueda(e.target.value);
+  };
+
+  const handleSugerenciaClick = (producto) => {
+    setBusqueda("");
+    setShowDropdown(false);
+    navigate(`/productos/${producto.id}`);
+  };
+
+  const handleBusquedaSubmit = (e) => {
+    e.preventDefault();
+    if (busqueda.trim().length > 0) {
+      navigate(`/productos?busqueda=${encodeURIComponent(busqueda)}`);
+      setShowDropdown(false);
+    }
+  };
+
+  // --- Logout ---
   const handleLogout = () => {
     if (ejectButtonRef.current) {
       const rect = ejectButtonRef.current.getBoundingClientRect();
@@ -48,13 +128,34 @@ const Header = () => {
           <Link to="/">
             <AnimatedLogo />
           </Link>
-          <div className="search-form">
+          <form className="search-form" onSubmit={handleBusquedaSubmit} autoComplete="off">
             <input
               type="text"
               placeholder="Buscar..."
               className="search-input"
+              value={busqueda}
+              onChange={handleBusquedaChange}
+              ref={searchInputRef}
+              onFocus={() => busqueda && sugerencias.length > 0 && setShowDropdown(true)}
             />
-          </div>
+            {showDropdown && (
+              <div className="search-suggestions-dropdown" ref={dropdownRef}>
+                {sugerencias.map((p) => (
+                  <div
+                    key={p.id}
+                    className="suggestion-item"
+                    onClick={() => handleSugerenciaClick(p)}
+                  >
+                    <img src={p.imagen} alt={p.nombre} className="suggestion-img" />
+                    <div className="suggestion-info">
+                      <span className="suggestion-nombre">{p.nombre}</span>
+                      <span className="suggestion-marca">{p.marca} | {p.categoria}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </form>
         </div>
 
         <nav className="nav">

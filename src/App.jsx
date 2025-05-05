@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import DashboardCliente from "./pages/DashboardCliente";
 import Cart from './components/Cart';
 import { CartProvider } from './context/CartContext';
+import ProductoDetalle from "./pages/ProductoDetalle";
 import "./App.css";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/unete-a-nosotros" element={<Contacto />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard-cliente" element={<DashboardCliente />} />
+            <Route path="/productos/:id" element={<ProductoDetalle />} />
           </Routes>
         </main>
         <Cart />
