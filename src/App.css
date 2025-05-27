@@ -55,6 +55,7 @@ body {
   flex: 1;
   width: 100%;
   background-color: var(--background-color);
+  padding-top: var(--header-height);
 }
 
 .container {

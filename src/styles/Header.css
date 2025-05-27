@@ -1,19 +1,19 @@
 .header {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95); /* Fondo claro */
+  backdrop-filter: blur(10px); /* Ajusta el blur si es necesario */
   height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--spacing-xl);
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eee; /* Borde inferior claro */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra clara */
+  flex-wrap: wrap;
 }
 
 .header-left {
@@ -26,6 +26,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  /* El color del logo (SVG o imagen) puede necesitar ajuste si es negro */
 }
 
 .logo {
@@ -48,19 +49,25 @@
 
 .search-input {
   padding: 0.75rem 1.25rem;
-  border: 2px solid #eee;
+  border: 2px solid #eee; /* Borde claro */
   border-radius: 999px;
   width: 300px;
   font-family: "Doto", sans-serif;
   font-size: 1rem;
-  background: #f8f8f8;
+  background: #f8f8f8; /* Fondo claro para el input */
+  color: #333; /* Texto oscuro */
   transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #888; /* Color oscuro para el texto del placeholder */
+  opacity: 1;
 }
 
 .search-input:focus {
   outline: none;
   border-color: var(--primary-color);
-  background: white;
+  background: white; /* Fondo blanco al enfocar */
   box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.1);
 }
 
@@ -72,7 +79,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: #2a2a2a;
+  color: #2a2a2a; /* Texto oscuro para los enlaces */
   padding: 0.5rem 1rem;
   font-weight: 500;
   position: relative;
@@ -93,8 +100,8 @@
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
-  background-color: rgba(255, 0, 0, 0.05);
+  color: var(--primary-color); /* Color primario al pasar el ratón */
+  background-color: rgba(255, 0, 0, 0.05); /* Fondo ligeramente rojo al pasar el ratón */
 }
 
 .nav-link:hover::after {
@@ -102,8 +109,8 @@
 }
 
 .nav-link.active {
-  color: var(--primary-color);
-  background-color: rgba(255, 0, 0, 0.1);
+  color: var(--primary-color); /* Color primario para el enlace activo */
+  background-color: rgba(255, 0, 0, 0.1); /* Fondo más pronunciado para el activo */
 }
 
 .nav-link.active::after {
@@ -115,7 +122,7 @@
   padding: 0.5rem 1.2rem;
   border: 2px solid var(--primary-color);
   border-radius: 6px;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Color primario */
   font-weight: 600;
   transition: all 0.3s ease;
   background-color: transparent;
@@ -123,7 +130,7 @@
 
 .unete-link:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: white; /* Texto blanco al pasar el ratón */
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
 }
@@ -141,14 +148,13 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
-  /* Asegura que no se encoja demasiado si el espacio es limitado */
   flex-shrink: 0;
 }
 
 .login-btn {
   padding: 0.75rem 1.5rem;
-  background: #2a2a2a;
-  color: white;
+  background: #2a2a2a; /* Fondo oscuro para los botones */
+  color: white; /* Texto blanco */
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -186,15 +192,15 @@
 }
 
 .login-btn:hover {
-  background: #3a3a3a;
+  background: #3a3a3a; /* Fondo un poco más claro al pasar el ratón */
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logout-button {
   padding: 0.5rem 1rem;
-  background: #ff0000;
-  color: white;
+  background: #ff0000; /* Rojo */
+  color: white; /* Texto blanco */
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -215,7 +221,7 @@
   content: "⚠";
   font-size: 1rem;
   color: #000;
-  background-color: #ffd700;
+  background-color: #ffd700; /* Amarillo */
   padding: 2px;
   border-radius: 4px;
   display: inline-flex;
@@ -227,7 +233,7 @@
 }
 
 .logout-button:hover {
-  background: #cc0000;
+  background: #cc0000; /* Rojo más oscuro al pasar el ratón */
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.1),
     inset 0 -3px 6px rgba(0, 0, 0, 0.3);
@@ -249,7 +255,7 @@
 
 .cart-icon {
   font-size: 1.75em;
-  color: #333;
+  color: #333; /* Icono de carrito oscuro */
 }
 
 .cart-count {
@@ -266,27 +272,26 @@
 
 /* Estilos para el botón de menú móvil (hamburguesa) */
 .menu-button {
-  display: none; /* Oculto por defecto en pantallas grandes */
+  display: none;
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333;
+  color: #333; /* Color oscuro para el icono de hamburguesa */
   padding: var(--spacing-sm);
-  z-index: 1100; /* Asegura que esté sobre el overlay */
+  z-index: 1100;
 }
 
 /* Overlay oscuro para el menú móvil */
 .mobile-menu-overlay {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
-  top: var(--header-height); /* Empieza justo debajo del header */
+  top: var(--header-height);
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9990; /* Z-index alto, pero menor que el menú */
-  /* Para prevenir scroll del contenido */
+  z-index: 9990;
   overflow: hidden;
 }
 
@@ -296,125 +301,77 @@
   }
 
   .nav {
-    display: none; /* Oculta la navegación principal en pantallas medianas/pequeñas */
+    display: none;
   }
 
-  /* Muestra el botón de menú móvil */
   .menu-button {
     display: block;
   }
 
-  /* Asegura que el overlay se muestre correctamente en este breakpoint */
   .mobile-menu-overlay {
-    display: block; /* Este display block aquí parece redundante si ya está en 768px, pero lo mantendremos para claridad */
+    display: block;
   }
 
   .search-input {
     width: 200px;
   }
 
-  /* Ajustes para el header-left y header-right en pantallas medianas */
   .header-left {
-    flex-grow: 1; /* Permite que el header-left ocupe espacio */
-    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    flex-grow: 1;
+    justify-content: flex-start;
   }
 
   .header-right {
-     /* Si es necesario, permite que se envuelva debajo o ajusta el gap/tamaño */
-     /* gap: var(--spacing-sm); */
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    padding: var(--spacing-sm); /* Ajusta padding para mejor espaciado */
-    align-items: center; /* Centra los elementos principales del header (header-left, header-right, nav) */
-    height: auto; /* Permite que la altura se ajuste al contenido envuelto */
-    min-height: var(--header-height); /* Mantiene una altura mínima */
-    flex-direction: column; /* Apila los elementos verticalmente en pantallas muy pequeñas */
-    gap: var(--spacing-sm); /* Espacio entre los elementos principales apilados */
+    padding: var(--spacing-sm);
+    align-items: center;
+    height: auto;
+    min-height: var(--header-height);
+    flex-direction: column;
+    gap: var(--spacing-sm);
   }
 
   .header-left {
     gap: 1rem;
-    width: 100%; /* Ocupa todo el ancho disponible */
-    justify-content: space-between; /* Espacio entre logo/hamburguesa */
-    align-items: center; /* Centra verticalmente logo/hamburguesa */
-    flex-wrap: nowrap; /* Evita que el logo y la hamburguesa se envuelvan */
-    flex-direction: row; /* Asegura que logo y hamburguesa estén en fila */
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 
   .search-form {
-     flex-grow: 1; /* Permite que la barra de búsqueda ocupe espacio disponible */
-     margin-left: 0; /* Elimina margen izquierdo */
-     width: 100%; /* Ocupa todo el ancho de su contenedor (header) */
-     order: 3; /* Coloca el formulario de búsqueda debajo del header-left */
+     flex-grow: 1;
+     margin-left: 0;
+     width: 100%;
+     order: 3;
   }
 
-  /* Oculta el botón de menú en pantallas muy pequeñas si es necesario, o ajusta su tamaño */
   .menu-button {
-     font-size: 1.5rem; /* Aumenta ligeramente el tamaño */
-     order: 2; /* Coloca el botón de menú segundo en el header-left */
+     font-size: 1.5rem;
+     order: 2;
   }
 
   .logo {
-    order: 1; /* Coloca el logo primero en el header-left */
-  }
-
-  /* Estilos para la navegación principal en móvil */
-  .nav {
-    position: fixed;
-    top: var(--header-height); /* Empieza justo debajo del header */
-    right: -250px; /* Oculto a la derecha por defecto (igual al ancho) */
-    width: 250px; /* Ancho del menú */
-    height: calc(100% - var(--header-height)); /* Altura ajustada */
-    background-color: white;
-    flex-direction: column; /* Apila los enlaces verticalmente */
-    padding: var(--spacing-lg); /* Padding interno */
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease-in-out; /* Animación de deslizamiento */
-    z-index: 9999; /* ¡Z-index muy alto para que esté SIEMPRE encima! */
-    overflow-y: auto; /* Permite scroll si el contenido es largo */
-    display: flex; /* Asegura que el contenedor nav sea un flex container */
-    align-items: center; /* ¡Centra horizontalmente los nav-link! */
-    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor flex (arriba) */
-  }
-
-  /* Clase para mostrar el menú móvil */
-  .nav.nav--open {
-    right: 0; /* Muestra el menú */
-  }
-
-  .nav-link {
-    padding: 1rem 0; /* Más padding vertical */
-    border-bottom: 1px solid #eee; /* Separador entre enlaces */
-    width: 100%; /* Ocupa todo el ancho del menú */
-    text-align: center; /* ¡Centra el texto dentro del enlace! */
-    display: block; /* Asegura que cada enlace sea un bloque y ocupe su propia línea */
-  }
-
-  .nav-link:last-child {
-    border-bottom: none;
-  }
-
-  .nav-link:hover::after {
-    width: 50%; /* Ajusta el ancho del underline en móvil, puede ser más centrado */
-    left: 50%; /* Asegura que el underline esté centrado */
-    transform: translateX(-50%); /* Complemento para centrar el underline */
+    order: 1;
   }
 
   .header-right {
     gap: var(--spacing-sm);
-    width: 100%; /* Permite que header-right ocupe su propia línea */
-    justify-content: center; /* ¡Centra horizontalmente los botones de login y carrito! */
-    align-items: center; /* Centra verticalmente los botones de login y carrito */
-    padding: var(--spacing-sm) 0; /* Añade padding para separarlo */
-    order: 4; /* Coloca los botones de login/carrito debajo del search-form */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    order: 4;
   }
 
   .search-input {
-    width: 100%; /* Permite que el input ocupe todo el espacio disponible en el form */
-    max-width: none; /* Elimina el max-width */
+    width: 100%;
+    max-width: none;
     padding: 0.5rem 1rem;
   }
 
@@ -423,22 +380,21 @@
     font-size: 0.9rem;
   }
 
-  /* Asegura que el dropdown de búsqueda se posicione correctamente */
   .search-suggestions-dropdown {
-    top: calc(var(--header-height) + var(--spacing-sm) + 50px + var(--spacing-sm)); /* Ajusta la posición */
-    left: var(--spacing-sm); /* Alinea el dropdown a la izquierda con padding */
-    right: var(--spacing-sm); /* Alinea el dropdown a la derecha con padding */
-    width: auto; /* Permite que el ancho se ajuste al left/right */
-    max-width: none; /* Elimina el max-width */
-    transform: none; /* Elimina la transformación de centrado */
-    z-index: 9998; /* Debe estar sobre el contenido, pero bajo el menú lateral */
+    top: calc(var(--header-height) + var(--spacing-sm) + 50px + var(--spacing-sm));
+    left: var(--spacing-sm);
+    right: var(--spacing-sm);
+    width: auto;
+    max-width: none;
+    transform: none;
+    z-index: 9998;
   }
 }
 
 .header-login-btn {
   padding: 0.75rem 1.5rem;
-  background: #2a2a2a;
-  color: white;
+  background: #2a2a2a; /* Fondo oscuro para los botones */
+  color: white; /* Texto blanco */
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -479,7 +435,7 @@
 }
 
 .header-login-btn:hover {
-  background: #3a3a3a;
+  background: #3a3a3a; /* Fondo un poco más claro al pasar el ratón */
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -490,9 +446,9 @@
   left: 0;
   width: 420px;
   max-width: 90vw;
-  background: rgba(255,255,255,0.98);
+  background: rgba(255,255,255,0.98); /* Fondo claro */
   border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 0 0 2px #ff0000;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 0 0 2px #ff0000; /* Sombra y borde claros */
   z-index: 2000;
   padding: 0.5rem 0;
   border: 1.5px solid #ff0000;
@@ -508,7 +464,7 @@
   transition: background 0.2s;
 }
 .suggestion-item:hover {
-  background: #ffeaea;
+  background: #ffeaea; /* Fondo claro al pasar el ratón */
 }
 .suggestion-img {
   width: 48px;
@@ -525,11 +481,11 @@
 }
 .suggestion-nombre {
   font-weight: 700;
-  color: #ff0000;
+  color: #ff0000; /* Color primario */
   font-size: 1.05rem;
 }
 .suggestion-marca {
-  color: #222;
+  color: #222; /* Texto oscuro */
   font-size: 0.95rem;
   opacity: 0.8;
 }
