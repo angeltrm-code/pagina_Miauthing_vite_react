@@ -280,7 +280,7 @@
 .mobile-menu-overlay {
   display: none; /* Oculto por defecto */
   position: fixed;
-  top: var(--header-height);
+  top: var(--header-height); /* Empieza justo debajo del header */
   left: 0;
   right: 0;
   bottom: 0;
@@ -328,7 +328,7 @@
 @media (max-width: 768px) {
   .header {
     padding: var(--spacing-sm); /* Ajusta padding para mejor espaciado */
-    align-items: flex-start; /* Alinea elementos al inicio cuando se envuelven */
+    align-items: center; /* Centra los elementos principales del header (header-left, header-right, nav) */
     height: auto; /* Permite que la altura se ajuste al contenido envuelto */
     min-height: var(--header-height); /* Mantiene una altura mínima */
     flex-direction: column; /* Apila los elementos verticalmente en pantallas muy pequeñas */
@@ -338,43 +338,45 @@
   .header-left {
     gap: 1rem;
     width: 100%; /* Ocupa todo el ancho disponible */
-    justify-content: space-between; /* Espacio entre logo/hamburguesa y barra de búsqueda */
-    align-items: center; /* Centra verticalmente logo/hamburguesa y búsqueda */
-    flex-wrap: wrap; /* Permite que logo y hamburguesa se envuelvan si es necesario (aunque con gap no debería pasar) */
+    justify-content: space-between; /* Espacio entre logo/hamburguesa */
+    align-items: center; /* Centra verticalmente logo/hamburguesa */
+    flex-wrap: nowrap; /* Evita que el logo y la hamburguesa se envuelvan */
+    flex-direction: row; /* Asegura que logo y hamburguesa estén en fila */
   }
 
   .search-form {
      flex-grow: 1; /* Permite que la barra de búsqueda ocupe espacio disponible */
-     margin-left: 0; /* Elimina margen izquierdo, ya que ahora está en su propia fila */
-     width: 100%; /* Ocupa todo el ancho de su contenedor (header-left) */
-     order: 3; /* Coloca el formulario de búsqueda debajo del logo y botón de menú */
+     margin-left: 0; /* Elimina margen izquierdo */
+     width: 100%; /* Ocupa todo el ancho de su contenedor (header) */
+     order: 3; /* Coloca el formulario de búsqueda debajo del header-left */
   }
 
   /* Oculta el botón de menú en pantallas muy pequeñas si es necesario, o ajusta su tamaño */
   .menu-button {
      font-size: 1.5rem; /* Aumenta ligeramente el tamaño */
-     order: 1; /* Coloca el botón de menú primero en el orden flex */
+     order: 2; /* Coloca el botón de menú segundo en el header-left */
   }
 
   .logo {
-    order: 2; /* Coloca el logo después del botón de menú */
+    order: 1; /* Coloca el logo primero en el header-left */
   }
 
   /* Estilos para la navegación principal en móvil */
   .nav {
     position: fixed;
-    top: var(--header-height);
+    top: var(--header-height); /* Empieza justo debajo del header */
     right: -250px; /* Oculto a la derecha por defecto (igual al ancho) */
     width: 250px; /* Ancho del menú */
-    height: calc(100% - var(--header-height)); /* Altura ajustada al header */
+    height: calc(100% - var(--header-height)); /* Altura ajustada */
     background-color: white;
-    flex-direction: column;
-    padding: var(--spacing-lg);
+    flex-direction: column; /* Apila los enlaces verticalmente */
+    padding: var(--spacing-lg); /* Padding interno */
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease-in-out; /* Animación */
+    transition: right 0.3s ease-in-out; /* Animación de deslizamiento */
     z-index: 9999; /* ¡Z-index muy alto para que esté SIEMPRE encima! */
     overflow-y: auto; /* Permite scroll si el contenido es largo */
     display: flex; /* Asegura que el contenedor nav sea un flex container */
+    align-items: center; /* ¡Centra horizontalmente los nav-link! */
   }
 
   /* Clase para mostrar el menú móvil */
@@ -386,7 +388,7 @@
     padding: 1rem 0; /* Más padding vertical */
     border-bottom: 1px solid #eee; /* Separador entre enlaces */
     width: 100%; /* Ocupa todo el ancho del menú */
-    text-align: left;
+    text-align: center; /* ¡Centra el texto dentro del enlace! */
     display: block; /* Asegura que cada enlace sea un bloque y ocupe su propia línea */
   }
 
@@ -395,36 +397,33 @@
   }
 
   .nav-link:hover::after {
-    width: 30%; /* Ajusta el ancho del underline en móvil */
+    width: 50%; /* Ajusta el ancho del underline en móvil, puede ser más centrado */
+    left: 50%; /* Asegura que el underline esté centrado */
+    transform: translateX(-50%); /* Complemento para centrar el underline */
   }
 
   .header-right {
     gap: var(--spacing-sm);
     width: 100%; /* Permite que header-right ocupe su propia línea */
     justify-content: flex-end; /* Alinea los elementos (login, carrito) a la derecha */
-    padding: var(--spacing-sm) 0; /* Añade padding para separarlo del contenido superior/inferior */
-    order: 4; /* Coloca los botones de login/carrito debajo del formulario de búsqueda */
+    padding: var(--spacing-sm) 0; /* Añade padding para separarlo */
+    order: 4; /* Coloca los botones de login/carrito debajo del search-form */
   }
 
   .search-input {
     width: 100%; /* Permite que el input ocupe todo el espacio disponible en el form */
-    max-width: none; /* Elimina el max-width para que se ajuste al contenedor */
+    max-width: none; /* Elimina el max-width */
     padding: 0.5rem 1rem;
   }
 
-  .login-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .header-login-btn {
+  .login-btn, .header-login-btn {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
 
   /* Asegura que el dropdown de búsqueda se posicione correctamente */
   .search-suggestions-dropdown {
-    top: calc(var(--header-height) + var(--spacing-sm) + 50px + var(--spacing-sm)); /* Ajusta la posición: debajo del header, más gap y altura estimada del search-form */
+    top: calc(var(--header-height) + var(--spacing-sm) + 50px + var(--spacing-sm)); /* Ajusta la posición */
     left: var(--spacing-sm); /* Alinea el dropdown a la izquierda con padding */
     right: var(--spacing-sm); /* Alinea el dropdown a la derecha con padding */
     width: auto; /* Permite que el ancho se ajuste al left/right */
@@ -543,3 +542,4 @@
     height: 36px;
   }
 }
+
