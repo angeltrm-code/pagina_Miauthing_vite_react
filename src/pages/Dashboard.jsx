@@ -14,19 +14,30 @@ const Dashboard = () => {
     const fetchProductos = async () => {
       try {
         setLoading(true);
+        setError(null);
         const response = await fetch(`${apiUrl}/productos`, {
           method: "GET",
           headers: headers,
         });
-        if (!response.ok) throw new Error("Error al cargar productos");
+        
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+        
         const data = await response.json();
+        if (!Array.isArray(data)) {
+          throw new Error('Formato de datos inválido');
+        }
+        
         setProductos(data);
       } catch (err) {
-        setError("No se pudo cargar los productos. ¿Está corriendo el servidor?");
+        console.error("Error fetching productos:", err);
+        setError("No se pudieron cargar los productos. Por favor, intente más tarde.");
       } finally {
         setLoading(false);
       }
     };
+
     fetchProductos();
   }, []);
 
@@ -101,8 +112,29 @@ const Dashboard = () => {
     rentabilidad: 33.2 // porcentaje
   };
 
-  if (loading) return <div className="loading">Cargando datos del dashboard...</div>;
-  if (error) return <div className="error">{error}</div>;
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p>Cargando datos del dashboard...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="error-container">
+        <div className="error-icon">⚠️</div>
+        <p className="error-message">{error}</p>
+        <button 
+          className="retry-button"
+          onClick={() => window.location.reload()}
+        >
+          Reintentar
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="dashboard">

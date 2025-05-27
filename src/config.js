@@ -1,9 +1,9 @@
 const config = {
   development: {
-    apiUrl: 'http://localhost:3000'
+    apiUrl: 'http://localhost:3000/api'
   },
   production: {
-    apiUrl: 'https://api.jsonbin.io/v3/b/6815dd878a456b796696b07e'
+    apiUrl: '/api'
   }
 };
 
@@ -12,5 +12,6 @@ export const apiUrl = config[env].apiUrl;
 
 // Headers simplificados para desarrollo
 export const headers = {
-  'Content-Type': 'application/json'
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
 }; 

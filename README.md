@@ -1,12 +1,87 @@
-# React + Vite
+# MiauThing Tech - Panel de Administración
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Panel de administración para la tienda de componentes informáticos MiauThing Tech, desarrollado con React y Vite.
 
-Currently, two official plugins are available:
+## 🚀 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Dashboard interactivo con estadísticas en tiempo real
+- Visualización de productos y stock
+- Gráficos de rendimiento y análisis
+- Diseño responsive y moderno
+- API integrada para gestión de datos
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18
+- Vite
+- Recharts (visualización de datos)
+- CSS Modules
+- API REST
+
+## 📦 Instalación
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/tu-usuario/miauthingtech.git
+cd miauthingtech
+```
+
+2. Instala las dependencias:
+```bash
+npm install
+```
+
+3. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+```
+
+## 🏗️ Construcción
+
+Para crear una versión de producción:
+
+```bash
+npm run build
+```
+
+## 🌐 Despliegue
+
+El proyecto está configurado para ser desplegado en Vercel. La configuración incluye:
+
+- Rutas de API optimizadas
+- Manejo de CORS
+- Configuración de entorno de producción
+- Optimización de assets
+
+## 📝 Estructura del Proyecto
+
+```
+miauthingtech/
+├── api/              # Endpoints de la API
+├── src/
+│   ├── components/   # Componentes React
+│   ├── pages/        # Páginas de la aplicación
+│   ├── styles/       # Estilos CSS
+│   └── config.js     # Configuración de la aplicación
+├── public/           # Archivos estáticos
+└── vercel.json       # Configuración de Vercel
+```
+
+## 🔧 Configuración
+
+El proyecto utiliza diferentes configuraciones para desarrollo y producción:
+
+- Desarrollo: `http://localhost:3000`
+- Producción: Rutas relativas para API
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+## 👥 Contribución
+
+1. Fork el proyecto
+2. Crea tu rama de características (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
