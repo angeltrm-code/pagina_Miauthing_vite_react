@@ -111,7 +111,7 @@ const Header = () => {
       const audio = new Audio("/eject-sound.mp3");
       audio.play().catch(() => {}); // Ignoramos errores si el navegador bloquea el audio
     } catch (error) {
-      console.log("Audio no soportado");
+      // console.log("Audio no soportado");
     }
   };
 

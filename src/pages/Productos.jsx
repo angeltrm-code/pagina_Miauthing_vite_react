@@ -31,20 +31,19 @@ function Productos() {
     });
   }, [productos, filtros]);
 
-  // Calcular productos para la página actual
   const productosActuales = useMemo(() => {
     const indiceInicio = (paginaActual - 1) * productosPorPagina;
     const indiceFin = indiceInicio + productosPorPagina;
     return productosFiltrados.slice(indiceInicio, indiceFin);
   }, [productosFiltrados, paginaActual]);
 
-  // Calcular número total de páginas
   const totalPaginas = Math.ceil(productosFiltrados.length / productosPorPagina);
 
   useEffect(() => {
     const fetchProductos = async () => {
       try {
         setLoading(true);
+        setError(null);
         const response = await fetch(`${apiUrl}/productos`, {
           method: 'GET',
           headers: headers
@@ -67,7 +66,6 @@ function Productos() {
     fetchProductos();
   }, []);
 
-  // Reset página actual cuando cambian los filtros
   useEffect(() => {
     setPaginaActual(1);
   }, [filtros]);
@@ -82,7 +80,6 @@ function Productos() {
 
   const handlePaginaChange = (nuevaPagina) => {
     setPaginaActual(nuevaPagina);
-    // Scroll al inicio de los productos
     window.scrollTo({
       top: document.querySelector('.productos-grid').offsetTop - 100,
       behavior: 'smooth'
@@ -171,7 +168,6 @@ function Productos() {
           
           {[...Array(totalPaginas)].map((_, index) => {
             const numeroPagina = index + 1;
-            // Mostrar solo algunas páginas para no sobrecargar la UI
             if (
               numeroPagina === 1 ||
               numeroPagina === totalPaginas ||

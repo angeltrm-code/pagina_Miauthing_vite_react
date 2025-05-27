@@ -35,7 +35,7 @@ const LoginDropdown = ({ isOpen, onClose }) => {
   };
 
   const handleAnimationComplete = () => {
-    console.log("Animación completada");
+    // console.log("Animación completada");
     setShowAnimation(false);
   };
 
