@@ -377,6 +377,7 @@
     overflow-y: auto; /* Permite scroll si el contenido es largo */
     display: flex; /* Asegura que el contenedor nav sea un flex container */
     align-items: center; /* ¡Centra horizontalmente los nav-link! */
+    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor flex (arriba) */
   }
 
   /* Clase para mostrar el menú móvil */
@@ -405,7 +406,8 @@
   .header-right {
     gap: var(--spacing-sm);
     width: 100%; /* Permite que header-right ocupe su propia línea */
-    justify-content: flex-end; /* Alinea los elementos (login, carrito) a la derecha */
+    justify-content: center; /* ¡Centra horizontalmente los botones de login y carrito! */
+    align-items: center; /* Centra verticalmente los botones de login y carrito */
     padding: var(--spacing-sm) 0; /* Añade padding para separarlo */
     order: 4; /* Coloca los botones de login/carrito debajo del search-form */
   }
