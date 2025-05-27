@@ -46,7 +46,7 @@ const DashboardCliente = () => {
         const data = await response.json();
         setProductos(data);
       } catch (err) {
-        setError("No se pudo cargar los productos. ¿Está corriendo el servidor?");
+        setError('No se pudo cargar los productos. Por favor, intente más tarde.');
       } finally {
         setLoading(false);
       }

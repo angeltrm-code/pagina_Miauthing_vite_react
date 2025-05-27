@@ -8,7 +8,7 @@ function Inicio() {
       nombre: "Angeltrm-code",
       cargo: "CEO & Fundador",
       descripcion: "Apasionado de los gatos, la programación y el diseño web. Liderando la innovación en MiauThing con creatividad y visión única.",
-      imagen: "/src/images/programmerNena.jpg"
+      imagen: "/assets/images/programmerNena.jpg"
     },
     {
       nombre: "Carlos Rodríguez",

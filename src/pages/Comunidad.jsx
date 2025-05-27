@@ -24,7 +24,7 @@ const Comunidad = () => {
         setUsuarios(data);
       } catch (err) {
         console.error('Error al cargar usuarios:', err);
-        setError('No se pudo cargar los datos de la comunidad. Por favor, asegúrese de que el servidor JSON esté corriendo en el puerto 3000.');
+        setError('No se pudo cargar los datos de la comunidad. Por favor, intente más tarde.');
       } finally {
         setLoading(false);
       }
@@ -41,8 +41,6 @@ const Comunidad = () => {
     return (
       <div className="error">
         <p>{error}</p>
-        <p>Por favor, asegúrese de que el servidor JSON esté corriendo con el comando:</p>
-        <code>npm run server</code>
       </div>
     );
   }

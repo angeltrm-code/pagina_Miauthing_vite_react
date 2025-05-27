@@ -58,7 +58,7 @@ function Productos() {
         setProductos(data);
       } catch (err) {
         console.error('Error al cargar productos:', err);
-        setError('No se pudo cargar los productos. Por favor, asegúrese de que el servidor JSON esté corriendo en el puerto 3000.');
+        setError('No se pudo cargar los productos. Por favor, intente más tarde.');
       } finally {
         setLoading(false);
       }
@@ -97,8 +97,6 @@ function Productos() {
     return (
       <div className="error">
         <p>{error}</p>
-        <p>Por favor, asegúrese de que el servidor JSON esté corriendo con el comando:</p>
-        <code>npm run server</code>
       </div>
     );
   }
