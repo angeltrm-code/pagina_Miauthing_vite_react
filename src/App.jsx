@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Inicio from "./pages/Inicio";
@@ -12,13 +12,26 @@ import DashboardCliente from "./pages/DashboardCliente";
 import Cart from './components/Cart';
 import { CartProvider } from './context/CartContext';
 import ProductoDetalle from "./pages/ProductoDetalle";
+import MobileMenu from "./components/MobileMenu";
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <CartProvider>
       <div className="app">
-        <Header />
+        <Header toggleMobileMenu={toggleMobileMenu} />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Inicio />} />
@@ -33,6 +46,7 @@ function App() {
         </main>
         <Cart />
         <Footer />
+        <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
       </div>
     </CartProvider>
   );

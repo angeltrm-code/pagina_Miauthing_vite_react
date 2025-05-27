@@ -7,7 +7,8 @@ import AnimatedLogo from "./AnimatedLogo";
 import { useCart } from '../context/CartContext';
 import { apiUrl, headers } from '../config';
 
-const Header = () => {
+// Recibe toggleMobileMenu como prop
+const Header = ({ toggleMobileMenu }) => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isEjecting, setIsEjecting] = useState(false);
   const [buttonPosition, setButtonPosition] = useState(null);
@@ -17,9 +18,6 @@ const Header = () => {
   const ejectButtonRef = useRef(null);
   const { toggleCart, getCartItemsCount } = useCart();
   const itemCount = getCartItemsCount();
-
-  // Estado para controlar la visibilidad del menú móvil
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // --- Búsqueda global ---
   const [productos, setProductos] = useState([]);
@@ -81,11 +79,6 @@ const Header = () => {
     };
   }, [showDropdown]);
 
-  // Cerrar menú móvil al cambiar de ruta
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location.pathname]);
-
   const handleBusquedaChange = (e) => {
     setBusqueda(e.target.value);
   };
@@ -129,11 +122,6 @@ const Header = () => {
     navigate("/");
   };
 
-  // Función para alternar el estado del menú móvil
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
   return (
     <>
       <header className="header">
@@ -141,7 +129,7 @@ const Header = () => {
           <Link to="/">
             <AnimatedLogo />
           </Link>
-          {/* Botón de menú móvil (hamburguesa) */}
+          {/* Botón de menú móvil (hamburguesa) - Usa la prop */}
           <button className="menu-button" onClick={toggleMobileMenu}>
             ☰
           </button>
@@ -177,14 +165,8 @@ const Header = () => {
           </form>
         </div>
 
-        {/* Navegación principal - se mostrará u ocultará en móvil */}
-        <nav className={`nav ${isMobileMenuOpen ? 'nav--open' : ''}`}> {/* Clase condicional */}
-          <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"} onClick={() => setIsMobileMenuOpen(false)}>Inicio</Link>
-          <Link to="/productos" className={location.pathname === "/productos" ? "nav-link active" : "nav-link"} onClick={() => setIsMobileMenuOpen(false)}>Productos</Link>
-          <Link to="/comunidad" className={location.pathname === "/comunidad" ? "nav-link active" : "nav-link"} onClick={() => setIsMobileMenuOpen(false)}>Comunidad</Link>
-          <Link to="/soporte" className={location.pathname === "/soporte" ? "nav-link active" : "nav-link"} onClick={() => setIsMobileMenuOpen(false)}>Soporte</Link>
-          <Link to="/unete-a-nosotros" className={`${location.pathname === "/unete-a-nosotros" ? "nav-link active" : "nav-link"} unete-link`} onClick={() => setIsMobileMenuOpen(false)}>Únete a nosotros</Link>
-        </nav>
+        {/* La navegación principal ahora se maneja en MobileMenu */}
+        {/* Eliminamos el NAV de aquí */}
 
         <div className="header-right">
           {isPrivateArea ? (
@@ -209,8 +191,8 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Overlay oscuro cuando el menú móvil está abierto */}
-      {isMobileMenuOpen && <div className="mobile-menu-overlay" onClick={toggleMobileMenu}></div>}
+      {/* El overlay también se mueve a MobileMenu */}
+      {/* Eliminamos el overlay div de aquí */}
 
       <LoginDropdown
         isOpen={isLoginOpen}
