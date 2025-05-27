@@ -13,6 +13,7 @@
   right: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .header-left {
@@ -140,6 +141,8 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+  /* Asegura que no se encoja demasiado si el espacio es limitado */
+  flex-shrink: 0;
 }
 
 .login-btn {
@@ -301,36 +304,65 @@
     display: block;
   }
 
-  /* Muestra el overlay cuando el menú está abierto */
+  /* Asegura que el overlay se muestre correctamente en este breakpoint */
   .mobile-menu-overlay {
-    display: block;
+    display: block; /* Este display block aquí parece redundante si ya está en 768px, pero lo mantendremos para claridad */
   }
 
   .search-input {
     width: 200px;
+  }
+
+  /* Ajustes para el header-left y header-right en pantallas medianas */
+  .header-left {
+    flex-grow: 1; /* Permite que el header-left ocupe espacio */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .header-right {
+     /* Si es necesario, permite que se envuelva debajo o ajusta el gap/tamaño */
+     /* gap: var(--spacing-sm); */
   }
 }
 
 @media (max-width: 768px) {
   .header {
     padding: 0 var(--spacing-sm);
-    justify-content: space-between;
+    /* justify-content: space-between; Dejamos que flex-wrap y gaps manejen el espaciado */
+    align-items: flex-start; /* Alinea elementos al inicio cuando se envuelven */
+    height: auto; /* Permite que la altura se ajuste al contenido envuelto */
+    min-height: var(--header-height); /* Mantiene una altura mínima */
+    flex-direction: row; /* Asegura que los elementos se alineen en fila antes de envolver */
   }
 
   .header-left {
     gap: 1rem;
+    /* flex-grow: 1; */ /* Ya definido en el breakpoint anterior, se hereda */
+    width: 100%; /* Permite que el header-left ocupe su propia línea si es necesario */
+    justify-content: space-between; /* Espacio entre logo/hamburguesa y barra de búsqueda */
+    align-items: center; /* Centra verticalmente logo/hamburguesa y búsqueda */
+  }
+
+  .search-form {
+     flex-grow: 1; /* Permite que la barra de búsqueda ocupe espacio disponible */
+     margin-left: var(--spacing-sm); /* Espacio entre hamburguesa y búsqueda */
   }
 
   /* Oculta el botón de menú en pantallas muy pequeñas si es necesario, o ajusta su tamaño */
   .menu-button {
-     font-size: 1.2rem; /* Ajusta tamaño si es necesario */
+     font-size: 1.5rem; /* Aumenta ligeramente el tamaño */
+     order: 1; /* Coloca el botón de menú primero en el orden flex */
+  }
+
+  .logo {
+    order: 2; /* Coloca el logo después del botón de menú */
   }
 
   /* Estilos para la navegación principal en móvil */
   .nav {
     position: fixed;
     top: var(--header-height);
-    right: 0; /* Oculto a la derecha por defecto */
+    right: -250px; /* Oculto a la derecha por defecto (igual al ancho) */
     width: 250px; /* Ancho del menú */
     height: calc(100% - var(--header-height)); /* Altura ajustada al header */
     background-color: white;
@@ -340,6 +372,7 @@
     transition: right 0.3s ease-in-out; /* Animación */
     z-index: 1080; /* Sobre el overlay, bajo el botón de menú */
     overflow-y: auto; /* Permite scroll si el contenido es largo */
+    display: flex; /* Asegura que el contenedor nav sea un flex container */
   }
 
   /* Clase para mostrar el menú móvil */
@@ -348,10 +381,11 @@
   }
 
   .nav-link {
-    padding: 1rem 0;
+    padding: 1rem 0; /* Más padding vertical */
     border-bottom: 1px solid #eee; /* Separador entre enlaces */
     width: 100%; /* Ocupa todo el ancho del menú */
     text-align: left;
+    display: block; /* Asegura que cada enlace sea un bloque y ocupe su propia línea */
   }
 
   .nav-link:last-child {
@@ -364,10 +398,14 @@
 
   .header-right {
     gap: var(--spacing-sm);
+    width: 100%; /* Permite que header-right ocupe su propia línea si es necesario */
+    justify-content: flex-end; /* Alinea los elementos (login, carrito) a la derecha */
+    padding: var(--spacing-sm) 0; /* Añade padding para separarlo del contenido superior/inferior */
   }
 
   .search-input {
-    width: 150px; /* Ajusta el ancho del input de búsqueda en móvil */
+    width: 100%; /* Permite que el input ocupe todo el espacio disponible en el form */
+    max-width: none; /* Elimina el max-width para que se ajuste al contenedor */
     padding: 0.5rem 1rem;
   }
 
@@ -383,10 +421,12 @@
 
   /* Asegura que el dropdown de búsqueda se posicione correctamente */
   .search-suggestions-dropdown {
-    top: 100%;
-    left: 0;
-    right: auto; /* Importante para que no se estire más allá del input */
-    width: 100%; /* Ocupa el ancho del input de búsqueda */
+    top: calc(var(--header-height) + 50px); /* Ajusta la posición del dropdown */
+    left: var(--spacing-sm); /* Alinea el dropdown a la izquierda con padding */
+    right: var(--spacing-sm); /* Alinea el dropdown a la derecha con padding */
+    width: auto; /* Permite que el ancho se ajuste al left/right */
+    max-width: none; /* Elimina el max-width */
+    transform: none; /* Elimina la transformación de centrado */
   }
 }
 
