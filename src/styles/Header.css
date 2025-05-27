@@ -253,80 +253,113 @@
   position: absolute;
   top: -5px;
   right: -5px;
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   color: white;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9em;
+  padding: 2px 6px;
+  font-size: 0.75rem;
   font-weight: bold;
-  border: 2px solid white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para el menú móvil */
+/* Estilos para el botón de menú móvil (hamburguesa) */
 .menu-button {
-  display: none;
+  display: none; /* Oculto por defecto en pantallas grandes */
   background: none;
   border: none;
-  color: #333;
-  font-size: var(--font-size-xl);
+  font-size: 1.5rem;
   cursor: pointer;
+  color: #333;
   padding: var(--spacing-sm);
+  z-index: 1100; /* Asegura que esté sobre el overlay */
+}
+
+/* Overlay oscuro para el menú móvil */
+.mobile-menu-overlay {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050; /* Entre el header y el contenido */
+  /* Para prevenir scroll del contenido */
+  overflow: hidden;
 }
 
 @media (max-width: 1024px) {
   .header {
-    padding: 0 var(--spacing-lg);
+    padding: 0 var(--spacing-md);
   }
 
-  .nav-links {
-    gap: var(--spacing-md);
+  .nav {
+    display: none; /* Oculta la navegación principal en pantallas medianas/pequeñas */
+  }
+
+  /* Muestra el botón de menú móvil */
+  .menu-button {
+    display: block;
+  }
+
+  /* Muestra el overlay cuando el menú está abierto */
+  .mobile-menu-overlay {
+    display: block;
   }
 
   .search-input {
-    width: 250px;
+    width: 200px;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    padding: 0 var(--spacing-md);
+    padding: 0 var(--spacing-sm);
+    justify-content: space-between;
   }
 
+  .header-left {
+    gap: 1rem;
+  }
+
+  /* Oculta el botón de menú en pantallas muy pequeñas si es necesario, o ajusta su tamaño */
   .menu-button {
-    display: block;
+     font-size: 1.2rem; /* Ajusta tamaño si es necesario */
   }
 
-  .nav-links {
-    display: none;
-    position: absolute;
+  /* Estilos para la navegación principal en móvil */
+  .nav {
+    position: fixed;
     top: var(--header-height);
-    left: 0;
-    right: 0;
+    right: 0; /* Oculto a la derecha por defecto */
+    width: 250px; /* Ancho del menú */
+    height: calc(100% - var(--header-height)); /* Altura ajustada al header */
     background-color: white;
     flex-direction: column;
-    padding: var(--spacing-md);
-    gap: var(--spacing-md);
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-lg);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out; /* Animación */
+    z-index: 1080; /* Sobre el overlay, bajo el botón de menú */
+    overflow-y: auto; /* Permite scroll si el contenido es largo */
   }
 
-  .nav-links.open {
-    display: flex;
+  /* Clase para mostrar el menú móvil */
+  .nav.nav--open {
+    right: 0; /* Muestra el menú */
   }
 
   .nav-link {
-    width: 100%;
-    text-align: center;
-    padding: var(--spacing-md);
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee; /* Separador entre enlaces */
+    width: 100%; /* Ocupa todo el ancho del menú */
+    text-align: left;
   }
 
-  .nav-link:hover {
-    background-color: #f8f8f8;
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link:hover::after {
+    width: 30%; /* Ajusta el ancho del underline en móvil */
   }
 
   .header-right {
@@ -334,13 +367,26 @@
   }
 
   .search-input {
-    width: 100%;
-    max-width: 200px;
+    width: 150px; /* Ajusta el ancho del input de búsqueda en móvil */
+    padding: 0.5rem 1rem;
   }
 
   .login-btn {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+  }
+
+  .header-login-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Asegura que el dropdown de búsqueda se posicione correctamente */
+  .search-suggestions-dropdown {
+    top: 100%;
+    left: 0;
+    right: auto; /* Importante para que no se estire más allá del input */
+    width: 100%; /* Ocupa el ancho del input de búsqueda */
   }
 }
 

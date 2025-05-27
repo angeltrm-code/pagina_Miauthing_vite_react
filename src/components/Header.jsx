@@ -18,6 +18,9 @@ const Header = () => {
   const { toggleCart, getCartItemsCount } = useCart();
   const itemCount = getCartItemsCount();
 
+  // Estado para controlar la visibilidad del menú móvil
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   // --- Búsqueda global ---
   const [productos, setProductos] = useState([]);
   const [busqueda, setBusqueda] = useState("");
@@ -58,7 +61,7 @@ const Header = () => {
     setShowDropdown(sugerenciasFiltradas.length > 0);
   }, [busqueda, productos]);
 
-  // Cerrar dropdown al hacer clic fuera
+  // Cerrar dropdown de búsqueda al hacer clic fuera
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -77,6 +80,11 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showDropdown]);
+
+  // Cerrar menú móvil al cambiar de ruta
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   const handleBusquedaChange = (e) => {
     setBusqueda(e.target.value);
@@ -121,6 +129,11 @@ const Header = () => {
     navigate("/");
   };
 
+  // Función para alternar el estado del menú móvil
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <>
       <header className="header">
@@ -128,6 +141,11 @@ const Header = () => {
           <Link to="/">
             <AnimatedLogo />
           </Link>
+          {/* Botón de menú móvil (hamburguesa) */}
+          <button className="menu-button" onClick={toggleMobileMenu}>
+            ☰
+          </button>
+          {/* Formulario de búsqueda */}
           <form className="search-form" onSubmit={handleBusquedaSubmit} autoComplete="off">
             <input
               type="text"
@@ -138,6 +156,7 @@ const Header = () => {
               ref={searchInputRef}
               onFocus={() => busqueda && sugerencias.length > 0 && setShowDropdown(true)}
             />
+            {/* Dropdown de sugerencias de búsqueda */}
             {showDropdown && (
               <div className="search-suggestions-dropdown" ref={dropdownRef}>
                 {sugerencias.map((p) => (
@@ -158,34 +177,13 @@ const Header = () => {
           </form>
         </div>
 
-        <nav className="nav">
-          <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-            Inicio
-          </Link>
-          <Link
-            to="/productos"
-            className={location.pathname === "/productos" ? "nav-link active" : "nav-link"}
-          >
-            Productos
-          </Link>
-          <Link
-            to="/comunidad"
-            className={location.pathname === "/comunidad" ? "nav-link active" : "nav-link"}
-          >
-            Comunidad
-          </Link>
-          <Link
-            to="/soporte"
-            className={location.pathname === "/soporte" ? "nav-link active" : "nav-link"}
-          >
-            Soporte
-          </Link>
-          <Link
-            to="/unete-a-nosotros"
-            className={`${location.pathname === "/unete-a-nosotros" ? "nav-link active" : "nav-link"} unete-link`}
-          >
-            Únete a nosotros
-          </Link>
+        {/* Navegación principal - se mostrará u ocultará en móvil */}
+        <nav className={`nav ${isMobileMenuOpen ? 'nav--open' : ''}`}> {/* Clase condicional */}
+          <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"} onClick={() => setIsMobileMenuOpen(false)}>Inicio</Link>
+          <Link to="/productos" className={location.pathname === "/productos" ? "nav-link active" : "nav-link"} onClick={() => setIsMobileMenuOpen(false)}>Productos</Link>
+          <Link to="/comunidad" className={location.pathname === "/comunidad" ? "nav-link active" : "nav-link"} onClick={() => setIsMobileMenuOpen(false)}>Comunidad</Link>
+          <Link to="/soporte" className={location.pathname === "/soporte" ? "nav-link active" : "nav-link"} onClick={() => setIsMobileMenuOpen(false)}>Soporte</Link>
+          <Link to="/unete-a-nosotros" className={`${location.pathname === "/unete-a-nosotros" ? "nav-link active" : "nav-link"} unete-link`} onClick={() => setIsMobileMenuOpen(false)}>Únete a nosotros</Link>
         </nav>
 
         <div className="header-right">
@@ -210,6 +208,9 @@ const Header = () => {
           </button>
         </div>
       </header>
+
+      {/* Overlay oscuro cuando el menú móvil está abierto */}
+      {isMobileMenuOpen && <div className="mobile-menu-overlay" onClick={toggleMobileMenu}></div>}
 
       <LoginDropdown
         isOpen={isLoginOpen}
