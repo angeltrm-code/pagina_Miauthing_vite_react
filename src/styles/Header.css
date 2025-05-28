@@ -71,7 +71,7 @@
 }
 
 .nav {
-  display: flex;
+  display: flex; /* Mostrar navegación por defecto (escritorio) */
   align-items: center;
   gap: 1.5rem;
 }
@@ -270,19 +270,19 @@
 
 /* Estilos para el botón de menú móvil (hamburguesa) */
 .menu-button {
-  display: none;
+  display: none; /* Ocultar por defecto (escritorio) */
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333; /* Color oscuro para el icono de hamburguesa */
+  color: #333;
   padding: var(--spacing-sm);
   z-index: 1100;
 }
 
 /* Overlay oscuro para el menú móvil */
 .mobile-menu-overlay {
-  display: none;
+  display: none; /* Ocultar por defecto (escritorio) */
   position: fixed;
   top: var(--header-height);
   left: 0;
@@ -299,15 +299,15 @@
   }
 
   .nav {
-    display: none;
+    display: none; /* Ocultar navegación en móvil */
   }
 
   .menu-button {
-    display: block;
+    display: block; /* Mostrar botón de menú en móvil */
   }
 
   .mobile-menu-overlay {
-    display: block;
+    display: block; /* Mostrar overlay en móvil */
   }
 
   .search-input {

@@ -134,6 +134,15 @@ const Header = ({ toggleMobileMenu }) => {
           </button>
         </div>
 
+        {/* Navegación principal para escritorio */}
+        <nav className="nav">
+          <Link to="/" className="nav-link">Inicio</Link>
+          <Link to="/productos" className="nav-link">Productos</Link>
+          <Link to="/comunidad" className="nav-link">Comunidad</Link>
+          <Link to="/soporte" className="nav-link">Soporte</Link>
+          <Link to="/unete-a-nosotros" className={`nav-link unete-link`}>Únete a nosotros</Link>
+        </nav>
+
         <form className="search-form" onSubmit={handleBusquedaSubmit} autoComplete="off">
           <input
             type="text"
@@ -200,4 +209,5 @@ const Header = ({ toggleMobileMenu }) => {
   );
 };
 
+// Forcing Vercel re-deploy
 export default Header;
