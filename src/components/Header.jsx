@@ -129,44 +129,39 @@ const Header = ({ toggleMobileMenu }) => {
           <Link to="/">
             <AnimatedLogo />
           </Link>
-          {/* Botón de menú móvil (hamburguesa) - Usa la prop */}
           <button className="menu-button" onClick={toggleMobileMenu}>
             ☰
           </button>
-          {/* Formulario de búsqueda */}
-          <form className="search-form" onSubmit={handleBusquedaSubmit} autoComplete="off">
-            <input
-              type="text"
-              placeholder="Buscar..."
-              className="search-input"
-              value={busqueda}
-              onChange={handleBusquedaChange}
-              ref={searchInputRef}
-              onFocus={() => busqueda && sugerencias.length > 0 && setShowDropdown(true)}
-            />
-            {/* Dropdown de sugerencias de búsqueda */}
-            {showDropdown && (
-              <div className="search-suggestions-dropdown" ref={dropdownRef}>
-                {sugerencias.map((p) => (
-                  <div
-                    key={p.id}
-                    className="suggestion-item"
-                    onClick={() => handleSugerenciaClick(p)}
-                  >
-                    <img src={p.imagen} alt={p.nombre} className="suggestion-img" />
-                    <div className="suggestion-info">
-                      <span className="suggestion-nombre">{p.nombre}</span>
-                      <span className="suggestion-marca">{p.marca} | {p.categoria}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </form>
         </div>
 
-        {/* La navegación principal ahora se maneja en MobileMenu */}
-        {/* Eliminamos el NAV de aquí */}
+        <form className="search-form" onSubmit={handleBusquedaSubmit} autoComplete="off">
+          <input
+            type="text"
+            placeholder="Buscar..."
+            className="search-input"
+            value={busqueda}
+            onChange={handleBusquedaChange}
+            ref={searchInputRef}
+            onFocus={() => busqueda && sugerencias.length > 0 && setShowDropdown(true)}
+          />
+          {showDropdown && (
+            <div className="search-suggestions-dropdown" ref={dropdownRef}>
+              {sugerencias.map((p) => (
+                <div
+                  key={p.id}
+                  className="suggestion-item"
+                  onClick={() => handleSugerenciaClick(p)}
+                >
+                  <img src={p.imagen} alt={p.nombre} className="suggestion-img" />
+                  <div className="suggestion-info">
+                    <span className="suggestion-nombre">{p.nombre}</span>
+                    <span className="suggestion-marca">{p.marca} | {p.categoria}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </form>
 
         <div className="header-right">
           {isPrivateArea ? (
@@ -190,9 +185,6 @@ const Header = ({ toggleMobileMenu }) => {
           </button>
         </div>
       </header>
-
-      {/* El overlay también se mueve a MobileMenu */}
-      {/* Eliminamos el overlay div de aquí */}
 
       <LoginDropdown
         isOpen={isLoginOpen}
