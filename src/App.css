@@ -42,7 +42,6 @@ body {
   background-color: var(--background-color);
   overflow-x: hidden;
   min-height: 100vh;
-  padding-top: var(--header-height);
 }
 
 .app {
